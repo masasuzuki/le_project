@@ -41,7 +41,36 @@
                 z-index:1000;
                 border:1px solid #003366;
             } 
-            
+
+            section.sub_main {
+                height: 550px;
+            }
+            .sub_main {
+               height: 100%;
+            }
+
+            section.full-height {
+                height: 500px;
+            }
+            .full-height {
+               height: 100%;
+            }
+            .col-md-6 {
+                    width: 50%;
+            }
+            .bg-img {
+                background-size: cover;
+                background-position: center;
+            }
+            .bg-black {
+                color: ;
+            }
+            .bg-black {
+                background-color: rgba(240,240,240,0.75);
+            }
+
+
+
         </style>
     </head>
     <body>
@@ -49,7 +78,10 @@
             <div class="navbar">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand"><span>LIVEEST</span></a>
+                        <a class="navbar-brand">
+                        <a class="navbar-brand"><span>LIVEEST,inc.</span></a>
+                        </span>
+                        </a>
                     </div>
                     <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                         <ul class="nav navbar-nav navbar-right">
@@ -90,29 +122,57 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1 class="hidden-sm text-center text-inverse" style="50pt;letter-spacing:10px;border:5px solid white; width:px">LIVEEST</h1>
+                        <p class="hidden-sm text-center text-inverse" style="font-size:50px; 50pt;letter-spacing:12px; border:5px solid white; padding:15px 25px; display:inline-block;">LIVEEST</p>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <style>
+        /*
+        <!--sub_main start-->
+        <div class="row" style="padding-top:50px;padding-bottom:50px;background-color: #ffffff; color:#003366;">
+            <div class="col-md-12 sub_main text-center" style="font-size: 100%;">
+                <p style="font-size:40pt;">Together , To the heights.</p>
+                <p style="font-size:40pt;">Together , Create the future.</p>
+                <p style="font-size:40pt;">Together , Let's go "LIVE EST"</p>
+                <p style="padding-top:30px;line-height:0px;">
+                <img src="img/LE_logo.png" width="90px;">
+                </p>
+                <span nowrap="nowrap"style="font-size:20pt;">SINCE 2012</span><br>
+            </div>
+        </div>
+        <!--sub_main end-->
+        */
+        </style>
+
+
+        <!--sub_main start-->
+         <section class="sub_main" style="background-color: #ffffff;color:#003366">
+            <div class="col-md-6 sub_main text-center">
+                <div class="v-align">
+                    <div class="h-align">
+                        <div class="inner" style="padding:15% 0px;">
+                            <h1 class="text-center">Together , To the heights.</h1>
+                            <h1 class="text-center">Together , Create the future.</h1>
+                            <h1 class="text-center">Together , Let's go "LIVE EST"</h1>
+                            <p style="font-size:15pt;padding-top:30px;line-height:0px;">
+                            <img src="img/LE_logo.png" width="90px;">
+                            </p>
+                            <span nowrap="nowrap"style="font-size:15pt;">SINCE 2012</span><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sub_main">
+                <div class="col-md-6 bg-img sub_main" src="img/sub_mainpic1.jpg" width="100%" style="background-image : url('img/sub_mainpic1.jpg') ;opacity:0.95;">
+                </div>
+            </div>
+        </section>
+        <!--sub_main end-->
 
         <!--News start-->
-        <div class="section" style="padding:0px;">
-            <div class="clearfix">
-                <div class="row" id="news">
-                    <div class="col-md-6" style="padding:20% 0px">
-                        <h1 class="text-center">Together To the heights.</h1>
-                        <h1 class="text-center">Together Create the future.</h1>
-                        <h1 class="text-center">Together Let's go "LIVE EST"</h1>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="img/sub_mainpic1.jpg" class="hidden-sm hidden-xs" width="100%" height="650px">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" style="background-color:rgba(240,240,240,0.27);">
+        <div class="section" style="padding-top:100px;padding-bottom:100px;background-color:rgba(240,240,240,0.75);">
             <div class="container">
                 <div class="row" id="news">
                     <div class="col-md-12">
@@ -123,7 +183,7 @@
                 <div class="row">
                 <div class="col-md-12">
                 <br>
-                <table class="table">
+                <table class="table" style="font-size: 18px">
                 <tbody>
                     <tr>
                       <td>2015/06/01　　　</td>
@@ -160,13 +220,13 @@
     <!--News end-->
 
         <!--About Us start-->
-        <div class="section" id="about_us">
+        <div class="section" id="about_us" style="padding-top:100px;padding-bottom:150px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">About Us</h1>
                         <br>
-                        <table class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped" style="font-size: 18px">
                             <tbody>
                                 <tr>
                                     <td>社名</td>
@@ -235,31 +295,28 @@
         <!--About Us end-->
 
     <!--Service start-->
-                <div class="section" style="color:white;background-color:#3CA89F;">
+                <div class="section" style="padding-top:50px; padding-bottom:70px; color:white;background-color:#3CA89F;">
                   <div class="container">
                     <div class="row">
                       <div class="col-md-12">
                         <h1 class="text-center">Service</h1>
                         <br>
-                        <p class="text-center">SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
+                        <p class="text-center" style="font-size: 18px">SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
                           <br>あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。</p>
                       </div>
                     </div>
                   </div>
                 </div>
-                <br>
-                <br>
-                <br>
-                <div class="section" style="color:#3CA89F;background-color:white">
+                <div class="section" style="padding-top:50px; padding-bottom:50px ;color:#3CA89F;background-color:white">
                   <div class="container">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="col-md-6">
                           <h1 class="text-center">Technical solution</h1>
-                          <p class="text-center">テクニカルソリューション事業部</p>
-                          <p class="text-center">テクニカルソリューション事業部では、
+                          <p class="text-center">- テクニカルソリューション事業部 -</p><br>
+                          <p class="text-center" style="font-size: 16px">テクニカルソリューション事業部では、
                             <br>Webコンテンツの企画・作成を主として事業展開をしております。</p>
-                          <br>
+                          <br><br>
                           <div class="button1 text-center">
                             <!-- 1.モーダル表示のためのボタン -->
                             <a data-toggle="modal" data-target="#modal-example">What's SES</a>
@@ -295,9 +352,11 @@
                         
                         <div class="col-md-6">
                           <h1 class="text-center">IT solution</h1>
-                          <p class="text-center">ITソリューション事業部</p>
-                          <p class="text-center">ITソリューション事業部では、
-                            <br>SES（システムエンジニアリングサービス）を主として事業展開しております。</p>
+                          <p class="text-center">- ITソリューション事業部 -</p>
+                          <p class="text-center" style="font-size: 16px">ITソリューション事業部では、
+                            <br>SES（システムエンジニアリングサービス）を
+                            <br>主として事業展開しております。</p>
+                          <br>
                           <br>
                           <div class="button1 text-center">
                             <!-- 1.モーダル表示のためのボタン -->
@@ -525,7 +584,7 @@
         <!--liveest_pic end-->
 
         <!--Top Message start-->
-        <div class="section section-primary">
+        <div class="section " style="padding-top:100px; padding-bottom:130px;background-color: #003366; color: #fff;">
             <div class="container">
                 <div class="row" id="company">
                     <div class="col-md-12">
@@ -557,80 +616,12 @@
         </div>
         <!--Top Message end-->
 
-        <!--How LIVEEST Menber？ start-->
-        <div class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="text-center">How LIVEEST Menber？</h1>
-                        <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="text-left">橋本 有梨香</h3>
-                        <p class="text-left">Hashimoto Arika</p>
-                        <p class="text-info text-left">営業</p>
-                    </div>
-                    <div class="col-md-2">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="text-left">高橋 真由</h3>
-                        <p class="text-left">Takahashi Mayu</p>
-                        <p class="text-info text-left">営業事務</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="text-left">鈴木 雅貴</h3>
-                        <p class="text-left">Suzuki Masataka</p>
-                        <p class="text-info text-left">エンジニア
-                            <br>
-                        </p>
-                    </div>
-                    <div class="col-md-2">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <h3 class="text-left">増村 琢哉</h3>
-                        <p class="text-left">Masumura Takuya</p>
-                        <p class="text-info text-left">エンジニア
-                            <br>
-                        </p>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="lead text-center">and more..</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--How LIVEEST Menber？ end-->
-
-        <!--liveest_pic start-->
-        <div class="row">
-            <div class="col-md-12">
-                <img src="img/walk.jpg" width="100%" style="opacity:0.9;" class="hidden-xs">
-            </div>
-        </div>
-        <!--liveest_pic end-->
-
         <!--Recruit start-->
-        <div class="section">
+        <div class="section" style="padding-top:100px; padding-bottom:0px;">
             <div class="container">
                 <div class="row" id="recruit">
                     <div class="col-md-12">
-                        <h1 class="text-center">Recruit</h1>
+                        <h1 class="text-center">Recruit</h1><br>
                         <p class="text-center">正社員／フリーランス募集中<br>
                         皆様からのご応募お待ちしております</p>
                         <br>
@@ -707,36 +698,102 @@
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
         <!--Recruit end-->
 
-        <!--Partnership start-->
-        <div class="section section-info">
+        <!--How LIVEEST Menber？ start-->
+        <div class="section" style="padding-top:100px; padding-bottom:100px;">
             <div class="container">
-                <div class="row" id="partner">
+                <div class="row">
                     <div class="col-md-12">
-                        <h1 class="text-center">Partnership</h1>
-                        <br>
+                        <h1 class="text-center">How LIVEEST Menber？</h1>
+                        <br><br>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8 text-left">
-                        <p>当社では、協業頂けるビジネスパートナー様を随時募集しております。&nbsp;
-                            <br>共にビジネスチャンスの獲得や事業強化を目的としたパートナーシップを結び、&nbsp;
-                            <br>お互いのスキル・技術力・ノウハウを共有し、相互のビジネスチャンスを広め、&nbsp;
-                            <br>共に成長できればと思います。
-                            <br>ビジネスパートナーとしてご協力頂ける方 もしくは、&nbsp;
-                            <br>弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。</p>
+                    <div class="col-md-2">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
                     </div>
                     <div class="col-md-4">
-                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
+                        <h3 class="text-left">橋本 有梨香</h3>
+                        <p class="text-left">Hashimoto Arika</p>
+                        <p class="text-info text-left">営業</p>
+                        <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-left">高橋 真由</h3>
+                        <p class="text-left">Takahashi Mayu</p>
+                        <p class="text-info text-left">営業事務</p>
+                        <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-left">鈴木 雅貴</h3>
+                        <p class="text-left">Suzuki Masataka</p>
+                        <p class="text-info text-left">エンジニア</p>
+                        <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
+                    </div>
+                    <div class="col-md-4 text-left">
+                        <h3 class="text-left">増村 琢哉</h3>
+                        <p class="text-left">Masumura Takuya</p>
+                        <p class="text-info text-left">エンジニア
+                        </p>
+                        <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        </p><br><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="lead text-center">and more..</p>
                     </div>
                 </div>
             </div>
         </div>
+        <!--How LIVEEST Menber？ end-->
+
+        <!--Partnership start-->
+         <section class="full-height">
+             <div class="bg-color bg-black full-height">
+                 <div class="col-md-6 bg-img full-height" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
+
+                 <div class="col-md-6 full-height text-center">
+                     <div class="v-align">
+                         <div class="h-align">
+                             <div class="inner">
+                             <h1 class="text-center">Partnership</h1><br>
+                             <p class="text-center">当社では、協業頂けるビジネスパートナー様を随時募集しております。&nbsp;
+                                 <br>共にビジネスチャンスの獲得や事業強化を目的としたパートナーシップを結び、&nbsp;
+                                 <br>お互いのスキル・技術力・ノウハウを共有し、相互のビジネスチャンスを広め、&nbsp;
+                                 <br>共に成長できればと思います。
+                                 <br>ビジネスパートナーとしてご協力頂ける方 もしくは、&nbsp;
+                                 <br>弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
+                                 </p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </section>
         <!--Partnership end-->
 
         <!--Contact start-->
@@ -818,82 +875,7 @@
                 </div>
             </div>
         </footer>
-        <section class="omg_component content-23">
-  <div class="bg-color bg-grey">
-    <div class="container">
-      <h1 class=" big padd-top-md padd-bottom-xs text-center wow animated fadeIn font-karla animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-        What we do.
-      </h1>
-      <div class="row">
-        <div class="col-md-4 padd-top-md padd-bottom-md">
-          <i class="icon ion-ios-photos-outline color-primary"></i>
-          <h4 class="hero-subtitle wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Templates
-          </h4>
-          <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
 
-        <div class="col-md-4 padd-top-md padd-bottom-md">
-          <i class="icon ion-ios-world-outline color-primary"></i>
-          <h4 class="hero-subtitle wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            SEO
-          </h4>
-          <p class=" color-primary wow animated fadeIn  animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-
-        <div class="col-md-4 padd-top-md padd-bottom-md">
-          <i class="icon ion-ios-pulse color-primary"></i>
-          <h4 class="hero-subtitle wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Analytics
-          </h4>
-          <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-
-        <div class="col-md-4 padd-top-md padd-bottom-md">
-          <i class="icon ion-ios-locked-outline color-primary"></i>
-          <h4 class="hero-subtitle wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            UX &amp; design
-          </h4>
-          <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-        
-        <div class="col-md-4 padd-top-md padd-bottom-md">
-          <i class="icon ion-ios-monitor-outline color-primary"></i>
-          <h4 class="hero-subtitle wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            e-commerce
-          </h4>
-          <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-
-        <div class="col-md-4 padd-top-md padd-bottom-md">
-          <i class="icon ion-ios-calendar-outline color-primary"></i>
-          <h4 class="hero-subtitle wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            digital marketing
-          </h4>
-          <p class=" color-primary wow animated fadeIn  animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <script type="text/javascript">
   $(function(){
    // #scrollをクリックした場合に処理
