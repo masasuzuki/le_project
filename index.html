@@ -7,71 +7,15 @@
         <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         <script src="js/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
+        <script src="js/featherlight.js"></script>
         <link href="css/main.css" rel="stylesheet" type="text/css">
         <link href="css/jquery-ui.min.css" rel="stylesheet">
         <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/featherlight.css" media="all">
         <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet" type="text/css">
         <title>株式会社ライブエスト</title>
-        <style>
-            .navbar-brand{
-                font-family:'Rokkitt';,serif;
-                font-size:30pt;
-                color:#ffffff;
-            }
-            .nav li a {
-                font-size:12pt;
-                color:#ffffff;
-                z-index:100;
-            }
-            .nav li a:hover{
-                color:#337cbb;
-            }
-            .topMenu{
-                color:blue;
-                display:block;
-                left:90%;
-                top:80%;
-                position:fixed;
-                width:50px;
-                height:50px;
-                opacity:0;
-                border-radius:10px;
-                z-index:1000;
-                border:1px solid #003366;
-            } 
-
-            section.sub_main {
-                height: 550px;
-            }
-            .sub_main {
-               height: 100%;
-            }
-
-            section.full-height {
-                height: 500px;
-            }
-            .full-height {
-               height: 100%;
-            }
-            .col-md-6 {
-                    width: 50%;
-            }
-            .bg-img {
-                background-size: cover;
-                background-position: center;
-            }
-            .bg-black {
-                color: ;
-            }
-            .bg-black {
-                background-color: rgba(240,240,240,0.75);
-            }
-
-
-
-        </style>
     </head>
     <body>
         <div class="cover">
@@ -119,53 +63,30 @@
                 </div>
             </div>
         </div>
-        
-        <style>
-        /*
+
         <!--sub_main start-->
-        <div class="row" style="padding-top:50px;padding-bottom:50px;background-color: #ffffff; color:#003366;">
-            <div class="col-md-12 sub_main text-center" style="font-size: 100%;">
-                <p style="font-size:40pt;">Together , To the heights.</p>
-                <p style="font-size:40pt;">Together , Create the future.</p>
-                <p style="font-size:40pt;">Together , Let's go "LIVE EST"</p>
-                <p style="padding-top:30px;line-height:0px;">
-                <img src="img/LE_logo.png" width="90px;">
-                </p>
-                <span nowrap="nowrap"style="font-size:20pt;">SINCE 2012</span><br>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 sub_main text-center" style="background-color: #ffffff;color:#003366">
+                    <div style="max-height:670px;margin:20% 0px;">
+                        <h1 class="text-center">Together , To the heights.</h1>
+                        <h1 class="text-center">Together , Create the future.</h1>
+                        <h1 class="text-center">Together , Let's go "LIVE EST"</h1>
+                        <p style="font-size:15pt;padding-top:30px;line-height:0px;">
+                            <img src="img/LE_logo.png" width="90px;">
+                        </p>
+                        <span nowrap="nowrap"style="font-size:15pt;">SINCE 2012</span><br>
+                    </div>
+                </div>
+                <div class="col-md-6 sub_main" style="padding-left:0px; padding-right:0px;">
+                    <img class="bg-img hidden-md"  src="img/sub_mainpic1.jpg" width="100%" style="opacity:0.95;">
+                </div>
             </div>
         </div>
         <!--sub_main end-->
-        */
-        </style>
-
-
-        <!--sub_main start-->
-         <section class="sub_main" style="background-color: #ffffff;color:#003366">
-            <div class="col-md-6 sub_main text-center">
-                <div class="v-align">
-                    <div class="h-align">
-                        <div class="inner" style="padding:15% 0px;">
-                            <h1 class="text-center">Together , To the heights.</h1>
-                            <h1 class="text-center">Together , Create the future.</h1>
-                            <h1 class="text-center">Together , Let's go "LIVE EST"</h1>
-                            <p style="font-size:15pt;padding-top:30px;line-height:0px;">
-                            <img src="img/LE_logo.png" width="90px;">
-                            </p>
-                            <span nowrap="nowrap"style="font-size:15pt;">SINCE 2012</span><br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sub_main">
-                <div class="col-md-6 bg-img sub_main" src="img/sub_mainpic1.jpg" width="100%" style="background-image : url('img/sub_mainpic1.jpg') ;opacity:0.95;">
-                </div>
-            </div>
-        </section>
-        <!--sub_main end-->
 
         <!--News start-->
-        <div class="section" style="padding-top:100px;padding-bottom:100px;background-color:rgba(240,240,240,0.75);">
-            <div class="container">
+        <div class="section container-fluid" style="padding-top:100px;padding-bottom:100px;background-color:rgba(240,240,240,0.75);">
                 <div class="row" id="news">
                     <div class="col-md-12">
                         <h1 class="text-center">News</h1>
@@ -204,7 +125,6 @@
                 </tbody>
                 </table>
                 </div>
-            </div>
         </div>
     </div>
     </div>
@@ -213,7 +133,7 @@
 
         <!--About Us start-->
         <div class="section" id="about_us" style="padding-top:100px;padding-bottom:150px;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">About Us</h1>
@@ -287,139 +207,139 @@
         <!--About Us end-->
 
     <!--Service start-->
-                <div class="section" style="padding-top:50px; padding-bottom:70px; color:white;background-color:#3CA89F;">
-                  <div class="container">
-                    <div class="row" id="service">
-                      <div class="col-md-12">
-                        <h1 class="text-center">Service</h1>
+        <div class="section container-fluid" style="padding-top:50px; padding-bottom:70px; color:white;background-color:#3CA89F;">
+            <div class="row" id="service">
+              <div class="col-md-12">
+                <h1 class="text-center">Service</h1>
+                <br>
+                <p class="text-center" style="font-size: 18px">SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
+                  <br>あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。</p>
+              </div>
+            </div>
+        </div>
+        <div class="section container-fluid" style="padding-top:50px; padding-bottom:50px ;color:#3CA89F;background-color:white">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="text-center">Technical solution</h1>
+                        <p class="text-center">- テクニカルソリューション事業部 -</p>
                         <br>
-                        <p class="text-center" style="font-size: 18px">SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
-                          <br>あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="section" style="padding-top:50px; padding-bottom:50px ;color:#3CA89F;background-color:white">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="col-md-6">
-                          <h1 class="text-center">Technical solution</h1>
-                          <p class="text-center">- テクニカルソリューション事業部 -</p><br>
-                          <p class="text-center" style="font-size: 16px">テクニカルソリューション事業部では、
-                            <br>Webコンテンツの企画・作成を主として事業展開をしております。</p>
-                          <br><br>
-                          <div class="button1 text-center">
-                            <!-- 1.モーダル表示のためのボタン -->
-                            <a data-toggle="modal" data-target="#modal-example">What's SES</a>
+                        <p class="text-center" style="font-size: 16px">
+                            テクニカルソリューション事業部では、<br>Webコンテンツの企画・作成を主として事業展開をしております。
+                        </p>
+                        <br>
+                        <br>
+                        <div class="button1 text-center">
+                            <!-- モーダル表示のためのボタン -->
+                            <a href="#" data-featherlight="#fl1">テスト</a>
                             <!-- 2.モーダルの配置 -->
-                            <div class="modal" id="modal-example" tabindex="-1">
+                            <!--20160615:鈴木追記_feather light変更に当たり、不要-->
+                            <!--<div class="modal" id="modal-example" tabindex="-1">
                               <div class="modal-dialog">
-                                <!-- 3.モーダルのコンテンツ -->
                                 <div class="modal-content">
-                                  <!-- 4.モーダルのヘッダ -->
-                                  <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <h1 class="modal-title" id="modal-label">What's SES</h1>
-                                  </div>
-                                  <!-- 5.モーダルのボディ -->
-                                  <div class="modal-body">
-                                    <p class="text-left" style="color:" contenteditable="true">SES(システムエンジニアリングサービス)とは、
-                                      <br>ソフトウェアやシステムの開発における、委託・請負契約の一種です。
-                                      <br>契約の対象となるのは、ソフトウェアの完成ベースではなく、
-                                      <br>エンジニアのスキルベースです。
-                                      <br>当社では、プロジェクトの企画、設計の上流工程から運用、保守の工程に至るまで、
-                                      <br>お客様のニーズに合わせたエンジニアリングサービスを提供しています。
-                                      <br>お客様も、一部上場企業様から成長ベンチャー企業様まで、
-                                      <br>幅広くお付き合いさせて頂いております。</p>
-                                    <img src="../../※HP作成参考資料/HP参考画像/man-1191845__340.jpg" class="img-responsive">
-                                  </div>
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">
+                                          <span aria-hidden="true">×</span>
+                                        </button>
+                                        <h1 class="modal-title" id="modal-label">What's SES</h1>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-left" style="color:" contenteditable="true">SES(システムエンジニアリングサービス)とは、
+                                          <br>ソフトウェアやシステムの開発における、委託・請負契約の一種です。
+                                          <br>契約の対象となるのは、ソフトウェアの完成ベースではなく、
+                                          <br>エンジニアのスキルベースです。
+                                          <br>当社では、プロジェクトの企画、設計の上流工程から運用、保守の工程に至るまで、
+                                          <br>お客様のニーズに合わせたエンジニアリングサービスを提供しています。
+                                          <br>お客様も、一部上場企業様から成長ベンチャー企業様まで、
+                                          <br>幅広くお付き合いさせて頂いております。</p>
+                                        <img src="../../※HP作成参考資料/HP参考画像/man-1191845__340.jpg" class="img-responsive">
+                                    </div>
                                 </div>
-                              </div>
-                            </div>　
+                            </div>-->
                         </div>
-                        </div>
-                        
-                        <div class="col-md-6">
-                          <h1 class="text-center">IT solution</h1>
-                          <p class="text-center">- ITソリューション事業部 -</p>
-                          <p class="text-center" style="font-size: 16px">ITソリューション事業部では、
-                            <br>SES（システムエンジニアリングサービス）を
-                            <br>主として事業展開しております。</p>
-                          <br>
-                          <br>
-                          <div class="button1 text-center">
-                            <!-- 1.モーダル表示のためのボタン -->
-                            <a data-toggle="modal" data-target="#modal-example">What's SES</a>
-                            <!-- 2.モーダルの配置 -->
-                            <div class="modal" id="modal-example" tabindex="-1">
-                              <div class="modal-dialog">
-                                <!-- 3.モーダルのコンテンツ -->
-                                <div class="modal-content">
-                                  <!-- 4.モーダルのヘッダ -->
-                                  <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <h1 class="modal-title" id="modal-label">What's SES</h1>
-                                  </div>
-                                  <!-- 5.モーダルのボディ -->
-                                  <div class="modal-body">
-                                    <p class="text-left" contenteditable="true">SES(システムエンジニアリングサービス)とは、
-                                      <br>ソフトウェアやシステムの開発における、委託・請負契約の一種です。
-                                      <br>契約の対象となるのは、ソフトウェアの完成ベースではなく、
-                                      <br>エンジニアのスキルベースです。
-                                      <br>当社では、プロジェクトの企画、設計の上流工程から運用、保守の工程に至るまで、
-                                      <br>お客様のニーズに合わせたエンジニアリングサービスを提供しています。
-                                      <br>お客様も、一部上場企業様から成長ベンチャー企業様まで、
-                                      <br>幅広くお付き合いさせて頂いております。</p>
-                                    <img src="../../※HP作成参考資料/HP参考画像/man-1191845__340.jpg" class="img-responsive">
-                                  </div>
+                    </div>                        
+                    <div class="col-md-6">
+                        <h1 class="text-center">IT solution</h1>
+                        <p class="text-center">- ITソリューション事業部 -</p>
+                        <p class="text-center" style="font-size: 16px">
+                            ITソリューション事業部では、<br>SES（システムエンジニアリングサービス）を<br>主として事業展開しております。
+                        </p>
+                        <br>
+                        <br>
+                        <div class="button1 text-center">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                    </div>
+                                    <div class="col-md-4">
+                                    <!-- 1.モーダル表示のためのボタン -->
+                                    <a href="#" data-featherlight="#fl1">What's SES</a>
+                                    <!--20160615:鈴木追記_feather light変更に当たり、不要-->
+                                    <!--
+                                    <div class="modal" id="modal-example" tabindex="-1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <h1 class="modal-title" id="modal-label">What's SES</h1>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="text-left" contenteditable="true">SES(システムエンジニアリングサービス)とは、
+                                                      <br>ソフトウェアやシステムの開発における、委託・請負契約の一種です。
+                                                      <br>契約の対象となるのは、ソフトウェアの完成ベースではなく、
+                                                      <br>エンジニアのスキルベースです。
+                                                      <br>当社では、プロジェクトの企画、設計の上流工程から運用、保守の工程に至るまで、
+                                                      <br>お客様のニーズに合わせたエンジニアリングサービスを提供しています。
+                                                      <br>お客様も、一部上場企業様から成長ベンチャー企業様まで、
+                                                      <br>幅広くお付き合いさせて頂いております。</p>
+                                                    <img src="../../※HP作成参考資料/HP参考画像/man-1191845__340.jpg" class="img-responsive">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a data-toggle="modal" data-target="#modal-example2">実績</a>
+                                        <!-- 2.モーダルの配置 -->
+                                        <!--20160615:鈴木追記_feather light変更に当たり、不要-->
+                                        <!--
+                                        <div class="modal" id="modal-example2" tabindex="-1">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <h1 class="modal-title" id="modal-label">実績</h1>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="text-left" contenteditable="true">【業務系開発案件】
+                                                    <br>Java／C++／PHP／VB.NET／C#.NET／COBOL
+                                                    <br>【Webシステム開発】
+                                                    <br>PHP／Rails／JavaScript／HTML5（Windows／Linux／Solaris）
+                                                    <br>【ネットワーク】
+                                                    <br>NW構築／設計（L2,L3)／Ciscoスイッチ設定／障害対応／運用・保守</p>
+                                                    <img src="../../※HP作成参考資料/HP参考画像/circuit-board-973311__340.jpg" class="img-responsive">
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                    </div>
+                                    <div class="col-md-2">
+                                    </div>
                                 </div>
-                              </div>
-                            </div>　　
-                            <a data-toggle="modal" data-target="#modal-example2">実績</a>
-                            <!-- 2.モーダルの配置 -->
-                            <div class="modal" id="modal-example2" tabindex="-1">
-                              <div class="modal-dialog">
-                                <!-- 3.モーダルのコンテンツ -->
-                                <div class="modal-content">
-                                  <!-- 4.モーダルのヘッダ -->
-                                  <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                      <span aria-hidden="true">×</span>
-                                    </button>
-                                    <h1 class="modal-title" id="modal-label">実績</h1>
-                                  </div>
-                                  <!-- 5.モーダルのボディ -->
-                                  <div class="modal-body">
-                                    <p class="text-left" contenteditable="true">【業務系開発案件】
-                                      <br>Java／C++／PHP／VB.NET／C#.NET／COBOL
-                                      <br>【Webシステム開発】
-                                      <br>PHP／Rails／JavaScript／HTML5（Windows／Linux／Solaris）
-                                      <br>【ネットワーク】
-                                      <br>NW構築／設計（L2,L3)／Ciscoスイッチ設定／障害対応／運用・保守</p>
-                                    <img src="../../※HP作成参考資料/HP参考画像/circuit-board-973311__340.jpg" class="img-responsive">
-                                  </div>
-                                </div>
-                              </div>
                             </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
+        </div>
     <br>
     <br>
     <br>
     <br>
-        <style>
+    <style>
       /*
     <div class="section" style="color:white;background-color:#3CA89F">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row" id="service">
           <div class="col-md-12">
             <div class="col-md-12">
@@ -434,7 +354,7 @@
       </div>
     </div>
     <div class="section" style="color:#3CA89F;background-color:white">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <h1 class="text-center">Technical solution</h1>
@@ -477,7 +397,7 @@
       </div>
     </div>
     <div class="section" style="color:#3CA89F;background-color:white">
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
             <h1 class="text-center">IT solution</h1>
@@ -577,7 +497,7 @@
 
         <!--Top Message start-->
         <div class="section " style="padding-top:100px; padding-bottom:130px;background-color: #003366; color: #fff;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row" id="company">
                     <div class="col-md-12">
                         <div class="col-md-12">
@@ -610,7 +530,7 @@
 
         <!--Recruit start-->
         <div class="section" style="padding-top:100px; padding-bottom:0px;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row" id="recruit">
                     <div class="col-md-12">
                         <h1 class="text-center">Recruit</h1><br>
@@ -694,7 +614,7 @@
 
         <!--How LIVEEST Menber？ start-->
         <div class="section" style="padding-top:100px; padding-bottom:100px;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                         <h1 class="text-center">How LIVEEST Menber？</h1>
@@ -790,7 +710,7 @@
 
         <!--Contact start-->
         <div class="section">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row" id="contact">
                     <div class="col-md-12">
                         <h1 class="text-center">Contact</h1>
@@ -816,7 +736,7 @@
         <!--Contact end-->
 
         <!--Family Company start <div class="section">
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <h1 class="text-center">Family Company</h1>
@@ -830,7 +750,7 @@
 
         <!--footer start-->
         <footer class="section section-primary">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-6">
                         <h1>LIVE EST,Inc.</h1>
@@ -867,6 +787,10 @@
                 </div>
             </div>
         </footer>
+        <div class="lightbox" id="fl1">
+            <h2>Featherlight Default</h2>
+            <p>デフォルトの表示です。</p>
+        </div>
 
 <script type="text/javascript">
   $(function(){
