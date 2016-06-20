@@ -6810,11 +6810,63 @@ section.full-height {
 .bg-black {
     background-color: rgba(240,240,240,0.75);
 }
-.lightbox {
+
+/*ここから_modalウィンドウのレイアウト*/
+.lightbox_map {
+    display: none;
+    padding: 10px;
+    width:100%;
+    height:100%;
+}
+.lightbox_ts {
+    display: none;
+    text-align:center;
+    margin: 30px;
+}
+.lightbox_ts p{
+    line-height: 40px;
+}
+
+.lightbox_its1 {
+    display: none;
+    margin: 30px;
+    text-align: left;
+}
+
+.lightbox_its1 p {
+    line-height: 40px;
+}
+.lightbox_its2 {
     display: none;
     padding: 10px;
 }
+.lightbox_its2 div{
+    width:40%;
+}
+.lightbox_its2 p{
+  text-align: center;
+  float:right;
+  width:60%;
+  line-height:20px;
+}
+.lightbox_reg {
+    display: none;
+    padding: 10px;
+}
+.lightbox_reg p {
+    line-height:25px;
+  }
+.lightbox_own {
+    display: none;
+    padding: 10px;
+}
+.lightbox_own p {
+    line-height:25px;
+  }
 
+/*ここまで_modalウィンドウのレイアウト*/
+
+/*ここから_各ボタンのレイアウト*/
 .button1 a:hover{
 	cursor:pointer;
 	text-decoration:none;
@@ -6862,4 +6914,4 @@ section.full-height {
 	height:50px;
 	text-align:center;
 }
-
+/*ここまで_各ボタンのレイアウト*/
