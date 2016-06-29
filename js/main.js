@@ -47,4 +47,23 @@ $(function(){
 		},500
 		);
 	});
+
+	//メニューバースクロール制御
+//	$(window).on('scroll',function(){
+//  	var scrollTop = $(window).scrollTop();
+//  	if(scrollTop > 300){
+//   		$('.navbar').stop().animate({
+//  			backgroundColor:'white'
+//  		},500
+//  		);
+//  		$('.mainMenu').switchClass('mainMenu', 'mainMenuScroll', 1000);
+//  		return false;
+//  	}
+//  	if(scrollTop == 0){
+//   		$('.nav li').css({
+//  			backgroundColor:'transparent'
+//  		});
+// 			$('.mainMenuScroll').switchClass('mainMenuScroll', 'mainMenu', 1000);
+//  	}
+//	});
 });

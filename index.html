@@ -9,7 +9,6 @@
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/featherlight.js"></script>
     <link href="img/LE_icon.png" rel="shortcut icon"> 
-    <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css">
@@ -19,11 +18,14 @@
     <link rel="stylesheet" href="css/featherlight.css" media="all">
     <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <title>株式会社ライブエスト</title>
+    <style type="text/css">
+    </style>
 </head>
 <body>
     <div class="cover">
-        <div class="navbar">
+        <div class="navbar" style="height:60px;padding-top:5px;padding-bottom:5px;border-bottom: solid 1.5px rgba(255,255,255,0.2);">
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand"><span>LIVEEST,inc.</span></a>
@@ -58,6 +60,19 @@
         <div class="background-image-fixed cover-image" src="img/mainpic1.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
         <div class="container">
             <div class="row">
+                <!--<div class="col-md-12">
+                <div class="mainMenu">
+                    <strong class="navLogo">LIVE EST,Inc.</strong>
+                    <ul class="menuBody">
+                        <li><a href="#news" id="scroll">News</a></li>
+                        <li><a href="#about_us" id="scroll">About Us</a></li>
+                        <li><a href="#service" id="scroll">Service</a></li>
+                        <li><a href="#partner" id="scroll">Partner</a></li>
+                        <li><a href="#recruit" id="scroll">Recruit</a></li>
+                        <li><a href="#contact" id="scroll">Contact</a></li>
+                    </ul>
+                </div>
+                </div>-->
                 <div class="col-md-12 text-center">
                     <p class="hidden-sm text-center text-inverse" style="font-size:50px; 50pt;letter-spacing:12px; border:5px solid white; padding:15px 25px; display:inline-block;">LIVEEST</p>
                 </div>
@@ -87,7 +102,7 @@
     <!--sub_main end-->
 
     <!--News start-->
-    <div class="section container-fluid" style="padding-top:100px;padding-bottom:100px;background-color:rgba(240,240,240,0.75);">
+    <div class="section container-fluid" style="padding-top:50px;padding-bottom:100px;background-color:rgba(240,240,240,0.75);">
         <div class="row" id="news">
             <div class="col-md-12">
                 <h1 class="text-center">News</h1>
@@ -205,8 +220,8 @@
     <!--About Us end-->
 
     <!--Service start-->
-    <div class="section container-fluid" style="padding-top:50px; padding-bottom:70px; color:white;background-color:#3CA89F;">
-        <div class="row" id="service">
+    <div class="section container-fluid" id="service" style="padding-top:100px; padding-bottom:70px; color:white;background-color:#3CA89F;">
+        <div class="row">
           <div class="col-md-12">
             <h1 class="text-center">Service</h1>
             <br>
@@ -344,9 +359,9 @@
     <!--liveest_pic end-->
 
     <!--Top Message start-->
-    <div class="section " style="padding-top:100px; padding-bottom:130px;background-color: #003366; color: #fff;">
+    <div class="section " id="company" style="padding-top:100px; padding-bottom:130px;background-color: #003366; color: #fff;">
         <div class="container-fluid">
-            <div class="row" id="company">
+            <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12">
                         <h1 class="text-center">Top Message</h1>
@@ -379,9 +394,9 @@
     <!--Top Message end-->
 
     <!--Recruit start-->
-    <div class="section" style="padding-top:100px; padding-bottom:0px;">
+    <div class="section" id="recruit" style="padding-top:100px; padding-bottom:0px;">
         <div class="container-fluid">
-            <div class="row" id="recruit">
+            <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center">Recruit</h1><br>
                     <p class="text-center">正社員／フリーランス募集中<br>
@@ -393,7 +408,7 @@
                         <div class="col-md-3" style="height:70px;">
                             <div class="button3 text-center">
                                 <!-- 1.モーダル表示のためのボタン -->
-                                <a href="#" data-featherlight="#modal5">　　　正社員募集　　　</a>
+                                <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　　　正社員募集　　　</a>
                                 <!-- 2.モーダルの配置 -->
                                 <!--20160615:鈴木追記_feather light変更に当たり、不要-->
                                 <!--
@@ -431,7 +446,7 @@
                         <div class="col-md-3" style="height:70px;">
                             <div class="button3 text-center">
                                 <!-- 1.モーダル表示のためのボタン -->
-                                <a href="#" data-featherlight="#modal6">　フリーランス募集　</a>
+                                <a href="#" data-featherlight="#modal6" style="white-space:nowrap">　フリーランス募集　</a>
                                 <!-- 2.モーダルの配置 -->
                                 <!--20160615:鈴木追記_feather light変更に当たり、不要-->
                                 <!--
@@ -542,11 +557,10 @@
     <!--How LIVEEST Menber？ end-->
 
     <!--Partnership start-->
-     <section class="full-height">
+     <section class="full-height" id="partner">
          <div class="bg-color bg-black full-height">
-             <div class="col-md-6 bg-img full-height" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
-
-             <div class="col-md-6 full-height text-center">
+             <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
+             <div class="col-md-6 text-center">
                  <div class="v-align">
                      <div class="h-align">
                          <div class="inner">
@@ -567,9 +581,9 @@
     <!--Partnership end-->
 
     <!--Contact start-->
-    <div class="section">
+    <div class="section" id="contact">
         <div class="container-fluid">
-            <div class="row" id="contact">
+            <div class="row">
                 <div class="col-md-12">
                     <h1 class="text-center">Contact</h1>
                     <br>
@@ -758,7 +772,7 @@
           // 移動先を数値で取得
           var position = target.offset().top;
           // スムーススクロール
-          $('body,html').animate({scrollTop:position-35}, speed, 'swing',
+          $('body,html').animate({scrollTop:position}, speed, 'swing',
               function(){
                 $('li#firstMenu').animate({
                   top:'-41px'

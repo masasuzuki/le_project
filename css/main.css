@@ -6718,11 +6718,11 @@ body {
   }
 }
 .cover .navbar {
-  position: absolute;
+  position: fixed;
   top: 0px;
   width: 100%;
   border: none;
-  background-color: transparent !important;
+  background-color: transparent;
 }
 .cover .navbar .navbar-nav li.active a {
   background-color: transparent !important;
@@ -6761,11 +6761,27 @@ body {
   background-attachment: fixed;
 }
 /* PINGENDO COMMENT DO NOT REMOVE */
-
+.navbar{
+  font-size:100%;
+  display:block;
+  position:fixed;
+  width:100%;
+  opacity:0.9;
+  /*background-color: #003366;/*#000055;*/
+  height:60px;
+  padding-top:10px;
+  padding-left:0px;
+  padding-right:0px;
+  z-index:1000;
+}
 .navbar-brand{
+    cursor: pointer;
     font-family:'Rokkitt';,serif;
     font-size:30pt;
     color:#ffffff;
+}
+.navbar-brand:hober{
+    color:#003366;
 }
 .nav li a {
     font-size:12pt;
@@ -6777,10 +6793,65 @@ body {
 }
 
 .row{
-	margin-left:0px !important;
-	margin-right:0px !important;
+	margin-left:3% !important;
+	margin-right:3% !important;
 }
 
+.navbar {
+  font-size:100%;
+  display:block;
+  position:fixed;
+  width:100%;
+  opacity:0.9;
+  /*background-color: #003366;/*#000055;*/
+  height:60px;
+  padding-top:10px;
+  padding-left:0px;
+  padding-right:0px;
+  z-index:1000;
+}
+.mainMenuScroll{
+  background-color:white;
+  color:black;
+  font-size:100%;
+  display:block;
+  position:fixed;
+  width:100%;
+  height:60px;
+  padding-left:0px;
+  padding-right:0px;
+  z-index:1000;
+}
+.menuBody{
+  list-style:none;
+  height:60px;
+}
+.mainMenuScroll{
+   
+}
+.menuBody li{
+  float:left;
+  padding:auto;
+  letter-spacing:3px;
+  padding-left:5px;
+  padding-right:5px;
+  height:100%;
+}
+.menuBody li a{
+  text-align:center;
+  display:block;
+  color:white;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+.menuBody li a:hover{
+  text-decoration:none;
+  color:#A7F1FF;
+}
+
+.navbar-nav .nav li a{
+  color:black;
+}
 .topMenu{
     color:blue;
     display:block;
