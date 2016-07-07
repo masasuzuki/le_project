@@ -61,10 +61,11 @@ $(function(){
  		},500
  		);
  		$('.mainMenu').switchClass('mainMenu', 'mainMenuScroll', 1000);
+ 		$('#top_logo').attr('src', 'img/LE_logo.png');
  		
  		return false;
  	}
- 	if(scrollTop == 0){
+ 	if(scrollTop <= 320){
   		$('.navbar').stop().animate({
  			backgroundColor:'transparent'
  		});
@@ -73,6 +74,14 @@ $(function(){
  		},500
  		);
  		$('.mainMenuScroll').switchClass('mainMenuScroll', 'mainMenu', 1000);
+ 		//$('#top_logo').stop().animate({
+ 		//	marginLeft:'-100px'
+ 		//},100
+ 		//).stop().animate({
+ 		//	marginLeft:'40px'
+ 		//},1000
+ 		//);
+ 		$('#top_logo').attr('src', 'img/LE_logo2.png');
  	}
 	});
 

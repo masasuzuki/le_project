@@ -26,10 +26,10 @@
 <body>
     <div class="cover">
         <div class="navbar mainMenu">
+            <div class="navbar-header">
+            <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
+            </div>
             <div class="container">
-                <div class="navbar-header">
-                        <img src="img/LE_logo2.png" width="50px;" height="50px">
-                </div>
                 <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                     <ul class="nav navbar-nav navbar-right" style="color:black;">
                         <li class="active">
@@ -90,8 +90,8 @@
     sub_main end-->
 
     <!--News start-->
-    <div class="section container-fluid" style="padding-top:100px;padding-bottom:150px;background-color:rgba(240,240,240,0.75);">
-        <div class="row" id="news">
+    <div class="section container-fluid" id="news" style="padding-top:100px;padding-bottom:150px;background-color:rgba(240,240,240,0.75);">
+        <div class="row">
             <div class="col-md-12">
                 <h1 class="text-center">News</h1><br>
             </div>
@@ -327,12 +327,11 @@
         </div>
     </div>
     -->
-        <!--Partnership start-->
-     <section class="full-height" id="partner">
+        <!--Recruit start-->
+     <section class="full-height" id="recruit">
          <div class="bg-color  full-height">
-            <div class="col-md-6">
-                <h1 class="text-center">IT solution</h1>
-                <p class="text-center">- ITソリューション事業部 -</p>
+            <div class="col-md-6" style="padding-top:120px;padding-bottom:120px;">
+                <h1 class="text-center">Recruit</h1>
                 <h4 class="text-center">
                     正社員／フリーランス募集中<br>
                     皆様からのご応募お待ちしております
@@ -341,23 +340,23 @@
                 <br>
                 <div class="button1 text-center">
                     <div class="row">
-                        <div class="col-md-2">
+                        <div class="col-md-1">
                         </div>
-                         <div class="col-md-3" style="height:70px;">
+                         <div class="col-md-4" style="height:70px;">
                             <div class="button3 text-center">
                                 <!-- 1.モーダル表示のためのボタン -->
-                                <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　　　正社員募集　　　</a>
+                                <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                         </div>
-                        <div class="col-md-3" style="height:70px;">
+                        <div class="col-md-4" style="height:70px;">
                             <div class="button3 text-center">
                                 <!-- 1.モーダル表示のためのボタン -->
-                                <a href="#" data-featherlight="#modal6" style="white-space:nowrap">　フリーランス募集　</a>
+                                <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-1">
                         </div>
                     </div>    
                 </div>
@@ -366,7 +365,7 @@
 
          </div>
     </section>
-    <!--Partnership end-->
+    <!--Recruit end-->
 
     <!--How LIVEEST Menber？ start
     <div class="section" style="padding-top:100px; padding-bottom:100px;">
@@ -454,7 +453,7 @@
                                 相互のビジネスチャンスを広め、共に成長できればと思います。<br>
                                 ビジネスパートナーとしてご協力頂ける方、もしくは、弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
                             </h4><br>
-                        <span class="glyphicon glyphicon-download" style="color:#828090;font-size:40pt;opacity:0.7"></span>
+                        <span class="glyphicon glyphicon-download visible-lg visible-md" style="color:#828090;font-size:40pt;opacity:0.7"></span>
                          </div>
                      </div>
                  </div>
@@ -673,18 +672,18 @@
           // 移動先を取得
           var target = $(href == "#" || href == "" ? 'html' : href);
           // 移動先を数値で取得
-          var position = target.offset().top;
+          var position = target.offset().top -60;
           // スムーススクロール
           $('body,html').animate({scrollTop:position}, speed, 'swing',
               function(){
-                $('li#firstMenu').animate({
-                  top:'-41px'
-                },
-                100,
-                'linear'
-                );
+                //$('li#firstMenu').animate({
+                //  top:'-41px'
+                //},
+                //100,
+                //'linear'
+                //);
                 $('li#secondMenu').animate({
-                  top:'-82px'
+                  top:'-500px'
                 },
                 100,
                 'linear'

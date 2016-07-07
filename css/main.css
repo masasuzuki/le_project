@@ -6814,7 +6814,7 @@ body {
 }
 .mainMenuScroll{
   background-color:white;
-  border-bottom:1.5px solid #003366 1.0;
+  border-bottom: solid 1.5px rgba(0,0,0,1.0);
 }
 
 
