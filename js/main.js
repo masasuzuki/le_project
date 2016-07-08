@@ -50,39 +50,52 @@ $(function(){
 
 	//メニューバースクロール制御
 	$(window).on('scroll',function(){
- 	var scrollTop = $(window).scrollTop();
- 	if(scrollTop > 320){
-  		$('.navbar').stop().animate({
- 			backgroundColor:'white'
- 		},500
- 		);
- 		$('.nav li a').stop().animate({
- 			color:'#003366'
- 		},500
- 		);
- 		$('.mainMenu').switchClass('mainMenu', 'mainMenuScroll', 1000);
- 		$('#top_logo').attr('src', 'img/LE_logo.png');
- 		
- 		return false;
- 	}
- 	if(scrollTop <= 320){
-  		$('.navbar').stop().animate({
- 			backgroundColor:'transparent'
- 		});
- 		$('.nav li a').stop().animate({
- 			color:'white'
- 		},500
- 		);
- 		$('.mainMenuScroll').switchClass('mainMenuScroll', 'mainMenu', 1000);
- 		//$('#top_logo').stop().animate({
- 		//	marginLeft:'-100px'
- 		//},100
- 		//).stop().animate({
- 		//	marginLeft:'40px'
- 		//},1000
- 		//);
- 		$('#top_logo').attr('src', 'img/LE_logo2.png');
- 	}
+	 	var scrollTop = $(window).scrollTop();
+	 	if(scrollTop > 320){
+	  		$('.navbar').stop().animate({
+	 			backgroundColor:'white'
+	 		},500,
+	 		function(){
+		 		$('#top_logo').attr('src', 'img/LE_logo.png');
+		 		$('.mainMenu').switchClass('mainMenu', 'mainMenuScroll', 10);
+	 		}
+	 		);
+	 		$('.nav li a').stop().animate({
+	 			color:'#003366'
+	 		},500,
+	 		function(){
+		 		//if($('#top_logo').attr("src") === "img/LE_logo2.png" ){
+		 		//}
+	 		}
+	 		);
+	 		//return false;
+	 	}
+	 	if(scrollTop == 0){
+	  		$('.navbar').stop().animate({
+	 			backgroundColor:'transparent'
+	 		},500,
+	 		function(){
+			 	$('#top_logo').attr('src', 'img/LE_logo2.png');
+		 		$('.mainMenuScroll').switchClass('mainMenuScroll', 'mainMenu', 10);
+	 		}
+	 		);
+	 		$('.nav li a').stop().animate({
+	 			color:'white'
+	 		},500,
+	 		function(){
+		 		//if($('#top_logo').attr("src") === "img/LE_logo.png" ){
+				//}
+	 		}
+ 			);
+	 		//return false;
+	 		//$('#top_logo').stop().animate({
+	 		//	marginLeft:'-100px'
+	 		//},100
+	 		//).stop().animate({
+	 		//	marginLeft:'40px'
+	 		//},1000
+	 		//);
+	 	}
 	});
 
 	//partnerMAILアイコン
