@@ -8,6 +8,7 @@
     <script src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/featherlight.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
     <link href="img/LE_icon.png" rel="shortcut icon"> 
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -19,13 +20,141 @@
     <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.css" />
     <title>株式会社ライブエスト</title>
     <style type="text/css">
+    i.fsDefault{
+        font-size:32pt !important;
+    }
+    #navi {
+      position: relative;
+      margin: 1em 0;
+      height: 20px;
+    }
+    #menu {
+      display: block;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+    #menu li {
+      float: left;
+      width: 20%;
+      text-align: center;
+      position: relative;  /*z-indexの指定や子要素の基準とするために指定*/
+      z-index: 1;  /*ドロップダウンしたメニューが隠れないように*/
+    }
+    #menu li a {
+      padding: 0 20px 10px;
+      border-top: none;
+      border-right: none;
+      background: none;
+      color: #555555;
+      display: inline-block;
+      margin: auto;
+      text-shadow: -1px 1px rgba(255, 255, 255, 0.8);
+    }
+    #menu li a:hover {
+      background: none;
+      color: #97C1F3;
+    }
+    #menu li a:active {
+      color: #5687F8;
+    }
+    #menu li ul.sub-menu {
+      display: none;  /*サブメニューは最初は非表示にしておく*/
+      position: absolute;  /*絶対配置にしておかないとうまくいかない*/
+      top: 2em;
+      left: 30%;
+    }
+    #menu li:hover ul.sub-menu {
+      display: block;    /*マウスオーバー時にサブメニューを表示する*/
+    }
+    #menu li ul.sub-menu li {
+      float: none;  /*サブメニューはフロートさせないので解除*/
+    }
+     
+    /*背景色などのカスタマイズ*/
+    .slicknav_nav li {
+      border-top: 1px solid #3362B3;
+    }
+    .slicknav_menu {
+        text-align:right;
+        background-color: #1E1A42 !important;
+    }
+    .slicknav_menu .slicknav_icon-bar {
+      background-color: #97C1F3 !important;
+    }
+    .slicknav_menu a:hover {
+      color: #85A8FB !important;
+    }
+    .slicknav_btn {
+      background-color: #1E1A42 !important;
+    }
+    .slicknav_nav .slicknav_row:hover {
+      background: #1E1A42 !important;
+    }
+    .slicknav_nav a:hover {
+      background: #1E1A42 !important;
+    }
+    i.fa {
+      font-size: 18px;
+    }
+    i.fa.fa-caret-right {
+      display: none;
+    }
+    #menu {
+      display: none;
+    }
+    .shortMenu {
+        display: none;
+    }
+
+    @media screen and (max-width : 600px) {
+      #content {
+        margin: 0;
+      }
+      .shortMenu {
+        display: block;
+        background-color:transparent !important;
+      }
+      .slicknav_menu {
+        display: block;
+      }
+      .wideMenu{
+        display: none;
+      }
+      i.fa.fa-caret-right {
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
     </style>
+<script>
+$(function(){
+    //ドロップダウンメニュー  
+    $('#navi ul>li').find('ul').hide();
+    $('#navi ul>li').hover(function(){
+            $('ul:not(:animated)', this).slideDown(700);
+        },
+        function(){
+            $('ul',this).hide();
+    });
+    $('#menu').slicknav({
+        label: '',
+        duration: 500,
+        easingOpen: "easeOutBounce", //available with jQuery UI
+        closedSymbol: '<i class="fa fa-angle-double-right"></i>',
+        openedSymbol: '<i class="fa fa-angle-double-down"></i>',
+        prependTo:'#container'
+    });
+ 
+});
+</script>
 </head>
 <body> 
     <div class="cover">
-        <div class="navbar mainMenu">
+        <div class="navbar mainMenu wideMenu">
             <div class="navbar-header">
             <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
             </div>
@@ -36,16 +165,16 @@
                             <a href="#news" id="scroll">News</a>
                         </li>
                         <li class="active">
-                            <a href="#about_us" id="scroll">About Us</a>
-                        </li>
-                        <li class="active">
-                            <a href="#about_us" id="scroll">Vision</a>
-                        </li>
-                        <li class="active">
                             <a href="#service" id="scroll">Service</a>
                         </li>
                         <li class="active">
-                            <a href="#company" id="scroll">Company</a>
+                            <a href="#about_us" id="scroll">About Us</a>
+                        </li>
+                        <li class="active">
+                            <a href="#company" id="scroll">Top Message</a>
+                        </li>
+                       <li class="active">
+                            <a href="#vision" id="scroll">Vision</a>
                         </li>
                         <li class="active">
                             <a href="#recruit" id="scroll">Recruit</a>
@@ -60,7 +189,28 @@
                 </div>
             </div>
         </div>
-        <div class="background-image-fixed cover-image" src="img/mainpic1.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
+        <div class="navbar shortMenu" id="container">
+            <!--
+            <div class="navbar-header">
+            <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
+            </div>
+            -->
+            <div class="container" id="navi">
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul id="menu" class="clearfix">
+                        <li><a href="#news" id="scroll">News</a></li>
+                        <li><a href="#service" id="scroll">Service</a></li>
+                        <li><a href="#about_us" id="scroll">About Us</a> </li>
+                        <li><a href="#company" id="scroll">Top Message</a> </li>
+                        <li><a href="#vision" id="scroll">Vision</a></li>
+                        <li><a href="#recruit" id="scroll">Recruit</a></li>
+                        <li><a href="#partner" id="scroll">Partner</a></li>
+                        <li><a href="#contact" id="scroll">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <div class="background-image-fixed cover-image" src="img/mainpic1.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -316,7 +466,7 @@
 
 
     <!--Vision start-->
-    <div class="section " id="company" style="padding-top:70px; padding-bottom:70px; background-color:#fff;">
+    <div class="section " id="vision" style="padding-top:70px; padding-bottom:70px; background-color:#fff;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -371,6 +521,7 @@
 
 
     <!--Recruit start-->
+    <!--
     <div class="section" id="recruit" style="padding-top:100px; padding-bottom:120px;background-color:#16A6B6">
         <div class="container-fluid">
             <div class="row">
@@ -385,14 +536,14 @@
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-3" style="height:70px;">
-                            <div class="button3 text-center">
+                            <div class="button2 text-center">
                                 <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　　　正社員募集　　　</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-3" style="height:70px;">
-                            <div class="button3 text-center">
+                            <div class="button2 text-center">
                                 <a href="#" data-featherlight="#modal6" style="white-space:nowrap">　フリーランス募集　</a>
                             </div>
                         </div>
@@ -403,10 +554,11 @@
             </div>
         </div>
     </div>
+    -->
     <!--Recruit end-->
 
 
-    <!--Recruit start
+    <!--Recruit start-->
      <section class="full-height" id="recruit">
          <div class="full-height" style="background-color:#16A6B6;color:#fff;" >
             <div class="col-md-6" style="padding-top:120px;padding-bottom:80px;">
@@ -422,16 +574,14 @@
                         <div class="col-md-1">
                         </div>
                          <div class="col-md-4" style="height:70px;">
-                            <div class="button3 text-center">
-                                 1.モーダル表示のためのボタン
+                            <div class="button2 text-center">
                                 <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                         </div>
                         <div class="col-md-4" style="height:70px;">
-                            <div class="button3 text-center">
-                                 1.モーダル表示のためのボタン
+                            <div class="button2 text-center">
                                 <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
                             </div>
                         </div>
@@ -444,7 +594,7 @@
             </div>
          </div>
     </section>
-    Recruit end-->
+    <!--Recruit end-->
 
     <!--How LIVEEST Menber？ start
     <div class="section" style="padding-top:100px; padding-bottom:100px;">
@@ -517,7 +667,6 @@
     </div>
     How LIVEEST Menber？ end-->
 
-
     <!--Partnership start-->
      <section class="full-height" id="partner">
          <div class="bg-color bg-black full-height">
@@ -540,7 +689,117 @@
          </div>
     </section>
     <!--Partnership end-->
-
+    <!--
+     <section class="full-height" id="partner">
+         <div class="bg-color bg-black full-height">
+             <div class="col-md-6 text-center">
+                 <div class="v-align">
+                     <div class="h-align">
+                         <div class="inner" style="padding-top:70px;padding-bottom:160px;background-color:#fff;">
+                            <p class="text-center" style="color:#08233E;font-size:35pt;">Partnership</p><br>
+                            <p class="text-center" style="color:#08233E;padding-top:10px;line-height:35px; font-size:13pt">
+                                当社では、協業頂けるビジネスパートナー様を募集しております。<br>
+                                共にビジネスチャンスの獲得や事業強化を目的とした<br>
+                                パートナーシップを結び、お互いのスキル・技術力・ノウハウを共有し、<br>
+                                相互のビジネスチャンスを広め、共に成長できればと思います。<br>
+                                ビジネスパートナーとしてご協力頂ける方、もしくは、弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
+                            </p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-color:#16A6B6;">
+            <div class="row">
+                <div class="col-md-12" style="padding-top:70px;padding-bottom:50px;">
+                    <p class="text-center" style="color:white;font-size:35pt;">Contact</p>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <p id="partnerBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
+                        <a class="partner" href="mailto:partner@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-user" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
+                    </p>
+                    <p id="partnerComent" class="text-center" style="color:white;opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
+                        <br/>
+                        ビジネスパートナー<br/>
+                        ご希望の方は上記アイコンより<br/>
+                        メールをお願い致します。
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p id="mailBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
+                        <a class="mail" href="mailto:info@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-envelope" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
+                    </p>
+                    <p id="mailComent" class="text-center" style="color:white;opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
+                        <br/>
+                        その他のメールは上記アイコン<br/>
+                        よりお願い致します。
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p id="telBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
+                        <span class="glyphicon glyphicon-phone-alt" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;"></span>
+                    </p>
+                    <p id="telComent" class="text-center" style="color:white;opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
+                        <br/>
+                        お電話でのご連絡は以下より<br/>
+                        お願い致します。<br/>
+                        TEL 　: 03-6907-1122<br/>
+                        FAX 　:  03-6907-1123
+                    </p>
+                </div>
+            </div>
+         </div>
+    </section>
+    -->
+    <!--
+    <div class="section" id="contact" style="background-color:#ECEEF1;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center" style="font-size:35pt;">Contact</p>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <p id="partnerBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
+                        <a class="partner" href="mailto:partner@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-user" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
+                    </p>
+                    <p id="partnerComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
+                        <br/>
+                        ビジネスパートナー<br/>
+                        ご希望の方は上記アイコンより<br/>
+                        メールをお願い致します。
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p id="mailBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
+                        <a class="mail" href="mailto:info@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-envelope" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
+                    </p>
+                    <p id="mailComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
+                        <br/>
+                        その他のメールは上記アイコン<br/>
+                        よりお願い致します。
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p id="telBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
+                        <span class="glyphicon glyphicon-phone-alt" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;"></span>
+                    </p>
+                    <p id="telComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
+                        <br/>
+                        お電話でのご連絡は以下より<br/>
+                        お願い致します。<br/>
+                        TEL 　: 03-6907-1122<br/>
+                        FAX 　:  03-6907-1123
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
     <!--Contact start-->
     <div class="section" id="contact" style="background-color:#ECEEF1;">
         <div class="container-fluid">
@@ -605,17 +864,17 @@
                     </p>
                     <div class="row">
                         <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-github text-inverse"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-instagram text-inverse fsDefault"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-twitter text-inverse fsDefault"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-facebook text-inverse fsDefault"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-github text-inverse fsDefault"></i></a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12 hidden-xs text-right">
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fsDefault fa fa-3x fa-fw fa-instagram text-inverse"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fsDefault fa fa-3x fa-fw fa-twitter text-inverse"></i></a>
+                            <a href="javascript:alert('Coming Soon...');"><i class="fsDefault fa fa-3x fa-fw fa-facebook text-inverse"></i></a>
                         </div>
                     </div>
                 </div>
