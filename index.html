@@ -8,6 +8,7 @@
     <script src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/featherlight.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
     <link href="img/LE_icon.png" rel="shortcut icon"> 
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -19,13 +20,141 @@
     <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.css" />
     <title>株式会社ライブエスト</title>
     <style type="text/css">
+
+
+    #navi {
+      position: relative;
+      margin: 1em 0;
+      height: 20px;
+    }
+    #menu {
+      display: block;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+    #menu li {
+      float: left;
+      width: 20%;
+      text-align: center;
+      position: relative;  /*z-indexの指定や子要素の基準とするために指定*/
+      z-index: 1;  /*ドロップダウンしたメニューが隠れないように*/
+    }
+    #menu li a {
+      padding: 0 20px 10px;
+      border-top: none;
+      border-right: none;
+      background: none;
+      color: #555555;
+      display: inline-block;
+      margin: auto;
+      text-shadow: -1px 1px rgba(255, 255, 255, 0.8);
+    }
+    #menu li a:hover {
+      background: none;
+      color: #97C1F3;
+    }
+    #menu li a:active {
+      color: #5687F8;
+    }
+    #menu li ul.sub-menu {
+      display: none;  /*サブメニューは最初は非表示にしておく*/
+      position: absolute;  /*絶対配置にしておかないとうまくいかない*/
+      top: 2em;
+      left: 30%;
+    }
+    #menu li:hover ul.sub-menu {
+      display: block;    /*マウスオーバー時にサブメニューを表示する*/
+    }
+    #menu li ul.sub-menu li {
+      float: none;  /*サブメニューはフロートさせないので解除*/
+    }
+     
+    /*背景色などのカスタマイズ*/
+    .slicknav_nav li {
+      border-top: 1px solid #3362B3;
+    }
+    .slicknav_menu {
+      background-color: #1E1A42 !important;
+    }
+    .slicknav_menu .slicknav_icon-bar {
+      background-color: #97C1F3 !important;
+    }
+    .slicknav_menu a:hover {
+      color: #85A8FB !important;
+    }
+    .slicknav_btn {
+      background-color: #1E1A42 !important;
+    }
+    .slicknav_nav .slicknav_row:hover {
+      background: #1E1A42 !important;
+    }
+    .slicknav_nav a:hover {
+      background: #1E1A42 !important;
+    }
+    i.fa {
+      font-size: 18px;
+    }
+    i.fa.fa-caret-right {
+      display: none;
+    }
+    #menu {
+      display: none;
+    }
+    .shortMenu {
+        display: none;
+    }
+
+    @media screen and (max-width : 600px) {
+      #content {
+        margin: 0;
+      }
+      .shortMenu {
+        display: block;
+        background-color:transparent !important;
+      }
+      .slicknav_menu {
+        display: block;
+      }
+      .wideMenu{
+        display: none;
+      }
+      i.fa.fa-caret-right {
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
+
     </style>
+<script>
+$(function(){
+    //ドロップダウンメニュー  
+    $('#navi ul>li').find('ul').hide();
+    $('#navi ul>li').hover(function(){
+            $('ul:not(:animated)', this).slideDown(700);
+        },
+        function(){
+            $('ul',this).hide();
+    });
+  
+    $('#menu').slicknav({
+        label: '',
+        duration: 500,
+        easingOpen: "easeOutBounce", //available with jQuery UI
+        closedSymbol: '<i class="fa fa-angle-double-right"></i>',
+        openedSymbol: '<i class="fa fa-angle-double-down"></i>',
+        prependTo:'#container'
+    });
+ 
+});
+</script>
 </head>
 <body> 
     <div class="cover">
-        <div class="navbar mainMenu">
+        <div class="navbar mainMenu wideMenu">
             <div class="navbar-header">
             <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
             </div>
@@ -36,16 +165,16 @@
                             <a href="#news" id="scroll">News</a>
                         </li>
                         <li class="active">
-                            <a href="#about_us" id="scroll">About Us</a>
-                        </li>
-                        <li class="active">
-                            <a href="#about_us" id="scroll">Vision</a>
-                        </li>
-                        <li class="active">
                             <a href="#service" id="scroll">Service</a>
                         </li>
                         <li class="active">
-                            <a href="#company" id="scroll">Company</a>
+                            <a href="#about_us" id="scroll">About Us</a>
+                        </li>
+                        <li class="active">
+                            <a href="#company" id="scroll">Top Message</a>
+                        </li>
+                       <li class="active">
+                            <a href="#vision" id="scroll">Vision</a>
                         </li>
                         <li class="active">
                             <a href="#recruit" id="scroll">Recruit</a>
@@ -60,7 +189,28 @@
                 </div>
             </div>
         </div>
-        <div class="background-image-fixed cover-image" src="img/mainpic1.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
+        <div class="navbar shortMenu" id="container">
+            <!--
+            <div class="navbar-header">
+            <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
+            </div>
+            -->
+            <div class="container" id="navi">
+                <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+                    <ul id="menu" class="clearfix">
+                        <li><a href="#news" id="scroll">News</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li> <a href="#">About Us</a> </li>
+                        <li> <a href="#">Top Message</a> </li>
+                        <li><a href="#">Vision</a></li>
+                        <li><a href="#">Recruit</a></li>
+                        <li><a href="#">Partner</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+          <div class="background-image-fixed cover-image" src="img/mainpic1.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -279,32 +429,54 @@
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-8">
-                        <p class="text-info text-left" style="font-size:22pt;">CEO & FOUNDER</p>
-                        <p class="text-left" style="font-size:20pt;color:#fff;">石川 秀和</p>
-                        <p class="text-left" style="color:#fff;">Ishikawa Hidekazu</p><br>
-                        <h4 class="text-left" style="color:#fff; line-height: 25px;">
-                            【ライブエスト(LIVE EST)】という社名は「LIVE(生きている)」とEST(英語の最上級表現)」を<br>
-                            組み合わせ、【最高に、生きている】という意味を込めています。<br><br>
+                        <p class="text-left" style="font-weight:bold;font-size:23pt;color:#fff;line-height:20px;letter-spacing:4px;">
+                            石川 秀和
+                            <!--<span style="font-size:10pt;">Ishikawa Hidekazu</span>-->
+                        </p>
+                        <p class="text-info text-left" style="font-weight:bold;font-size:10pt;margin-left:10px;">- CEO & FOUNDER -</p>
+                        <br>
+                        <p class="text-left" style="letter-spacing:2px;font-size:12pt;color:#fff; line-height:32px;">
+                            まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
+                             <br>
+                            【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
+                            <br>
+                            なぜ動詞の「LIVE/リブ」ではなく「LIVE/ライブ」なのかといいますと、音楽で使われるような「LIVE/ライブ」にすることにより、一層生き生きとした表現になり【今】や【一瞬】を大事にする弊社にとって最高に適した言葉だと思ったからです。<br>
+                            ※詳細は是非とも経営理念をご覧下さい<br>
+                            <br>
                             【仕事】は、人生の中で多くの時間を費やす場です。<br>
-                            だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br><br>
-                            そんな貴重な時間を共に過ごすお客様をはじめ、ステークホルダーの皆様が、<br>
-                            ライブエストを通じてより良い人生を送れますようにと本気で思っています。<br><br>
-                            これから、IT分野だけでなく人生をより楽しめるよう事業分野を広げていきます。<br>
-                            一度しか無い人生だからこそ、最高に生きたいからこそ、面白い事、楽しい事に、<br>
-                            日々チャレンジし続けます。<br><br>
+                            だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br>
+                            どんな仕事でも、その時間は一度しかない人生の貴重な時間です。<br>
+                            <br>
+                            そんな人生の貴重な時間を仕事に費やすからこそ、人生をより素晴らしいものにしたいからこそ、私達は本気で、何事にも全力で取り組みます。<br>
+                            これからも今を楽しみ、人生をより素晴らしいものにする為に、また皆様にとって<価値>のある会社にする為に、
+                            絶えずチャレンジを続け日々努力をしていく所存です。<br>
+                             <br>
                             今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
-                        </h4>
-                        <div class="col-md-2">
+                        </p>
+                        <br>
                     </div>
+                    <div class="col-md-2">
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!--Top Message end-->
+    <!--旧TOP_MESSAGE-->
+    <!--【ライブエスト(LIVE EST)】という社名は「LIVE(生きている)」とEST(英語の最上級表現)」を
+    組み合わせ、【最高に、生きている】という意味を込めています。<br><br>
+    【仕事】は、人生の中で多くの時間を費やす場です。<br>
+    だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br><br>
+    そんな貴重な時間を共に過ごすお客様をはじめ、ステークホルダーの皆様が、
+    ライブエストを通じてより良い人生を送れますようにと本気で思っています。<br><br>
+    これから、IT分野だけでなく人生をより楽しめるよう事業分野を広げていきます。<br>
+    一度しか無い人生だからこそ、最高に生きたいからこそ、面白い事、楽しい事に、
+    日々チャレンジし続けます。<br><br>
+    今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。-->
+
 
     <!--Vision start-->
-    <div class="section " id="company" style="padding-top:100px; padding-bottom:100px; background-color:#fff;">
+    <div class="section " id="vision" style="padding-top:100px; padding-bottom:100px; background-color:#fff;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
