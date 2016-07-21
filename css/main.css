@@ -20,8 +20,8 @@ html {
 }
 
 @supports (-ms-accelerator:true){
-  html {
-    font-family : "メイリオ";
+  body{
+    font-family :"メイリオ", "ＭＳ Ｐゴシック", "ヒラギノ角ゴシックW3", "Osaka", sans-serif;
   }
 }
 
