@@ -146,6 +146,32 @@
         display: inline-block;
       }
     }
+
+    .main_text{
+        font-size:80px;
+        letter-spacing:4px;
+        display:inline-block;
+    }
+    .sub_text{
+        font-size:30px;
+        letter-spacing:2px;
+        display:inline-block;
+    }
+    .fs35{
+        font-size:35pt;
+    }
+
+    .section{
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+    .sub_section{
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+    dl.taigu dt{
+        float:left;
+    }
     </style>
 <script>
 $(function(){
@@ -173,11 +199,11 @@ $(function(){
     <div class="cover">
         <div class="navbar mainMenu wideMenu">
             <div class="navbar-header">
-            <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
+                <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
             </div>
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-                    <ul class="nav navbar-nav navbar-right" style="color:black;">
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="active">
                             <a href="#news" id="scroll">News</a>
                         </li>
@@ -207,11 +233,6 @@ $(function(){
             </div>
         </div>
         <div class="navbar shortMenu" id="container">
-            <!--
-            <div class="navbar-header">
-            <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
-            </div>
-            -->
             <div class="container" id="navi">
                 <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                     <ul id="menu" class="clearfix">
@@ -231,39 +252,23 @@ $(function(){
         <div class="container">
             <div class="row" style="margin:25%;">
                 <div class="col-md-12 text-center" id="change_text">
-                    <p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br>
-                    <p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--sub_main start
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-6 sub_main text-center" style="background-color: #ffffff;color:#003366">
-                <div style="max-height:670px;margin:20% 0px;">
-                    <h1 class="text-center">Together , To the heights.</h1>
-                    <h1 class="text-center">Together , Create the future.</h1>
-                    <h1 class="text-center">Together , Let's go "LIVE EST"</h1>
-                    <p style="font-size:15pt;padding-top:30px;line-height:0px;">
-                        <img src="img/LE_logo.png" width="90px;">
+                    <p class="text-center text-inverse main_text">
+                        LIVE EST ,INC.
                     </p>
-                    <span nowrap="nowrap"style="font-size:15pt;">SINCE 2012</span><br>
+                    <br>
+                    <p class="text-center text-inverse sub_text">
+                        - Always From Here-
+                    </p>
                 </div>
-            </div>
-            <div class="col-md-6 sub_main" style="padding-left:0px; padding-right:0px;">
-                <img class="bg-img visible-lg visible-md"  src="img/sub_mainpic1.jpg" width="103%" style="opacity:0.95;margin-left:3.4%;">
             </div>
         </div>
     </div>
-    sub_main end-->
 
     <!--News start-->
-    <div class="section container-fluid" id="news" style="padding-top:100px;padding-bottom:150px;">
+    <div class="section container-fluid" id="news">
         <div class="row">
             <div class="col-md-12">
-                <p class="text-center" style="font-size:35pt">News</p><br>
+                <p class="text-center fs35">News</p><br>
             </div>
         </div>
         <div class="row">
@@ -309,14 +314,14 @@ $(function(){
     <div class="section container-fluid" id="service" style="padding-top:80px; padding-bottom:80px; color:white;background-color:#3CA89F;">
         <div class="row">
           <div class="col-md-12">
-            <p class="text-center" style="font-size:35pt;">Service</p>
+            <p class="text-center fs35">Service</p>
             <br>
             <p class="text-center" style="font-size: 15pt">SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
               <br>あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。</p>
           </div>
         </div>
     </div>
-    <div class="section container-fluid" style="padding-top:50px; padding-bottom:50px ;color:#3CA89F;background-color:#fff">
+    <div class="section container-fluid sub_section" style="color:#3CA89F;background-color:#fff">
         <div class="row">
             <div class="col-md-6">
                 <p class="text-center" style="font-size:25pt">Technical solution</p>
@@ -368,22 +373,12 @@ $(function(){
         </div>
     <!--liveest_pic end-->
 
-    <!--liveest_pic start
-    <div class="background-image-fixed cover-image" src="img/liveest.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
-    <div class="row">
-        <div class="col-md-12" style="margin-left:-3%;">
-            <img src="img/liveest.jpg" width="106%" style="opacity:1.0;" class="visible-lg visible-md background-image-fixed">
-            <img src="img/liveest.jpg" width="106%" style="opacity:0.9;" class="visible-lg visible-md">
-        </div>
-    </div>
-    liveest_pic end-->
-
     <!--About Us start-->
-    <div class="section" id="about_us" style="padding-top:100px;padding-bottom:100px;">
+    <div class="section" id="about_us">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center" style="font-size:35pt;">About Us</p>
+                    <p class="text-center fs35">About Us</p>
                     <br>
                     <table class="table table-bordered table-striped" style="font-size:13pt">
                         <tbody>
@@ -434,12 +429,12 @@ $(function(){
     <!--About Us end-->
 
     <!--Top Message start-->
-    <div class="section " id="company" style="padding-top:100px; padding-bottom:100px; background-color:#0E7AC4;">
+    <div class="section " id="company" style="background-color:#0E7AC4;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <p class="text-center" style="color:#fff;font-size:35pt;">Top Message</p>
+                        <p class="text-center fs35" style="color:#fff;">Top Message</p>
                         <br>
                         <br> 
                     </div>
@@ -472,7 +467,7 @@ $(function(){
                         </p>
                         <br>
                     </div>
-                        <div class="col-md-2">
+                    <div class="col-md-2">
                     </div>
                     </div>
                 </div>
@@ -483,7 +478,7 @@ $(function(){
 
 
     <!--Vision start-->
-    <div class="section " id="vision" style="padding-top:70px; padding-bottom:70px; background-color:#fff;">
+    <div class="section" id="vision" style="padding-top:70px;padding-bottom:70px; background-color:#fff;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -503,7 +498,7 @@ $(function(){
 
 
     <!--STYLE５ start-->
-    <div class="section " id="company" style="padding-top:100px; padding-bottom:150px; background-color:#08233E;">
+    <div class="section " id="company" style="background-color:#08233E;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -535,48 +530,8 @@ $(function(){
         </div>
     </div>
     <!--STYLE５ end-->
-
-
     <!--Recruit start-->
-    <!--
-    <div class="section" id="recruit" style="padding-top:100px; padding-bottom:120px;background-color:#16A6B6">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12" style="color:#fff">
-                    <p class="text-center" style="font-size:35pt;">Recruit</p><br>
-                    <h3 class="text-center" style="font-size:18pt;">正社員／フリーランス募集中<br>
-                    皆様からのご応募お待ちしております</h3>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-3" style="height:70px;">
-                            <div class="button2 text-center">
-                                <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　　　正社員募集　　　</a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-3" style="height:70px;">
-                            <div class="button2 text-center">
-                                <a href="#" data-featherlight="#modal6" style="white-space:nowrap">　フリーランス募集　</a>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-    <!--Recruit end-->
-
-
-    <!--Recruit start-->
-     <section class="full-height" id="recruit">
+    <section class="full-height" id="recruit">
          <div class="full-height" style="background-color:#16A6B6;color:#fff;" >
             <div class="col-md-6" style="padding-top:120px;padding-bottom:80px;">
                 <h1 class="text-center">Recruit</h1>
@@ -590,7 +545,7 @@ $(function(){
                     <div class="row">
                         <div class="col-md-1">
                         </div>
-                         <div class="col-md-4" style="height:70px;">
+                        <div class="col-md-4" style="height:70px;">
                             <div class="button2 text-center">
                                 <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                             </div>
@@ -613,86 +568,15 @@ $(function(){
     </section>
     <!--Recruit end-->
 
-    <!--How LIVEEST Menber？ start
-    <div class="section" style="padding-top:100px; padding-bottom:100px;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1 class="text-center">How LIVEEST Menber？</h1>
-                    <br><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                </div>
-                <div class="col-md-4">
-                    <h3 class="text-left">橋本 有梨香</h3>
-                    <p class="text-left">Hashimoto Arika</p>
-                    <p class="text-info text-left">営業</p>
-                    <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="col-md-2">
-                    <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                </div>
-                <div class="col-md-4">
-                    <h3 class="text-left">高橋 真由</h3>
-                    <p class="text-left">Takahashi Mayu</p>
-                    <p class="text-info text-left">営業事務</p>
-                    <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                </div>
-                <div class="col-md-4">
-                    <h3 class="text-left">鈴木 雅貴</h3>
-                    <p class="text-left">Suzuki Masataka</p>
-                    <p class="text-info text-left">エンジニア</p>
-                    <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                    </p>
-                </div>
-                <div class="col-md-2">
-                    <img src="http://pingendo.github.io/pingendo-bootstrap/assets/user_placeholder.png" class="img-circle img-responsive">
-                </div>
-                <div class="col-md-4 text-left">
-                    <h3 class="text-left">増村 琢哉</h3>
-                    <p class="text-left">Masumura Takuya</p>
-                    <p class="text-info text-left">エンジニア
-                    </p>
-                    <p class=" color-primary wow animated fadeIn animated" style="visibility: visible; animation: fadeIn; -webkit-animation: fadeIn;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                    </p><br><br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="lead text-center">and more..</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    How LIVEEST Menber？ end-->
-
     <!--Partnership start-->
-     <section class="full-height" id="partner">
-         <div class="bg-color bg-black full-height">
-             <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
-             <div class="col-md-6 text-center" style="background-color:">
-                 <div class="v-align">
-                     <div class="h-align">
-                         <div class="inner" style="padding-top:70px;padding-bottom:160px;background-color:#fff;">
-                            <p class="text-center" style="font-size:35pt;">Partnership</p><br>
+    <section class="full-height" id="partner">
+        <div class="bg-color bg-black full-height">
+            <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
+            <div class="col-md-6 text-center">
+                <div class="v-align">
+                    <div class="h-align">
+                        <div class="inner" style="padding-top:70px;padding-bottom:160px;background-color:#fff;">
+                            <p class="text-center fs35">Partnership</p><br>
                             <p class="text-center" style="padding-top:10px;line-height:35px; font-size:13pt">
                                 当社では、協業頂けるビジネスパートナー様を募集しております。<br>
                                 共にビジネスチャンスの獲得や事業強化を目的とした<br>
@@ -700,130 +584,20 @@ $(function(){
                                 相互のビジネスチャンスを広め、共に成長できればと思います。<br>
                                 ビジネスパートナーとしてご協力頂ける方、もしくは、弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
                             </p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
-    </section>
-    <!--Partnership end-->
-    <!--
-     <section class="full-height" id="partner">
-         <div class="bg-color bg-black full-height">
-             <div class="col-md-6 text-center">
-                 <div class="v-align">
-                     <div class="h-align">
-                         <div class="inner" style="padding-top:70px;padding-bottom:160px;background-color:#fff;">
-                            <p class="text-center" style="color:#08233E;font-size:35pt;">Partnership</p><br>
-                            <p class="text-center" style="color:#08233E;padding-top:10px;line-height:35px; font-size:13pt">
-                                当社では、協業頂けるビジネスパートナー様を募集しております。<br>
-                                共にビジネスチャンスの獲得や事業強化を目的とした<br>
-                                パートナーシップを結び、お互いのスキル・技術力・ノウハウを共有し、<br>
-                                相互のビジネスチャンスを広め、共に成長できればと思います。<br>
-                                ビジネスパートナーとしてご協力頂ける方、もしくは、弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
-                            </p>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-color:#16A6B6;">
-            <div class="row">
-                <div class="col-md-12" style="padding-top:70px;padding-bottom:50px;">
-                    <p class="text-center" style="color:white;font-size:35pt;">Contact</p>
-                    <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <p id="partnerBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
-                        <a class="partner" href="mailto:partner@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-user" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
-                    </p>
-                    <p id="partnerComent" class="text-center" style="color:white;opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
-                        ビジネスパートナー<br/>
-                        ご希望の方は上記アイコンより<br/>
-                        メールをお願い致します。
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p id="mailBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
-                        <a class="mail" href="mailto:info@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-envelope" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
-                    </p>
-                    <p id="mailComent" class="text-center" style="color:white;opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
-                        その他のメールは上記アイコン<br/>
-                        よりお願い致します。
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p id="telBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
-                        <span class="glyphicon glyphicon-phone-alt" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;"></span>
-                    </p>
-                    <p id="telComent" class="text-center" style="color:white;opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
-                        お電話でのご連絡は以下より<br/>
-                        お願い致します。<br/>
-                        TEL 　: 03-6907-1122<br/>
-                        FAX 　:  03-6907-1123
-                    </p>
-                </div>
-            </div>
-         </div>
-    </section>
-    -->
-    <!--
-    <div class="section" id="contact" style="background-color:#ECEEF1;">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <p class="text-center" style="font-size:35pt;">Contact</p>
-                    <br>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <p id="partnerBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
-                        <a class="partner" href="mailto:partner@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-user" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
-                    </p>
-                    <p id="partnerComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
-                        ビジネスパートナー<br/>
-                        ご希望の方は上記アイコンより<br/>
-                        メールをお願い致します。
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p id="mailBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
-                        <a class="mail" href="mailto:info@live-est.com" style="width:150px;height:150px;"><span class="glyphicon glyphicon-envelope" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;" ></span></a>
-                    </p>
-                    <p id="mailComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
-                        その他のメールは上記アイコン<br/>
-                        よりお願い致します。
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <p id="telBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:150px;height:150px;">
-                        <span class="glyphicon glyphicon-phone-alt" style="color:white;font-size:75pt;width:100px;height:100px;margin:20px;"></span>
-                    </p>
-                    <p id="telComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
-                        お電話でのご連絡は以下より<br/>
-                        お願い致します。<br/>
-                        TEL 　: 03-6907-1122<br/>
-                        FAX 　:  03-6907-1123
-                    </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    -->
+    </section>
+    <!--Partnership end-->
+
     <!--Contact start-->
     <div class="section" id="contact" style="background-color:#ECEEF1;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center" style="font-size:35pt;">Contact</p>
+                    <p class="text-center fs35">Contact</p>
                     <br>
                 </div>
             </div>
@@ -955,20 +729,20 @@ $(function(){
         </p>
         <h3>【待遇】</h3>
         <p>
-            <dl>
-                <dt style="float:left;">給与　　</dt>
+            <dl class="taigu">
+                <dt>給与　　</dt>
                 <dd>：応相談</dd>
-                <dt style="float:left;">試用期間</dt>
+                <dt>試用期間</dt>
                 <dd>：3ヵ月 (この期間の給与は本採用時と同額です)</dd>
-                <dt style="float:left;">交通費　</dt>
+                <dt>交通費　</dt>
                 <dd>：全支給</dd>
-                <dt style="float:left;">備考　　</dt>
+                <dt>備考　　</dt>
                 <dd>：人事査定半年に1回、各種社会保険完備、</dd>
-                <dt style="float:left;">　　　　</dt>
+                <dt>　　　　</dt>
                 <dd>　社員旅行（1期目は箱根強羅温泉、2期目は西伊豆）</dd>
-                <dt style="float:left;">　　　　</dt>
+                <dt>　　　　</dt>
                 <dd>　勉強本購入サポート</dd>
-                <dt style="float:left;">　　　　</dt>
+                <dt>　　　　</dt>
                 <dd>　（教科書代をサポート！やる気を応援します）</dd>
             </dl>
         </p>
@@ -995,20 +769,20 @@ $(function(){
         </p>
         <h3>【待遇】</h3>
         <p>
-            <dl>
-                <dt style="float:left;">給与　</dt>
+            <dl class="taigu">
+                <dt>給与　</dt>
                 <dd>：スキル・経験・案件により。ご希望をお聞かせ下さい。</dd>
-                <dt style="float:left;">　　　</dt>
+                <dt>　　　</dt>
                 <dd>　●数ヶ月に一度、プレゼントをご用意しています。</dd>
-                <dt style="float:left;">　　　</dt>
+                <dt>　　　</dt>
                 <dd>　　⇒ご就業頂きいつも有難う御座いますという感謝の気持ちです</dd>
-                <dt style="float:left;">　　　</dt>
+                <dt>　　　</dt>
                 <dd>　●お友達ご紹介インセンティブあり。</dd>
-                <dt style="float:left;">　　　</dt>
+                <dt>　　　</dt>
                 <dd>　　⇒お友達の就業が決まり次第、翌月から報酬アップです!!</dd>
-                <dt style="float:left;">備考　</dt>
+                <dt>備考　</dt>
                 <dd>：勤務地など色々ご希望をお聞かせ下さい！</dd>
-                <dt style="float:left;">　　　</dt>
+                <dt>　　　</dt>
                 <dd>　Ex:横浜周辺限定・最寄駅から乗り換えなし・就業開始10時〜 </dd>
             </dl>
         </p>
