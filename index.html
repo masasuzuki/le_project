@@ -181,6 +181,39 @@
         padding-bottom:100px;
         background-color:#0E7AC4;
     }
+    .vision_section{
+        padding-top:70px;
+        padding-bottom:70px;
+        background-color:#fff;
+    }
+    .style5_section{
+        padding-top:100px;
+        padding-bottom:100px;
+        background-color:#08233E;
+    }
+    .recruit_section{
+        height:100%;
+        padding-top:120px;
+        padding-bottom:80px;
+        background-color:#16A6B6;
+        color:#fff;
+    }
+    .partnership_section{
+        height:100%;
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+    .contact_section{
+        padding-top:100px;
+        padding-bottom:100px;
+        background-color:#ECEEF1;
+    }
+    .footer_section{
+        padding-top:100px;
+        padding-bottom:100px;
+        background-color:#2C5379;
+    }
+
     .section_title{
         text-align:center;
         font-size:35pt;
@@ -189,6 +222,26 @@
         text-align:center;
         font-size:25pt;
     }
+    .visionsection_title{
+        margin-bottom:45px;
+        text-align:center;
+        color:#08233E;
+        font-size:40pt;
+        font-weight:bold;
+    }
+    .style5_title{
+        margin-bottom:55px;
+        text-align:center;
+        font-size:40pt;
+        font-weight:bold;
+        color:#fff;
+    }
+    .partnership_title{
+        text-align:center;
+        font-size:35pt;
+        font-weight:bold;
+    }
+
     .section_content{
         text-align:center;
         font-size:15pt;
@@ -226,12 +279,89 @@
         font-size:13pt;
         color:#fff;
     }
+    .visionsection_content{
+        margin-bottom:40px;
+        text-align:center;
+        font-size:25pt;
+        font-weight:bold;
+    }
+    .visionsection_content span{
+        font-size:30pt;
+        color:#EB2142;
+    }
+    .style5_content{
+        text-align:center;
+        font-size:13pt;
+        color:#FFFFFF;
+    }
+    .style5_content h5{
+        margin-top:5px;
+        margin-bottom:30px;
+        font-size:25pt;
+    }
+    .style5_content h5 span{
+        color:#02AEDC;
+        font-weight:bold;
+    }
+    .style5_content p{
+        margin-bottom:50px;
+        line-height:35px;
+    }
+    .recruit_content{
+        margin-bottom:50px;
+        text-align:center;
+        font-size:13pt;
+    }
+    .partnership_content{
+        padding-top:10px;
+        line-height:35px;
+        text-align:center;
+        font-size:13pt;
+    }
 
     .table{
         font-size:13pt;
     }
     /*ここまで各sectionのCSS*/
-
+    
+    /*Contactアイコンここから*/
+    .icon_block{
+        margin:auto;
+        margin-top:30px;
+        width:200px;
+        height:200px;
+        opacity:0.7;
+        border-radius:100px;
+        text-align:center;
+        background-color:#003366;
+    }
+    .icon_block a{
+        width:200px;
+        height:200px;
+    }
+    .icon_block a span{
+        margin:20px;
+        width:160px;
+        height:160px;
+        font-size:115pt;
+        color:white;
+    }
+    .icon_block span{
+        margin:20px;
+        width:160px;
+        height:160px;
+        font-size:115pt;
+        color:white;
+    }
+    .icon_comment{
+        margin-top:30px;
+        text-align:center;
+        opacity:0;
+        font-family:'Helvetica';
+        font-size:10pt;
+        font-weight:bold;
+    }
+    /*Contactアイコンここまで*/
     dl.taigu dt{
         float:left;
     }
@@ -530,47 +660,61 @@ $(function(){
         </div>
         <!--Top Message end-->
         <!--Vision start-->
-        <div class="section" id="vision" style="padding-top:70px;padding-bottom:70px; background-color:#fff;">
+        <div class="vision_section" id="vision">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <h1 class="text-center" style="color:#08233E;font-size:40pt"><strong>LIVE EST × VISION</strong></h1><br><br>
-                        <p class="text-center"><strong><span color="#EB2142" style="font-size:30pt;color:#EB2142;">「今」</span> <span style="font-size:25pt;">を楽しみ、</span> <span style="color:#EB2142;font-size:30pt;">「人生」</span><span style="font-size:25pt;">をより素晴らしく。</span></strong></p><br><br>
-                        <div class="col-md-1">
+                        <h1 class="visionsection_title">LIVE EST × VISION</h1>
+                        <p class="visionsection_content">
+                            <span>「今」</span>を楽しみ、<span>「人生」</span>をより素晴らしく。
+                        </p>
                     </div>
+                    <div class="col-md-1">
                     </div>
                 </div>
             </div>
         </div>
         <!--Vision end-->
         <!--STYLE５ start-->
-        <div class="section " id="company" style="background-color:#08233E;">
+        <div class="style5_section" id="company">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <p class="text-center" style="color:#fff;font-size:40pt"><strong>LIVE EST × STYLE５</strong></p><br><br>
-                        <p class="text-center" style="font-size:25pt"> <font color="#FFFFFF">１、感動的</font> <font color="#02AEDC"><b>「VALUE」</b></font> <font color="#FFFFFF">提供</font></p><br>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">「○」=「✕」、「◎」=「○」</font> </p>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">【納得】・【満足】して頂ける内容は✕であり、</font> </p>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">【感動】・【驚嘆】して頂ける内容が○である。</font> </p><br><br>
-                        <p class="text-center" style="font-size:25pt"> <font color="#FFFFFF">２、熱狂的</font> <font color="#02AEDC"><b>「WITH」</b></font> <font color="#FFFFFF">思考</font></p><br>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">共に喜び共に悲しみ、共に笑い共に泣き、共に仕事し共に遊ぶ、</font> </p>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">常に<本気>で<素直>で<心を分かち合える>集団であり続ける。</font> </p><br><br>
-                        <p class="text-center" style="font-size:25pt"> <font color="#FFFFFF">３、圧倒的</font> <font color="#02AEDC"><b>「SPEED」</b></font> <font color="#FFFFFF">全開</font></p><br>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">慎重に・正確に事を為すのは当たり前。一番大切な事は「SPEED」の意識。</font> </p>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">意思決定、行動、言動、市場の変化に対する対応、全てにおいてスピーディーに。</font> </p><br><br>
-                        <p class="text-center" style="font-size:25pt"> <font color="#FFFFFF">４、積極的</font> <font color="#02AEDC"><b>「３C」</b></font> <font color="#FFFFFF">貫徹</font></p><br>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">CHANCE（好機）を掴める者=CHANGE（変革）出来る者+CHALLENGE（挑戦）し続ける者</font> </p>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">意識を変え、挑戦し続けた者に、好機がくる。常に積極的に変革し、挑戦し続る者を応援・推進する。</font> </p><br><br>
-                        <p class="text-center" style="font-size:25pt"> <font color="#FFFFFF">５、絶対的</font> <font color="#02AEDC"><b>「MEMBER」</b></font> <font color="#FFFFFF">主義</font></p><br>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">会社はメンバーのものであり、メンバーの＜幸せ＞、<想い>があってこそ、</font> </p>
-                        <p class="text-center" style="font-size:13pt"> <font color="#FFFFFF">モチベーションの向上により大切なお客様へより良い提供・提案が出来る人財になれる。</font></p>
-                        <div class="col-md-1">
+                        <p class="style5_title">LIVE EST × STYLE５</p>
+                        <div class="style5_content">
+                            <h5>１、感動的 <span>「VALUE」</span> 提供</h5>
+                            <p>
+                                「○」=「✕」、「◎」=「○」<br/>
+                                【納得】・【満足】して頂ける内容は✕であり、<br/>
+                                【感動】・【驚嘆】して頂ける内容が○である。
+                            </p>
+                            <h5>２、熱狂的 <span>「WITH」</span> 思考</h5>
+                            <p>
+                                共に喜び共に悲しみ、共に笑い共に泣き、共に仕事し共に遊ぶ、<br/>
+                                常に<本気>で<素直>で<心を分かち合える>集団であり続ける。
+                            </p>
+                            <h5>３、圧倒的 <span>「SPEED」</span> 全開</h5>
+                            <p>
+                                慎重に・正確に事を為すのは当たり前。一番大切な事は「SPEED」の意識。<br/>
+                                意思決定、行動、言動、市場の変化に対する対応、全てにおいてスピーディーに。
+                            </p>
+                            <h5>４、積極的 <span>「３C」</span> 貫徹</h5>
+                            <p>
+                                CHANCE（好機）を掴める者=CHANGE（変革）出来る者+CHALLENGE（挑戦）し続ける者<br/>
+                                意識を変え、挑戦し続けた者に、好機がくる。常に積極的に変革し、挑戦し続る者を応援・推進する。
+                            </p>
+                            <h5>５、絶対的 <span>「MEMBER」</span> 主義</h5>
+                            <p>
+                                会社はメンバーのものであり、メンバーの＜幸せ＞、<想い>があってこそ、<br/>
+                                モチベーションの向上により大切なお客様へより良い提供・提案が出来る人財になれる。
+                            </p>
+                        </div>
                     </div>
+                    <div class="col-md-1">
                     </div>
                 </div>
             </div>
@@ -579,69 +723,58 @@ $(function(){
     </div><!--container-fluidここまで-->
     <!--Recruit start-->
     <section class="full-height" id="recruit">
-         <div class="full-height" style="background-color:#16A6B6;color:#fff;" >
-            <div class="col-md-6" style="padding-top:120px;padding-bottom:80px;">
-                <p class="section_title">Recruit</p>
-                <h4 class="text-center">
-                    正社員／フリーランス募集中<br>
-                    皆様からのご応募お待ちしております
-                </h4>
-                <br>
-                <br>
-                <div class="button1 text-center">
-                    <div class="row">
-                        <div class="col-md-1">
+        <div class="col-md-6 recruit_section">
+            <p class="section_title">Recruit</p>
+            <p class="recruit_content">
+                正社員／フリーランス募集中<br>
+                皆様からのご応募お待ちしております
+            </p>
+            <div class="button1 text-center">
+                <div class="row">
+                    <div class="col-md-1">
+                    </div>
+                    <div class="col-md-4" style="height:70px;">
+                        <div class="button2 text-center">
+                            <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                         </div>
-                        <div class="col-md-4" style="height:70px;">
-                            <div class="button2 text-center">
-                                <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
-                            </div>
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                    <div class="col-md-4" style="height:70px;">
+                        <div class="button2 text-center">
+                            <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
                         </div>
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-4" style="height:70px;">
-                            <div class="button2 text-center">
-                                <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
-                            </div>
-                        </div>
-                        <div class="col-md-1">
-                        </div>
-                    </div>    
-                </div>
+                    </div>
+                    <div class="col-md-1">
+                    </div>
+                </div>    
             </div>
-            <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/art.jpg" width="100%" style="background-image : url('img/art.jpg')">
-            </div>
-         </div>
+        </div>
+        <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/art.jpg" width="100%" style="background-image : url('img/art.jpg')">
+        </div>
     </section>
     <!--Recruit end-->
 
     <!--Partnership start-->
     <section class="full-height" id="partner">
-        <div class="bg-color bg-black full-height">
-            <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
-            <div class="col-md-6 text-center">
-                <div class="v-align">
-                    <div class="h-align">
-                        <div class="inner" style="padding-top:70px;padding-bottom:160px;background-color:#fff;">
-                            <p class="section_title">Partnership</p>
-                            <p class="text-center" style="padding-top:10px;line-height:35px; font-size:13pt">
-                                当社では、協業頂けるビジネスパートナー様を募集しております。<br>
-                                共にビジネスチャンスの獲得や事業強化を目的とした<br>
-                                パートナーシップを結び、お互いのスキル・技術力・ノウハウを共有し、<br>
-                                相互のビジネスチャンスを広め、共に成長できればと思います。<br>
-                                ビジネスパートナーとしてご協力頂ける方、もしくは、弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
+        <div class="col-md-6 partnership_section">
+            <p class="partnership_title">Partnership</p>
+            <p class="partnership_content">
+                当社では、協業頂けるビジネスパートナー様を募集しております。<br>
+                共にビジネスチャンスの獲得や事業強化を目的とした<br>
+                パートナーシップを結び、お互いのスキル・技術力・ノウハウを共有し、<br>
+                相互のビジネスチャンスを広め、共に成長できればと思います。<br>
+                ビジネスパートナーとしてご協力頂ける方、<br>
+                もしくは、弊社についてお話を聞きたいと思って頂いた方、<br>
+                是非一度ご連絡下さい。
+            </p>
         </div>
     </section>
     <!--Partnership end-->
-
     <div class="container-fluid">
         <!--Contact start-->
-        <div class="section" id="contact" style="background-color:#ECEEF1;">
+        <div class="contact_section" id="contact">
             <div class="row">
                 <div class="col-md-12">
                     <p class="section_title">Contact</p>
@@ -650,32 +783,29 @@ $(function(){
             </div>
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <p id="partnerBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:200px;height:200px;">
-                        <a class="partner" href="mailto:partner@live-est.com" style="width:200px;height:200px;"><span class="glyphicon glyphicon-user" style="color:white;font-size:115pt;width:160px;height:160px;margin:20px;" ></span></a>
+                    <p id="partnerBlock" class="icon_block">
+                        <a class="partner" href="mailto:partner@live-est.com"><span class="glyphicon glyphicon-user"></span></a>
                     </p>
-                    <p id="partnerComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
+                    <p id="partnerComent" class="icon_comment">
                         ビジネスパートナー<br/>
                         ご希望の方は上記アイコンより<br/>
                         メールをお願い致します。
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <p id="mailBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:200px;height:200px;">
-                        <a class="mail" href="mailto:info@live-est.com" style="width:200px;height:200px;"><span class="glyphicon glyphicon-envelope" style="color:white;font-size:115pt;width:160px;height:160px;margin:20px;" ></span></a>
+                    <p id="mailBlock" class="icon_block">
+                        <a class="mail" href="mailto:info@live-est.com"><span class="glyphicon glyphicon-envelope"></span></a>
                     </p>
-                    <p id="mailComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
+                    <p id="mailComent" class="icon_comment">
                         その他のメールは上記アイコン<br/>
                         よりお願い致します。
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <p id="telBlock" class="text-center" style="margin:auto;margin-top:30px;opacity:0.7;border-radius:100px;background-color:#003366;width:200px;height:200px;">
-                        <span class="glyphicon glyphicon-phone-alt" style="color:white;font-size:115pt;width:160px;height:160px;margin:20px;"></span>
+                    <p id="telBlock" class="icon_block">
+                        <span class="glyphicon glyphicon-phone-alt"></span>
                     </p>
-                    <p id="telComent" class="text-center" style="opacity:0;font-size:10pt;font-weight:bold;font-family:'Helvetica';">
-                        <br/>
+                    <p id="telComent" class="icon_comment">
                         お電話でのご連絡は以下より<br/>
                         お願い致します。<br/>
                         TEL 　: 03-6907-1122<br/>
@@ -686,7 +816,7 @@ $(function(){
         </div>
         <!--Contact end-->
         <!--footer start-->
-        <footer class="section" style="background-color:#2C5379;">
+        <footer class="footer_section">
             <div class="row">
                 <div class="col-sm-6" style="color: #fff">
                     <h1>LIVE EST,INC.</h1>
