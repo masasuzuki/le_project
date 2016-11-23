@@ -146,6 +146,7 @@
         display: inline-block;
       }
     }
+
     .font_white{
         color:#fff;
     }
@@ -171,7 +172,7 @@
         background-color:#3CA89F;
     }
     .sub_section{
-        padding-top:50px;
+        padding-top:20px;
         padding-bottom:50px;
         color:#3CA89F;
         background-color:#fff;
@@ -219,8 +220,18 @@
         font-size:35pt;
     }
     .subsection_title{
+        margin-top:30px;
         text-align:center;
         font-size:25pt;
+    }
+    .subsection_subtitle{
+        text-align:center;
+        font-size:14pt;
+    }
+    .topmessage_section_title{
+        margin-bottom:50px;
+        text-align:center;
+        font-size:35pt;
     }
     .visionsection_title{
         margin-bottom:45px;
@@ -239,7 +250,6 @@
     .partnership_title{
         text-align:center;
         font-size:35pt;
-        font-weight:bold;
     }
 
     .section_content{
@@ -318,7 +328,15 @@
         text-align:center;
         font-size:13pt;
     }
+    .footer_comname{
 
+    }
+    .footer_comaddress{
+
+    }
+    .footer_copyright{
+        text-align:right;
+    }
     .table{
         font-size:13pt;
     }
@@ -362,6 +380,246 @@
         font-weight:bold;
     }
     /*Contactアイコンここまで*/
+    /*スマホ用*/
+    @media screen and (max-width : 770px) {
+        .main_text{
+            font-size:80px;
+            letter-spacing:4px;
+            display:inline-block;
+        }
+        .sub_text{
+            font-size:30px;
+            letter-spacing:2px;
+            display:inline-block;
+        }
+        /*ここから各sectionのCSS*/
+        .section{
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+        .service_section{
+            padding-top:20px;
+            padding-bottom:20px;
+            color:white;
+            background-color:#3CA89F;
+        }
+        .sub_section{
+            padding-top:10px;
+            padding-bottom:10px;
+            color:#3CA89F;
+            background-color:#fff;
+        }
+        .top_message_section{
+            padding-top:30px;
+            padding-bottom:30px;
+            background-color:#0E7AC4;
+        }
+        .vision_section{
+            padding-top:20px;
+            padding-bottom:20px;
+            background-color:#fff;
+        }
+        .style5_section{
+            padding-top:30px;
+            padding-bottom:30px;
+            background-color:#08233E;
+        }
+        .recruit_section{
+            height:100%;
+            padding-top:50px;
+            padding-bottom:30px;
+            background-color:#16A6B6;
+            color:#fff;
+        }
+        .partnership_section{
+            height:100%;
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+        .contact_section{
+            padding-top:30px;
+            padding-bottom:15px;
+            background-color:#ECEEF1;
+        }
+        .footer_section{
+            padding-top:30px;
+            padding-bottom:30px;
+            background-color:#2C5379;
+        }
+
+        .section_title{
+            margin-bottom:0px;
+            text-align:center;
+            font-size:20pt;
+        }
+        .subsection_title{
+            margin-bottom:0px;
+            text-align:center;
+            font-size:18pt;
+        }
+        .subsection_subtitle{
+            text-align:center;
+            font-size:6pt;
+        }
+        .topmessage_section_title{
+            margin-bottom:30px;
+            text-align:center;
+            font-size:20pt;
+        }
+        .visionsection_title{
+            margin-bottom:20px;
+            text-align:center;
+            color:#08233E;
+            font-size:20pt;
+            font-weight:bold;
+        }
+        .style5_title{
+            margin-bottom:20px;
+            text-align:center;
+            font-size:20pt;
+            font-weight:bold;
+            color:#fff;
+        }
+        .partnership_title{
+            text-align:center;
+            font-size:20pt;
+        }
+
+        .section_content{
+            text-align:center;
+            font-size:8pt;
+        }
+        .subsection_content{
+            text-align:center;
+            font-size:8pt;
+        }
+        .top_message_eng_name{
+            text-align:left;
+            font-size:8pt;
+            color:#fff;
+        }
+        .top_message_jap_name{
+            text-align:left;
+            line-height:8px;
+            letter-spacing:4px;
+            font-weight:bold;
+            font-size:12pt;
+            color:#fff;
+        }
+        .top_message_subname{
+            line-height:8px;
+            text-align:left;
+            font-weight:bold;
+            font-size:6pt;
+            color:#5bc0de;
+        }
+
+        .top_message_content{
+            margin-top:30px;
+            text-align:left;
+            letter-spacing:2px;
+            line-height:20px;
+            font-size:8pt;
+            color:#fff;
+        }
+        .visionsection_content{
+            margin-bottom:30px;
+            text-align:center;
+            font-size:8pt;
+            font-weight:bold;
+        }
+        .visionsection_content span{
+            font-size:10pt;
+            color:#EB2142;
+        }
+        .style5_content{
+            text-align:center;
+            font-size:8pt;
+            color:#FFFFFF;
+        }
+        .style5_content h5{
+            margin-top:5px;
+            margin-bottom:15px;
+            font-size:10pt;
+        }
+        .style5_content h5 span{
+            color:#02AEDC;
+            font-weight:bold;
+        }
+        .style5_content p{
+            margin-bottom:30px;
+            line-height:25px;
+        }
+        .recruit_content{
+            margin-bottom:30px;
+            text-align:center;
+            font-size:8pt;
+        }
+        .partnership_content{
+            padding-top:10px;
+            line-height:25px;
+            text-align:center;
+            font-size:7pt;
+        }
+        .table{
+            font-size:8pt;
+        }
+        section.full-height{
+            height:350px;
+        }
+        .footer_comname{
+            font-size:20pt;
+        }
+        .footer_comaddress{
+            font-size:9pt;
+        }
+        .footer_copyright{
+            text-align:right;
+            font-size:8pt;
+        }
+        /*ここまで各sectionのCSS*/
+        
+        /*Contactアイコンここから*/
+        .icon_block{
+            margin:auto;
+            margin-top:10px;
+            width:120px;
+            height:120px;
+            opacity:0.7;
+            border-radius:100px;
+            text-align:center;
+            background-color:#003366;
+        }
+        .icon_block a{
+            width:120px;
+            height:120px;
+        }
+        .icon_block a span{
+            margin:10px;
+            width:100px;
+            height:100px;
+            font-size:69pt;
+            color:white;
+        }
+        .icon_block span{
+            margin:10px;
+            width:100px;
+            height:100px;
+            font-size:69pt;
+            color:white;
+        }
+        .icon_comment{
+            margin-top:20px;
+            text-align:center;
+            opacity:0;
+            font-family:'Helvetica';
+            font-size:8pt;
+            font-weight:bold;
+        }
+        /*Contactアイコンここまで*/
+    }/*@media screen(max-width:500px)*/
+    /*スマホ用ここまで*/
+
     dl.taigu dt{
         float:left;
     }
@@ -521,7 +779,7 @@ $(function(){
             <div class="row">
                 <div class="col-md-6">
                     <p class="subsection_title">Technical solution</p>
-                    <p class="text-center">- テクニカルソリューション事業部 -</p>
+                    <p class="subsection_subtitle">- テクニカルソリューション事業部 -</p>
                     <br>
                     <p class="subsection_content">
                         テクニカルソリューション事業部では、<br>Webコンテンツの企画・作成を主として事業展開をしております。
@@ -535,7 +793,7 @@ $(function(){
                 </div>                        
                 <div class="col-md-6">
                     <p class="subsection_title">IT solution</p>
-                    <p class="text-center">- ITソリューション事業部 -</p>
+                    <p class="subsection_subtitle">- ITソリューション事業部 -</p>
                     <p class="subsection_content">
                         ITソリューション事業部では、<br>SES（システムエンジニアリングサービス）を<br>主として事業展開しております。
                     </p>
@@ -624,9 +882,7 @@ $(function(){
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <p class="section_title font_white">Top Message</p>
-                        <br>
-                        <br> 
+                        <p class="topmessage_section_title font_white">Top Message</p>
                     </div>
                     <div class="col-md-2">
                     </div>
@@ -819,9 +1075,11 @@ $(function(){
         <footer class="footer_section">
             <div class="row">
                 <div class="col-sm-6" style="color: #fff">
-                    <h1>LIVE EST,INC.</h1>
-                    <p>東京都豊島区池袋2−68−9　池袋MIBビル5F
-                    <br>TEL / FAX　03-6907-1122 / 03-6907-1123</p>
+                    <h1 class="footer_comname">LIVE EST,INC.</h1>
+                    <p class="footer_comaddress">
+                    東京都豊島区池袋2−68−9　池袋MIBビル5F<br>
+                    TEL / FAX　03-6907-1122 / 03-6907-1123
+                    </p>
                 </div>
                 <div class="col-sm-6">
                     <p class="text-right">
@@ -829,11 +1087,10 @@ $(function(){
                         <br>
                     </p>
                     <div class="row">
-                        <div class="col-md-12 hidden-lg hidden-md hidden-sm text-left">
+                        <div class="col-md-12 hidden-lg hidden-md hidden-sm text-right">
                             <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-instagram text-inverse fsDefault"></i></a>
                             <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-twitter text-inverse fsDefault"></i></a>
                             <a href="https://www.facebook.com/LIVEEST.inc/about/" target="_blank"><i class="fa fa-3x fa-fw fa-facebook text-inverse fsDefault"></i></a>
-                            <a href="javascript:alert('Coming Soon...');"><i class="fa fa-3x fa-fw fa-github text-inverse fsDefault"></i></a>
                         </div>
                     </div>
                     <div class="row">
@@ -847,7 +1104,7 @@ $(function(){
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-right" style="color:#fff">Copyright (C) 2016 LIVEEST All Rights Reserved.</p>
+                    <p class="footer_copyright" style="color:#fff">Copyright (C) 2016 LIVEEST All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

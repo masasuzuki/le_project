@@ -1,9 +1,9 @@
 $(function(){
     var x = $(window).width();
     //windowの分岐幅をyに代入
-    var y = 500;
+    var y = 770;
     if (x <= y) {
-        $('#change_text').html('<p class="text-center text-inverse" style="font-size:30px; letter-spacing:3px; display:inline-block;">LIVE EST ,INC.</p>');
+        $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
     } else {
         $('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
     }
@@ -14,9 +14,9 @@ $(function(){
 	    //windowの幅をxに代入
 	    var x = $(window).width();
 	    //windowの分岐幅をyに代入
-	    var y = 500;
+	    var y = 770;
 	    if (x <= y) {
-	        $('#change_text').html('<p class="text-center text-inverse" style="font-size:30px; letter-spacing:3px; display:inline-block;">LIVE EST ,INC.</p>');
+	        $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
 	    } else {
 	        $('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
 	    }
