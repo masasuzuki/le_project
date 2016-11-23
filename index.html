@@ -146,7 +146,9 @@
         display: inline-block;
       }
     }
-
+    .font_white{
+        color:#fff;
+    }
     .main_text{
         font-size:80px;
         letter-spacing:4px;
@@ -157,25 +159,87 @@
         letter-spacing:2px;
         display:inline-block;
     }
-    .fs35{
-        font-size:35pt;
-    }
-
+    /*ここから各sectionのCSS*/
     .section{
         padding-top:100px;
         padding-bottom:100px;
     }
+    .service_section{
+        padding-top:80px;
+        padding-bottom:80px;
+        color:white;
+        background-color:#3CA89F;
+    }
     .sub_section{
         padding-top:50px;
         padding-bottom:50px;
+        color:#3CA89F;
+        background-color:#fff;
     }
+    .top_message_section{
+        padding-top:100px;
+        padding-bottom:100px;
+        background-color:#0E7AC4;
+    }
+    .section_title{
+        text-align:center;
+        font-size:35pt;
+    }
+    .subsection_title{
+        text-align:center;
+        font-size:25pt;
+    }
+    .section_content{
+        text-align:center;
+        font-size:15pt;
+    }
+    .subsection_content{
+        text-align:center;
+        font-size:13pt;
+    }
+    .top_message_eng_name{
+        text-align:left;
+        font-size:13pt;
+        color:#fff;
+    }
+    .top_message_jap_name{
+        text-align:left;
+        line-height:20px;
+        letter-spacing:4px;
+        font-weight:bold;
+        font-size:23pt;
+        color:#fff;
+    }
+    .top_message_subname{
+        line-height:30px;
+        text-align:left;
+        font-weight:bold;
+        font-size:9pt;
+        color:#5bc0de;
+    }
+
+    .top_message_content{
+        margin-top:30px;
+        text-align:left;
+        letter-spacing:2px;
+        line-height:25px;
+        font-size:13pt;
+        color:#fff;
+    }
+
+    .table{
+        font-size:13pt;
+    }
+    /*ここまで各sectionのCSS*/
+
     dl.taigu dt{
         float:left;
     }
+
     </style>
 <script>
 $(function(){
-    //ドロップダウンメニュー  
+    //ドロップダウンメニュー
     $('#navi ul>li').find('ul').hide();
     $('#navi ul>li').hover(function(){
             $('ul:not(:animated)', this).slideDown(700);
@@ -264,123 +328,122 @@ $(function(){
         </div>
     </div>
 
-    <!--News start-->
-    <div class="section container-fluid" id="news">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="text-center fs35">News</p><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <br>
-                <table class="table" style="font-size:13pt">
-                    <tbody>
-                        <tr>
-                          <td>2015/06/01　　　</td>
-                          <td>東京都豊島区池袋2−68−9 池袋MIBビル5F　本社移転</td>
-                        </tr>
-                        <tr>
-                          <td>2014/02/01</td>
-                          <td>【技術者登録センター】･【開発センター】開設</td>
-                        </tr>
-                        <tr>
-                          <td>2014/01/01</td>
-                          <td>東京都豊島区南大塚3-2-11　Kビルディング3階　本社移転</td>
-                        </tr>
-                        <tr>
-                          <td>2013/07/02</td>
-                          <td>資本金 1,000万円　増資</td>
-                        </tr>
-                        <tr>
-                          <td>2012/07/02</td>
-                          <td>㈱ライブエスト設立　資本金300万円</td>
-                        </tr>
-                        <!--これにより下線を挿入の為、1列追加-->
-                        <tr>
-                          <td></td>
-                          <td></td>
-                        </tr>
-                        <!--ここまで下線を挿入の為、1列追加-->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-    <!--News end-->
-
-
-    <!--Service start-->
-    <div class="section container-fluid" id="service" style="padding-top:80px; padding-bottom:80px; color:white;background-color:#3CA89F;">
-        <div class="row">
-          <div class="col-md-12">
-            <p class="text-center fs35">Service</p>
-            <br>
-            <p class="text-center" style="font-size: 15pt">SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
-              <br>あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。</p>
-          </div>
-        </div>
-    </div>
-    <div class="section container-fluid sub_section" style="color:#3CA89F;background-color:#fff">
-        <div class="row">
-            <div class="col-md-6">
-                <p class="text-center" style="font-size:25pt">Technical solution</p>
-                <p class="text-center">- テクニカルソリューション事業部 -</p>
-                <br>
-                <p class="text-center" style="font-size: 13pt">
-                    テクニカルソリューション事業部では、<br>Webコンテンツの企画・作成を主として事業展開をしております。
-                </p>
-                <br>
-                <br>
-                <div class="button1 text-center">
-                    <!-- モーダル表示のためのボタン -->
-                    <a href="#" data-featherlight="#modal2">WEBコンテンツ</a>
+    <div class="container-fluid">
+        <!--News start-->
+        <div class="section" id="news">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="section_title">News</p><br>
                 </div>
-            </div>                        
-            <div class="col-md-6">
-                <p class="text-center" style="font-size:25pt;">IT solution</p>
-                <p class="text-center">- ITソリューション事業部 -</p>
-                <p class="text-center" style="font-size: 13pt;">
-                    ITソリューション事業部では、<br>SES（システムエンジニアリングサービス）を<br>主として事業展開しております。
-                </p>
-                <br>
-                <br>
-                <div class="button1 text-center">
-                    <div class="row">
-                        <div class="col-md-2">
-                        </div>
-                        <div class="col-md-4" style="height:70px;">
-                            <!-- 1.モーダル表示のためのボタン -->
-                            <a href="#" data-featherlight="#modal3">What's SES</a>
-                        </div>
-                        <div class="col-md-4" style="height:70px;">
-                            <a href="#" data-featherlight="#modal4">実績</a>
-                        </div>
-                        <div class="col-md-2">
-                        </div>
-                    </div>    
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                              <td>2015/06/01　　　</td>
+                              <td>東京都豊島区池袋2−68−9 池袋MIBビル5F　本社移転</td>
+                            </tr>
+                            <tr>
+                              <td>2014/02/01</td>
+                              <td>【技術者登録センター】･【開発センター】開設</td>
+                            </tr>
+                            <tr>
+                              <td>2014/01/01</td>
+                              <td>東京都豊島区南大塚3-2-11　Kビルディング3階　本社移転</td>
+                            </tr>
+                            <tr>
+                              <td>2013/07/02</td>
+                              <td>資本金 1,000万円　増資</td>
+                            </tr>
+                            <tr>
+                              <td>2012/07/02</td>
+                              <td>㈱ライブエスト設立　資本金300万円</td>
+                            </tr>
+                            <!--これにより下線を挿入の為、1列追加-->
+                            <tr>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <!--ここまで下線を挿入の為、1列追加-->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Service end-->
-
-    <!--liveest_pic start-->
+        <!--News end-->
+        <!--Service start-->
+        <div class="service_section" id="service">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="section_title">Service</p>
+                    <br>
+                    <p class="section_content">
+                        SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
+                        <br>
+                        あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sub_section">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="subsection_title">Technical solution</p>
+                    <p class="text-center">- テクニカルソリューション事業部 -</p>
+                    <br>
+                    <p class="subsection_content">
+                        テクニカルソリューション事業部では、<br>Webコンテンツの企画・作成を主として事業展開をしております。
+                    </p>
+                    <br>
+                    <br>
+                    <div class="button1 text-center">
+                        <!-- モーダル表示のためのボタン -->
+                        <a href="#" data-featherlight="#modal2">WEBコンテンツ</a>
+                    </div>
+                </div>                        
+                <div class="col-md-6">
+                    <p class="subsection_title">IT solution</p>
+                    <p class="text-center">- ITソリューション事業部 -</p>
+                    <p class="subsection_content">
+                        ITソリューション事業部では、<br>SES（システムエンジニアリングサービス）を<br>主として事業展開しております。
+                    </p>
+                    <br>
+                    <br>
+                    <div class="button1 text-center">
+                        <div class="row">
+                            <div class="col-md-2">
+                            </div>
+                            <div class="col-md-4" style="height:70px;">
+                                <!-- 1.モーダル表示のためのボタン -->
+                                <a href="#" data-featherlight="#modal3">What's SES</a>
+                            </div>
+                            <div class="col-md-4" style="height:70px;">
+                                <a href="#" data-featherlight="#modal4">実績</a>
+                            </div>
+                            <div class="col-md-2">
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Service end-->
+        <!--liveest_pic start-->
         <div class="row">
             <div class="col-md-12">
                 <img src="img/liveest.jpg" width="106%" style="opacity:1.0;margin-left:-3%" class="hidden-xs">
             </div>
         </div>
-    <!--liveest_pic end-->
-
-    <!--About Us start-->
-    <div class="section" id="about_us">
-        <div class="container-fluid">
+        <!--liveest_pic end-->
+        <!--About Us start-->
+        <div class="section" id="about_us">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center fs35">About Us</p>
+                    <p class="section_title">About Us</p>
                     <br>
-                    <table class="table table-bordered table-striped" style="font-size:13pt">
+                    <table class="table table-bordered table-striped">
                         <tbody>
                             <tr>
                                 <td>社名</td>
@@ -425,29 +488,23 @@ $(function(){
                 </div>
             </div>
         </div>
-    </div>
-    <!--About Us end-->
-
-    <!--Top Message start-->
-    <div class="section " id="company" style="background-color:#0E7AC4;">
-        <div class="container-fluid">
+        <!--About Us end-->
+        <!--Top Message start-->
+        <div class="top_message_section" id="company">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <p class="text-center fs35" style="color:#fff;">Top Message</p>
+                        <p class="section_title font_white">Top Message</p>
                         <br>
                         <br> 
                     </div>
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-8">
-                        <p class="text-left" style="font-size:13pt;color:#fff;"> Ishikawa Hidekazu</p>
-                        <p class="text-left" style="font-weight:bold;font-size:23pt;color:#fff;line-height:20px;letter-spacing:4px;">
-                            石川 秀和 
-                        </p>
-                        <p class="text-info text-left" style="font-weight:bold;font-size:9pt;margin-left:px;line-height:30px">- CEO & FOUNDER -</p>
-                        <br>
-                        <p class="text-left" style="letter-spacing:2px;font-size:13pt;color:#fff; line-height:25px;">
+                        <p class="top_message_eng_name">Ishikawa Hidekazu</p>
+                        <p class="top_message_jap_name">石川 秀和</p>
+                        <p class="top_message_subname">- CEO & FOUNDER -</p>
+                        <p class="top_message_content">
                             まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
                              <br>
                             【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
@@ -465,21 +522,15 @@ $(function(){
                              <br>
                             今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
                         </p>
-                        <br>
                     </div>
                     <div class="col-md-2">
-                    </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--Top Message end-->
-
-
-    <!--Vision start-->
-    <div class="section" id="vision" style="padding-top:70px;padding-bottom:70px; background-color:#fff;">
-        <div class="container-fluid">
+        <!--Top Message end-->
+        <!--Vision start-->
+        <div class="section" id="vision" style="padding-top:70px;padding-bottom:70px; background-color:#fff;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-1">
@@ -493,13 +544,9 @@ $(function(){
                 </div>
             </div>
         </div>
-    </div>
-    <!--Vision end-->
-
-
-    <!--STYLE５ start-->
-    <div class="section " id="company" style="background-color:#08233E;">
-        <div class="container-fluid">
+        <!--Vision end-->
+        <!--STYLE５ start-->
+        <div class="section " id="company" style="background-color:#08233E;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-1">
@@ -528,13 +575,13 @@ $(function(){
                 </div>
             </div>
         </div>
-    </div>
-    <!--STYLE５ end-->
+        <!--STYLE５ end-->
+    </div><!--container-fluidここまで-->
     <!--Recruit start-->
     <section class="full-height" id="recruit">
          <div class="full-height" style="background-color:#16A6B6;color:#fff;" >
             <div class="col-md-6" style="padding-top:120px;padding-bottom:80px;">
-                <h1 class="text-center">Recruit</h1>
+                <p class="section_title">Recruit</p>
                 <h4 class="text-center">
                     正社員／フリーランス募集中<br>
                     皆様からのご応募お待ちしております
@@ -576,7 +623,7 @@ $(function(){
                 <div class="v-align">
                     <div class="h-align">
                         <div class="inner" style="padding-top:70px;padding-bottom:160px;background-color:#fff;">
-                            <p class="text-center fs35">Partnership</p><br>
+                            <p class="section_title">Partnership</p>
                             <p class="text-center" style="padding-top:10px;line-height:35px; font-size:13pt">
                                 当社では、協業頂けるビジネスパートナー様を募集しております。<br>
                                 共にビジネスチャンスの獲得や事業強化を目的とした<br>
@@ -592,12 +639,12 @@ $(function(){
     </section>
     <!--Partnership end-->
 
-    <!--Contact start-->
-    <div class="section" id="contact" style="background-color:#ECEEF1;">
-        <div class="container-fluid">
+    <div class="container-fluid">
+        <!--Contact start-->
+        <div class="section" id="contact" style="background-color:#ECEEF1;">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center fs35">Contact</p>
+                    <p class="section_title">Contact</p>
                     <br>
                 </div>
             </div>
@@ -637,12 +684,9 @@ $(function(){
                 </div>
             </div>
         </div>
-    </div>
-    <!--Contact end-->
-
-    <!--footer start-->
-    <footer class="section" style="background-color:#2C5379;">
-        <div class="container-fluid">
+        <!--Contact end-->
+        <!--footer start-->
+        <footer class="section" style="background-color:#2C5379;">
             <div class="row">
                 <div class="col-sm-6" style="color: #fff">
                     <h1>LIVE EST,INC.</h1>
@@ -676,8 +720,9 @@ $(function(){
                     <p class="text-right" style="color:#fff">Copyright (C) 2016 LIVEEST All Rights Reserved.</p>
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div><!--container-fluidここまで-->
+
     <div class="lightbox_map" id="modal1">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.306258755683!2d139.7094275!3d35.735746999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5f996b8e35%3A0xa7e75361fd07f47d!2z44CSMTcwLTAwMTQg5p2x5Lqs6YO96LGK5bO25Yy65rGg6KKL77yS5LiB55uu77yW77yY4oiS77yZ!5e0!3m2!1sja!2sjp!4v1444293336079" frameborder="1" style="border:3" width="100%" height="100%"></iframe>
     </div>
