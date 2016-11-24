@@ -380,6 +380,109 @@
         font-weight:bold;
     }
     /*Contactアイコンここまで*/
+    /*ここから_各ボタンのレイアウト*/
+    .button1 a:hover{
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+    .button2 a:hover{
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+    .button3 a:hover{
+        cursor:pointer;
+        text-decoration:none;
+    }
+    .button1 a{
+        cursor:pointer;
+        text-decoration:none;
+        font-size:15pt;
+        color:#3CA89F;
+        border:2px solid #3CA89F;
+        padding:10px 20px;
+        width:150px;
+        height:50px;
+        text-align:center;
+    }
+    .button2 a{
+        cursor:pointer;
+        text-decoration:none;
+        font-size:15pt;
+        color:white;
+        border:2px solid white;
+        padding:10px 20px;
+        width:150px;
+        height:50px;
+        text-align:center;
+    }
+    .button3 a{
+        cursor:pointer;
+        text-decoration:none;
+        font-size:15pt;
+        color:black;
+        border:1px solid black;
+        padding:10px 20px;
+        width:150px;
+        height:50px;
+        text-align:center;
+    }
+    /*ここまで_各ボタンのレイアウト*/
+    /*ここから_modalウィンドウのレイアウト*/
+    .lightbox_map {
+        display: none;
+        padding: 10px;
+        width:100%;
+        height:100%;
+    }
+    .lightbox_ts {
+        display: none;
+        text-align:center;
+        margin: 30px;
+    }
+    .lightbox_ts p{
+        line-height: 40px;
+    }
+
+    .lightbox_its1 {
+        display: none;
+        margin: 30px;
+        text-align: left;
+    }
+
+    .lightbox_its1 p {
+        line-height: 40px;
+    }
+    .lightbox_its2 {
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_its2 div{
+        width:40%;
+    }
+    .lightbox_its2 p{
+      text-align: center;
+      float:right;
+      width:60%;
+      line-height:20px;
+    }
+    .lightbox_reg {
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_reg p {
+        line-height:25px;
+      }
+    .lightbox_own {
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_own p {
+        line-height:25px;
+      }
+
+    /*ここまで_modalウィンドウのレイアウト*/
     /*スマホ用*/
     @media screen and (max-width : 770px) {
         .main_text{
@@ -404,7 +507,7 @@
             background-color:#3CA89F;
         }
         .sub_section{
-            padding-top:10px;
+            padding-top:0px;
             padding-bottom:10px;
             color:#3CA89F;
             background-color:#fff;
@@ -455,7 +558,7 @@
         .subsection_title{
             margin-bottom:0px;
             text-align:center;
-            font-size:18pt;
+            font-size:15pt;
         }
         .subsection_subtitle{
             text-align:center;
@@ -519,28 +622,28 @@
             text-align:left;
             letter-spacing:2px;
             line-height:20px;
-            font-size:8pt;
+            font-size:10pt;
             color:#fff;
         }
         .visionsection_content{
             margin-bottom:30px;
             text-align:center;
-            font-size:8pt;
+            font-size:9pt;
             font-weight:bold;
         }
         .visionsection_content span{
-            font-size:10pt;
+            font-size:11pt;
             color:#EB2142;
         }
         .style5_content{
             text-align:center;
-            font-size:8pt;
+            font-size:9pt;
             color:#FFFFFF;
         }
         .style5_content h5{
             margin-top:5px;
             margin-bottom:15px;
-            font-size:10pt;
+            font-size:11pt;
         }
         .style5_content h5 span{
             color:#02AEDC;
@@ -553,25 +656,30 @@
         .recruit_content{
             margin-bottom:30px;
             text-align:center;
-            font-size:8pt;
+            font-size:9pt;
         }
         .partnership_content{
-            padding-top:10px;
+            /*padding:10px 30px;*/
             line-height:25px;
             text-align:center;
-            font-size:7pt;
+            font-size:8pt;
         }
+        /*
+        .partnership_content br{
+            display:none;
+        }
+        */
         .table{
             font-size:8pt;
         }
         section.full-height{
-            height:350px;
+            height:380px;
         }
         .footer_comname{
-            font-size:20pt;
+            font-size:23pt;
         }
         .footer_comaddress{
-            font-size:9pt;
+            font-size:10pt;
         }
         .footer_copyright{
             text-align:right;
@@ -617,6 +725,142 @@
             font-weight:bold;
         }
         /*Contactアイコンここまで*/
+        /*ここから_各ボタンのレイアウト*/
+        .button1 a:hover{
+            cursor:pointer;
+            text-decoration:none;
+        }
+
+        .button2 a:hover{
+            cursor:pointer;
+            text-decoration:none;
+        }
+
+        .button3 a:hover{
+            cursor:pointer;
+            text-decoration:none;
+        }
+        .button1 a{
+            cursor:pointer;
+            text-decoration:none;
+            font-size:10pt;
+            color:#3CA89F;
+            border:2px solid #3CA89F;
+            padding:5px 10px;
+            width:130px;
+            height:40px;
+            text-align:center;
+        }
+        .button2 a{
+            cursor:pointer;
+            text-decoration:none;
+            font-size:10pt;
+            color:white;
+            border:2px solid white;
+            padding:5px 10px;
+            width:130px;
+            height:40px;
+            text-align:center;
+        }
+        .button3 a{
+            cursor:pointer;
+            text-decoration:none;
+            font-size:10pt;
+            color:black;
+            border:1px solid black;
+            padding:10px 20px;
+            width:150px;
+            height:50px;
+            text-align:center;
+        }
+        /*ここまで_各ボタンのレイアウト*/
+        /*ここから_modalウィンドウのレイアウト*/
+        .lightbox_map {
+            display: none;
+            padding: 0px;
+            width:100%;
+            height:100%;
+        }
+        .lightbox_ts {
+            display: none;
+            text-align:center;
+            margin: 30px;
+        }
+        .lightbox_ts h2{
+            font-size: 15px;
+        }
+        .lightbox_ts p{
+            font-size: 10px;
+            line-height: 20px;
+        }
+
+        .lightbox_its1 {
+            display: none;
+            margin: 30px;
+            text-align: left;
+        }
+
+        .lightbox_its1 h2 {
+            font-size: 15px;
+        }
+        .lightbox_its1 p {
+            font-size: 10px;
+            line-height: 20px;
+        }
+        .lightbox_its2 {
+            display: none;
+            padding: 10px;
+        }
+        .lightbox_its2 h2 {
+            font-size: 15px;
+        }
+        .lightbox_its2 div{
+            width:40%;
+        }
+        .lightbox_its2 p{
+            text-align: center;
+            float:right;
+            width:60%;
+            font-size: 9px;
+            line-height:15px;
+        }
+        .lightbox_reg {
+            display: none;
+            padding: 10px;
+        }
+        .lightbox_reg h2 {
+            font-size: 15px;
+          }
+        .lightbox_reg h3 {
+            font-size: 14px;
+          }
+        .lightbox_reg p {
+            font-size: 8px;
+            line-height: 18px;
+          }
+        .lightbox_own {
+            display: none;
+            padding: 10px;
+        }
+        .lightbox_own h2 {
+            font-size: 15px;
+          }
+        .lightbox_own h3 {
+            font-size: 14px;
+          }
+        .lightbox_own p {
+            font-size: 8px;
+            line-height: 18px;
+        }
+        dl.taigu dt{
+            font-size: 10px;
+        }
+        dl.taigu dd{
+            white-space: nowrap;
+            height:15px;
+            font-size: 8px;
+        }
+        /*ここまで_modalウィンドウのレイアウト*/
     }/*@media screen(max-width:500px)*/
     /*スマホ用ここまで*/
 
@@ -636,12 +880,13 @@ $(function(){
             $('ul',this).hide();
     });
     $('#menu').slicknav({
-        label: '',
+        label: 'MENU　',
         duration: 500,
         easingOpen: "easeOutBounce", //available with jQuery UI
         closedSymbol: '<i class="fa fa-angle-double-right"></i>',
         openedSymbol: '<i class="fa fa-angle-double-down"></i>',
-        prependTo:'#container'
+        prependTo:'#container',
+        closeOnClick: true
     });
  
 });
@@ -700,7 +945,7 @@ $(function(){
                 </div>
             </div>
         </div>
-        <div class="background-image-fixed cover-image" src="img/mainpic1.jpg" width="100%" style="background-image : url('img/mainpic1.jpg')"></div>
+        <div class="background-image-fixed cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image : url('img/mainpic1.jpg')"></div>
         <div class="container">
             <div class="row" style="margin:25%;">
                 <div class="col-md-12 text-center" id="change_text">
@@ -785,7 +1030,6 @@ $(function(){
                         テクニカルソリューション事業部では、<br>Webコンテンツの企画・作成を主として事業展開をしております。
                     </p>
                     <br>
-                    <br>
                     <div class="button1 text-center">
                         <!-- モーダル表示のためのボタン -->
                         <a href="#" data-featherlight="#modal2">WEBコンテンツ</a>
@@ -798,16 +1042,15 @@ $(function(){
                         ITソリューション事業部では、<br>SES（システムエンジニアリングサービス）を<br>主として事業展開しております。
                     </p>
                     <br>
-                    <br>
                     <div class="button1 text-center">
                         <div class="row">
                             <div class="col-md-2">
                             </div>
-                            <div class="col-md-4" style="height:70px;">
+                            <div class="col-md-4" style="height:50px;">
                                 <!-- 1.モーダル表示のためのボタン -->
                                 <a href="#" data-featherlight="#modal3">What's SES</a>
                             </div>
-                            <div class="col-md-4" style="height:70px;">
+                            <div class="col-md-4" style="height:50px;">
                                 <a href="#" data-featherlight="#modal4">実績</a>
                             </div>
                             <div class="col-md-2">
@@ -989,14 +1232,14 @@ $(function(){
                 <div class="row">
                     <div class="col-md-1">
                     </div>
-                    <div class="col-md-4" style="height:70px;">
+                    <div class="col-md-4" style="height:50px;">
                         <div class="button2 text-center">
                             <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                         </div>
                     </div>
                     <div class="col-md-2">
                     </div>
-                    <div class="col-md-4" style="height:70px;">
+                    <div class="col-md-4" style="height:50px;">
                         <div class="button2 text-center">
                             <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
                         </div>
