@@ -8,7 +8,10 @@
     <script src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/featherlight.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
+    <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
     <link href="img/LE_icon.png" rel="shortcut icon"> 
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -20,27 +23,32 @@
     <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/main_770.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/slicknav.css" />
     <title>株式会社ライブエスト</title>
     <style type="text/css">
     html {
-      font-family: sans-serif,"メイリオ";
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
     }
-    /*0722変更点>保留*/
-    /*body {
-      font-family: sans-serif,"メイリオ";
-      -ms-text-size-adjust: 100%;
-      -webkit-text-size-adjust: 100%;
-    }
+
     @supports (-ms-accelerator:true){
       body{
-        font-family :"メイリオ", "ＭＳ Ｐゴシック", "ヒラギノ角ゴシックW3", "Osaka", sans-serif;
+        font-family :"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
       }
     }
-    */
+    body {
+      
+      /*font-family: Lato;*/
+      /*↑0221 変更*/
+      font-family:"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+      letter-spacing: 0.6em;
+      font-size: 11pt;
+      line-height:30px;
+      color: #000000;
+      background-color: #ffffff;
 
+    }
     i.fsDefault{
         font-size:32pt !important;
     }
@@ -217,17 +225,20 @@
     }
 
     .section_title{
+        letter-spacing:0.1em;
+        font-family:'Lato';
         text-align:center;
-        font-size:35pt;
+        font-size:2.2em;
     }
+
     .subsection_title{
         margin-top:30px;
         text-align:center;
-        font-size:25pt;
+        /*font-size:25pt;*/
     }
     .subsection_subtitle{
         text-align:center;
-        font-size:14pt;
+        /*font-size:14pt;*/
     }
     .topmessage_section_title{
         margin-bottom:50px;
@@ -238,7 +249,8 @@
         margin-bottom:45px;
         text-align:center;
         color:#08233E;
-        font-size:40pt;
+        font-family:'Lato';
+        font-size:1.3em;
         font-weight:bold;
     }
     .style5_title{
@@ -255,11 +267,11 @@
 
     .section_content{
         text-align:center;
-        font-size:15pt;
+        /*font-size:15pt;*/
     }
     .subsection_content{
         text-align:center;
-        font-size:13pt;
+        /*font-size:13pt;*/
     }
     .top_message_eng_name{
         text-align:left;
@@ -339,7 +351,7 @@
         text-align:right;
     }
     .table{
-        font-size:13pt;
+        /*font-size:13pt;*/
     }
     /*ここまで各sectionのCSS*/
     
@@ -484,386 +496,7 @@
       }
 
     /*ここまで_modalウィンドウのレイアウト*/
-    /*スマホ用*/
-    @media screen and (max-width : 770px) {
-        .main_text{
-            font-size:80px;
-            letter-spacing:4px;
-            display:inline-block;
-        }
-        .sub_text{
-            font-size:30px;
-            letter-spacing:2px;
-            display:inline-block;
-        }
-        /*ここから各sectionのCSS*/
-        .section{
-            padding-top:30px;
-            padding-bottom:30px;
-        }
-        .service_section{
-            padding-top:20px;
-            padding-bottom:20px;
-            color:white;
-            background-color:#3CA89F;
-        }
-        .sub_section{
-            padding-top:0px;
-            padding-bottom:10px;
-            color:#3CA89F;
-            background-color:#fff;
-        }
-        .top_message_section{
-            padding-top:30px;
-            padding-bottom:30px;
-            background-color:#0E7AC4;
-        }
-        .vision_section{
-            padding-top:20px;
-            padding-bottom:20px;
-            background-color:#fff;
-        }
-        .style5_section{
-            padding-top:30px;
-            padding-bottom:30px;
-            background-color:#08233E;
-        }
-        .recruit_section{
-            height:100%;
-            padding-top:50px;
-            padding-bottom:0px;
-            background-color:#16A6B6;
-            color:#fff;
-        }
-        .partnership_section{
-            height:100%;
-            padding-top:30px;
-            padding-bottom:60px;
-        }
-        .contact_section{
-            padding-top:30px;
-            padding-bottom:15px;
-            background-color:#ECEEF1;
-        }
-        .footer_section{
-            padding-top:30px;
-            padding-bottom:30px;
-            background-color:#2C5379;
-        }
 
-        .section_title{
-            margin-bottom:0px;
-            text-align:center;
-            font-size:20pt;
-        }
-        .subsection_title{
-            margin-bottom:0px;
-            text-align:center;
-            font-size:15pt;
-        }
-        .subsection_subtitle{
-            text-align:center;
-            font-size:6pt;
-        }
-        .topmessage_section_title{
-            margin-bottom:30px;
-            text-align:center;
-            font-size:20pt;
-        }
-        .visionsection_title{
-            margin-bottom:20px;
-            text-align:center;
-            color:#08233E;
-            font-size:20pt;
-            font-weight:bold;
-        }
-        .style5_title{
-            margin-bottom:20px;
-            text-align:center;
-            font-size:20pt;
-            font-weight:bold;
-            color:#fff;
-        }
-        .partnership_title{
-            text-align:center;
-            font-size:20pt;
-        }
-
-        .section_content{
-            text-align:center;
-            font-size:8pt;
-        }
-        .subsection_content{
-            text-align:center;
-            font-size:8pt;
-        }
-        .top_message_eng_name{
-            text-align:left;
-            font-size:8pt;
-            color:#fff;
-        }
-        .top_message_jap_name{
-            text-align:left;
-            line-height:8px;
-            letter-spacing:4px;
-            font-weight:bold;
-            font-size:12pt;
-            color:#fff;
-        }
-        .top_message_subname{
-            line-height:8px;
-            text-align:left;
-            font-weight:bold;
-            font-size:6pt;
-            color:#5bc0de;
-        }
-
-        .top_message_content{
-            margin-top:30px;
-            text-align:left;
-            letter-spacing:2px;
-            line-height:20px;
-            font-size:10pt;
-            color:#fff;
-        }
-        .visionsection_content{
-            margin-bottom:30px;
-            text-align:center;
-            font-size:9pt;
-            font-weight:bold;
-        }
-        .visionsection_content span{
-            font-size:11pt;
-            color:#EB2142;
-        }
-        .style5_content{
-            text-align:center;
-            font-size:9pt;
-            color:#FFFFFF;
-        }
-        .style5_content h5{
-            margin-top:5px;
-            margin-bottom:15px;
-            font-size:11pt;
-        }
-        .style5_content h5 span{
-            color:#02AEDC;
-            font-weight:bold;
-        }
-        .style5_content p{
-            margin-bottom:30px;
-            line-height:25px;
-        }
-        .recruit_content{
-            margin-bottom:30px;
-            text-align:center;
-            font-size:9pt;
-        }
-        .partnership_content{
-            /*padding:10px 30px;*/
-            line-height:25px;
-            text-align:center;
-            font-size:8pt;
-        }
-        /*
-        .partnership_content br{
-            display:none;
-        }
-        */
-        .table{
-            font-size:8pt;
-        }
-        section.full-height{
-            height:330px;
-        }
-        .footer_comname{
-            font-size:23pt;
-        }
-        .footer_comaddress{
-            font-size:10pt;
-        }
-        .footer_copyright{
-            text-align:right;
-            font-size:8pt;
-        }
-        /*ここまで各sectionのCSS*/
-        
-        /*Contactアイコンここから*/
-        .icon_block{
-            margin:auto;
-            margin-top:10px;
-            width:120px;
-            height:120px;
-            opacity:0.7;
-            border-radius:100px;
-            text-align:center;
-            background-color:#003366;
-        }
-        .icon_block a{
-            width:120px;
-            height:120px;
-        }
-        .icon_block a span{
-            margin:10px;
-            width:100px;
-            height:100px;
-            font-size:69pt;
-            color:white;
-        }
-        .icon_block span{
-            margin:10px;
-            width:100px;
-            height:100px;
-            font-size:69pt;
-            color:white;
-        }
-        .icon_comment{
-            margin-top:20px;
-            text-align:center;
-            opacity:0;
-            font-family:'Helvetica';
-            font-size:8pt;
-            font-weight:bold;
-        }
-        /*Contactアイコンここまで*/
-        /*ここから_各ボタンのレイアウト*/
-        .button1 a:hover{
-            cursor:pointer;
-            text-decoration:none;
-        }
-
-        .button2 a:hover{
-            cursor:pointer;
-            text-decoration:none;
-        }
-
-        .button3 a:hover{
-            cursor:pointer;
-            text-decoration:none;
-        }
-        .button1 a{
-            cursor:pointer;
-            text-decoration:none;
-            font-size:10pt;
-            color:#3CA89F;
-            border:2px solid #3CA89F;
-            padding:7px 10px;
-            width:130px;
-            height:50px;
-            text-align:center;
-        }
-        .button2 a{
-            cursor:pointer;
-            text-decoration:none;
-            font-size:10pt;
-            color:white;
-            border:2px solid white;
-            padding:7px 10px;
-            width:130px;
-            height:50px;
-            text-align:center;
-        }
-        .button3 a{
-            cursor:pointer;
-            text-decoration:none;
-            font-size:10pt;
-            color:black;
-            border:1px solid black;
-            padding:10px 20px;
-            width:150px;
-            height:50px;
-            text-align:center;
-        }
-        /*ここまで_各ボタンのレイアウト*/
-        /*ここから_modalウィンドウのレイアウト*/
-        .lightbox_map {
-            display: none;
-            padding: 0px;
-            width:100%;
-            height:100%;
-        }
-        .lightbox_ts {
-            display: none;
-            text-align:center;
-            margin: 30px;
-        }
-        .lightbox_ts h2{
-            font-size: 15px;
-        }
-        .lightbox_ts p{
-            font-size: 10px;
-            line-height: 20px;
-        }
-
-        .lightbox_its1 {
-            display: none;
-            margin: 30px;
-            text-align: left;
-        }
-
-        .lightbox_its1 h2 {
-            font-size: 15px;
-        }
-        .lightbox_its1 p {
-            font-size: 10px;
-            line-height: 20px;
-        }
-        .lightbox_its2 {
-            display: none;
-            padding: 10px;
-        }
-        .lightbox_its2 h2 {
-            font-size: 15px;
-        }
-        .lightbox_its2 div{
-            width:40%;
-        }
-        .lightbox_its2 p{
-            text-align: center;
-            float:right;
-            width:60%;
-            font-size: 9px;
-            line-height:15px;
-        }
-        .lightbox_reg {
-            display: none;
-            padding: 10px;
-        }
-        .lightbox_reg h2 {
-            font-size: 15px;
-          }
-        .lightbox_reg h3 {
-            font-size: 14px;
-          }
-        .lightbox_reg p {
-            font-size: 8px;
-            line-height: 18px;
-          }
-        .lightbox_own {
-            display: none;
-            padding: 10px;
-        }
-        .lightbox_own h2 {
-            font-size: 15px;
-          }
-        .lightbox_own h3 {
-            font-size: 14px;
-          }
-        .lightbox_own p {
-            font-size: 8px;
-            line-height: 18px;
-        }
-        dl.taigu dt{
-            font-size: 10px;
-        }
-        dl.taigu dd{
-            white-space: nowrap;
-            height:15px;
-            font-size: 8px;
-        }
-        /*ここまで_modalウィンドウのレイアウト*/
-    }/*@media screen(max-width:770px)*/
-    /*スマホ用ここまで*/
 
     dl.taigu dt{
         float:left;
@@ -889,7 +522,21 @@ $(function(){
         prependTo:'#container',
         closeOnClick: true
     });
- 
+    //フェードイン・アウトの設定
+    $('.fadeIn').css('opacity', 0);
+    $('.fadeIn').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView) {
+            $(this).stop().animate({opacity:1}, 2500);
+        }
+        else {
+            $(this).stop().animate({opacity: 0}, 2500);
+        }
+    });
+
+    //パララックスの設定
+    $('#main_image').localScroll();
+    $('#news').localScroll();
+
 });
 </script>
 </head>
@@ -946,15 +593,15 @@ $(function(){
                 </div>
             </div>
         </div>
-        <div class="cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image : url('img/mainpic1.jpg')"></div>
+        <div class="cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image : url('img/mainpic1.jpg')50% 0 no-repeat fixed;color:white;"></div>
         <div class="container">
             <div class="row" style="margin:25%;">
                 <div class="col-md-12 text-center" id="change_text">
-                    <p class="text-center text-inverse main_text">
+                    <p class="fadeIn text-center text-inverse main_text">
                         LIVE EST ,INC.
                     </p>
                     <br>
-                    <p class="text-center text-inverse sub_text">
+                    <p class="fadeIn text-center text-inverse sub_text">
                         - Always From Here-
                     </p>
                 </div>
@@ -964,10 +611,10 @@ $(function(){
 
     <div class="container-fluid">
         <!--News start-->
-        <div class="section" id="news">
+        <div class="section" id="news" style="background:url(img/bg_img.jpg) 50% 0 no-repeat fixed;color:white;">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="section_title">News</p><br>
+                    <p class="fadeIn section_title">News</p><br>
                 </div>
             </div>
             <div class="row">
@@ -975,28 +622,28 @@ $(function(){
                     <br>
                     <table class="table">
                         <tbody>
-                            <tr>
+                            <tr class="fadeIn">
                               <td>2015/06/01　　　</td>
                               <td>東京都豊島区池袋2−68−9 池袋MIBビル5F　本社移転</td>
                             </tr>
-                            <tr>
+                            <tr class="fadeIn">
                               <td>2014/02/01</td>
                               <td>【技術者登録センター】･【開発センター】開設</td>
                             </tr>
-                            <tr>
+                            <tr class="fadeIn">
                               <td>2014/01/01</td>
                               <td>東京都豊島区南大塚3-2-11　Kビルディング3階　本社移転</td>
                             </tr>
-                            <tr>
+                            <tr class="fadeIn">
                               <td>2013/07/02</td>
                               <td>資本金 1,000万円　増資</td>
                             </tr>
-                            <tr>
+                            <tr class="fadeIn">
                               <td>2012/07/02</td>
                               <td>㈱ライブエスト設立　資本金300万円</td>
                             </tr>
                             <!--これにより下線を挿入の為、1列追加-->
-                            <tr>
+                            <tr class="fadeIn">
                               <td></td>
                               <td></td>
                             </tr>
@@ -1011,9 +658,9 @@ $(function(){
         <div class="service_section" id="service">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="section_title">Service</p>
+                    <p class="fadeIn section_title">Service</p>
                     <br>
-                    <p class="section_content">
+                    <p class="fadeIn section_content">
                         SES、技術者派遣の他に、ホームページ制作やソフトウェア開発、 及びコンサルティング等、
                         <br>
                         あらゆるニーズに対応出来ます。ITにまつわる事でしたら、是非ともご相談・お声掛け下さい。
@@ -1063,19 +710,19 @@ $(function(){
         </div>
         <!--Service end-->
         <!--liveest_pic start-->
-        <div class="row">
+        <!--<div class="row">
             <div class="col-md-12">
                 <img src="img/liveest.jpg" width="106%" style="opacity:1.0;margin-left:-3%" class="hidden-xs">
             </div>
-        </div>
+        </div>-->
         <!--liveest_pic end-->
         <!--About Us start-->
-        <div class="section" id="about_us">
+        <div class="section" id="about_us" style="background:url(img/liveest.jpg) 50% 0 no-repeat fixed;color:white;" >
             <div class="row">
                 <div class="col-md-12">
-                    <p class="section_title">About Us</p>
+                    <p class="fadeIn section_title">About Us</p>
                     <br>
-                    <table class="table table-bordered table-striped">
+                    <table class="fadeIn table table-bordered">
                         <tbody>
                             <tr>
                                 <td>社名</td>

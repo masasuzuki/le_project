@@ -13,18 +13,7 @@
  * }
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-@supports (-ms-accelerator:true){
-  body{
-    font-family :"メイリオ", "ＭＳ Ｐゴシック", "ヒラギノ角ゴシックW3", "Osaka", sans-serif;
-  }
-}
-body {
-  font-family: Lato;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #000000;
-  background-color: #ffffff;
-}
+
 
 a {
   color: #337cbb;
@@ -984,7 +973,7 @@ th {
 .table > tbody > tr > td,
 .table > tfoot > tr > td {
   padding: 8px;
-  line-height: 1.42857143;
+  line-height: 3;
   vertical-align: top;
   border-top: 1px solid #dddddd;
 }
