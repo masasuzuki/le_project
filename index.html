@@ -44,7 +44,7 @@
       font-family:"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
       letter-spacing: 0.6em;
       font-size: 11pt;
-      line-height:30px;
+      line-height:35px;
       color: #000000;
       background-color: #ffffff;
 
@@ -175,21 +175,21 @@
         padding-bottom:100px;
     }
     .service_section{
-        padding-top:80px;
-        padding-bottom:80px;
+        padding-top:100px;
+        padding-bottom:100px;
         color:white;
-        background-color:#3CA89F;
+        background-color:#08233E;/*#3CA89F;*/
     }
     .sub_section{
-        padding-top:20px;
+        padding-top:100px;
         padding-bottom:50px;
-        color:#3CA89F;
+        color:#08233E;/*#3CA89F;*/
         background-color:#fff;
     }
     .top_message_section{
         padding-top:100px;
         padding-bottom:100px;
-        background-color:#0E7AC4;
+        background-color:#01044E;/*#0E7AC4;*/
     }
     .vision_section{
         padding-top:70px;
@@ -232,19 +232,18 @@
     }
 
     .subsection_title{
-        margin-top:30px;
+        margin:30px 0 0;
         text-align:center;
-        /*font-size:25pt;*/
+        font-size:1.6em;
+        letter-spacing:0.1em;
+        font-family:'Lato';
     }
     .subsection_subtitle{
         text-align:center;
-        /*font-size:14pt;*/
+        font-size:0.8em;
+        letter-spacing:0.1em;
     }
-    .topmessage_section_title{
-        margin-bottom:50px;
-        text-align:center;
-        font-size:35pt;
-    }
+
     .visionsection_title{
         margin-bottom:45px;
         text-align:center;
@@ -270,36 +269,35 @@
         /*font-size:15pt;*/
     }
     .subsection_content{
+        margin-top:40px;
         text-align:center;
-        /*font-size:13pt;*/
+        font-size:11pt;
     }
     .top_message_eng_name{
         text-align:left;
-        font-size:13pt;
+        font-size:0.8em;
+        letter-spacing: 0.1em;
         color:#fff;
+        margin-top:50px;
     }
     .top_message_jap_name{
+        margin-bottom:00px;
         text-align:left;
-        line-height:20px;
         letter-spacing:4px;
-        font-weight:bold;
-        font-size:23pt;
+        font-size:20pt;
         color:#fff;
     }
     .top_message_subname{
-        line-height:30px;
         text-align:left;
         font-weight:bold;
-        font-size:9pt;
-        color:#5bc0de;
+        font-size:0.5em;
+        letter-spacing: 0.1em;
+       color:#5bc0de;
     }
 
     .top_message_content{
         margin-top:30px;
         text-align:left;
-        letter-spacing:2px;
-        line-height:25px;
-        font-size:13pt;
         color:#fff;
     }
     .visionsection_content{
@@ -408,12 +406,14 @@
         cursor:pointer;
         text-decoration:none;
     }
+    /*service_subsection*/
     .button1 a{
         cursor:pointer;
         text-decoration:none;
-        font-size:15pt;
-        color:#3CA89F;
-        border:2px solid #3CA89F;
+        font-size:1.2em;
+        letter-spacing:0.1em;
+        color:#08233E;/*#3CA89F;*/
+        border:2px solid #08233E;/*#3CA89F;*/
         padding:10px 20px;
         width:150px;
         height:50px;
@@ -593,7 +593,7 @@ $(function(){
                 </div>
             </div>
         </div>
-        <div class="cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image : url('img/mainpic1.jpg')50% 0 no-repeat fixed;color:white;"></div>
+        <div class="cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image : url('img/mainpic1.jpg');color:white;"></div>
         <div class="container">
             <div class="row" style="margin:25%;">
                 <div class="col-md-12 text-center" id="change_text">
@@ -671,22 +671,23 @@ $(function(){
         <div class="sub_section">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="subsection_title">Technical solution</p>
-                    <p class="subsection_subtitle">- テクニカルソリューション事業部 -</p>
-                    <br>
-                    <p class="subsection_content">
-                        テクニカルソリューション事業部では、<br>Webコンテンツの企画・作成を主として事業展開をしております。
+                    <p class="fadeIn subsection_title">Technical solution</p>
+                    <p class="fadeIn subsection_subtitle">- テクニカルソリューション事業部 -</p>
+                    <p class="fadeIn subsection_content">
+                        テクニカルソリューション事業部では、<br>
+                        Webコンテンツの企画・作成を主として<br>
+                        事業展開をしております。
                     </p>
                     <br>
-                    <div class="button1 text-center">
+                    <div class="fadeIn button1 text-center">
                         <!-- モーダル表示のためのボタン -->
                         <a href="#" data-featherlight="#modal2">WEBコンテンツ</a>
                     </div>
                 </div>                        
                 <div class="col-md-6">
-                    <p class="subsection_title">IT solution</p>
-                    <p class="subsection_subtitle">- ITソリューション事業部 -</p>
-                    <p class="subsection_content">
+                    <p class="fadeIn subsection_title">IT solution</p>
+                    <p class="fadeIn subsection_subtitle">- ITソリューション事業部 -</p>
+                    <p class="fadeIn subsection_content">
                         ITソリューション事業部では、<br>SES（システムエンジニアリングサービス）を<br>主として事業展開しております。
                     </p>
                     <br>
@@ -696,10 +697,10 @@ $(function(){
                             </div>
                             <div class="col-md-4" style="height:50px;">
                                 <!-- 1.モーダル表示のためのボタン -->
-                                <a href="#" data-featherlight="#modal3">What's SES</a>
+                                <a href="#" class="fadeIn" data-featherlight="#modal3">What's SES</a>
                             </div>
                             <div class="col-md-4" style="height:50px;">
-                                <a href="#" data-featherlight="#modal4">実績</a>
+                                <a href="#" class="fadeIn" data-featherlight="#modal4">実績</a>
                             </div>
                             <div class="col-md-2">
                             </div>
@@ -773,14 +774,14 @@ $(function(){
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <p class="topmessage_section_title font_white">Top Message</p>
+                        <p class="section_title font_white">Top Message</p>
                     </div>
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-8">
                         <p class="top_message_eng_name">Ishikawa Hidekazu</p>
-                        <p class="top_message_jap_name">石川 秀和</p>
-                        <p class="top_message_subname">- CEO & FOUNDER -</p>
+                        <p class="top_message_jap_name">石川 秀和<span class="top_message_subname">- CEO & FOUNDER -</span></p>
+                        
                         <p class="top_message_content">
                             まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
                              <br>

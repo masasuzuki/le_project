@@ -22,7 +22,7 @@ $(function(){
 	    }
 	});
 
-	//button1の制御
+	//button1の制御//0221変更：'#3CA89F'
 	$('.button1 a').on('mouseover',function(){
 		$(this).stop().animate({
 			backgroundColor:'#00CCFF',
@@ -33,8 +33,8 @@ $(function(){
 	}).on('mouseout',function(){
 		$(this).stop().animate({
 			backgroundColor:'transparent',
-			borderColor:'#3CA89F',
-			color:'#3CA89F'
+			borderColor:'#08233E',
+			color:'#08233E'
 		},500
 		);
 	});
