@@ -2,10 +2,10 @@ $(function(){
     var x = $(window).width();
     //windowの分岐幅をyに代入
     var y = 770;
-    if (x <= y) {
-        $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
+    if (x <= y) {	//一時不要_0222
+       // $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
     } else {
-        $('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
+       // $('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
     }
 
 	//windowのサイズによりテキストを入れ替える
@@ -15,10 +15,10 @@ $(function(){
 	    var x = $(window).width();
 	    //windowの分岐幅をyに代入
 	    var y = 770;
-	    if (x <= y) {
-	        $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
+	    if (x <= y) {	//一時不要
+	       // $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
 	    } else {
-	        $('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
+	        //$('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
 	    }
 	});
 
@@ -75,6 +75,9 @@ $(function(){
 	$(window).on('scroll',function(){
 	 	var scrollTop = $(window).scrollTop();
 	 	if(scrollTop > 320){
+            //メニューバーを表示
+            $('.navbar').removeClass('hide');
+            
 	  		$('.navbar').stop().animate({
 	 			backgroundColor:'white'
 	 		},500,
@@ -94,6 +97,16 @@ $(function(){
 	 		//return false;
 	 	}
 	 	if(scrollTop == 0){
+            //スクロール禁止
+            //PC用
+            var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+            $(document).on(scroll_event,function(e){e.preventDefault();});
+            //SP用
+            $(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
+
+            //メニューバーを隠す
+            $('.navbar').addClass('hide');
+
 	  		$('.navbar').stop().animate({
 	 			backgroundColor:'transparent'
 	 		},500,

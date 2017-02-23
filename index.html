@@ -12,6 +12,7 @@
     <script src="js/jquery.slicknav.js"></script>
     <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
     <script type="text/javascript" src="js/jquery.localscroll-1.2.7-min.js"></script>
+    <script type="text/javascript" src="js/parallax.min.js"></script>
     <link href="img/LE_icon.png" rel="shortcut icon"> 
     <link href="css/jquery-ui.min.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -42,7 +43,7 @@
       /*font-family: Lato;*/
       /*↑0221 変更*/
       font-family:"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
-      letter-spacing: 0.6em;
+      letter-spacing: 0.4em;
       font-size: 11pt;
       line-height:35px;
       color: #000000;
@@ -160,11 +161,14 @@
         color:#fff;
     }
     .main_text{
-        font-size:80px;
+        color:#01044E;
+        font-size:4.0em !important;
         letter-spacing:4px;
         display:inline-block;
     }
     .sub_text{
+        color:#01044E;
+        font-size:1.5em !important;
         font-size:30px;
         letter-spacing:2px;
         display:inline-block;
@@ -178,12 +182,12 @@
         padding-top:100px;
         padding-bottom:100px;
         color:white;
-        background-color:#08233E;/*#3CA89F;*/
+        background-color:#01044E;/*#3CA89F;*/
     }
     .sub_section{
         padding-top:100px;
         padding-bottom:50px;
-        color:#08233E;/*#3CA89F;*/
+        color:#01044E;/*#3CA89F;*/
         background-color:#fff;
     }
     .top_message_section{
@@ -278,10 +282,10 @@
         font-size:0.8em;
         letter-spacing: 0.1em;
         color:#fff;
-        margin-top:50px;
+        margin:50px 10% 0;
     }
     .top_message_jap_name{
-        margin-bottom:00px;
+        margin:50px 10% 0;
         text-align:left;
         letter-spacing:4px;
         font-size:20pt;
@@ -292,11 +296,12 @@
         font-weight:bold;
         font-size:0.5em;
         letter-spacing: 0.1em;
-       color:#5bc0de;
+        color:#5bc0de;
+        margin:50px 10% 0;
     }
 
     .top_message_content{
-        margin-top:30px;
+        margin:30px 10% 0;
         text-align:left;
         color:#fff;
     }
@@ -493,8 +498,15 @@
     }
     .lightbox_own p {
         line-height:25px;
-      }
-
+    }
+    .lightbox_pp {
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_ssp {
+        display: none;
+        padding: 10px;
+    }
     /*ここまで_modalウィンドウのレイアウト*/
 
 
@@ -502,9 +514,51 @@
         float:left;
     }
 
-    </style>
+    a.pp_link:hover, focus{
+        color:#FFF;
+    }
+    a.sp_link:hover{
+        color:#FFF;
+    }
+#scene {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+    #scene > li {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 <script>
 $(function(){
+
+    //scroll禁止関数
+    function scroll_disabled(){
+            //スクロール禁止
+            //PC用
+            var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+            $(document).on(scroll_event,function(e){e.preventDefault();});
+            //SP用
+            $(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
+    }
+
+    //topScrollクリック時スクロール可
+    $("#topScroll").click(function(){
+        //PC用
+        var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
+        $(document).off(scroll_event);
+        //SP用
+        $(document).off('.noScroll');
+
+    });
+
+
     //ドロップダウンメニュー
     $('#navi ul>li').find('ul').hide();
     $('#navi ul>li').hover(function(){
@@ -533,6 +587,42 @@ $(function(){
         }
     });
 
+    var first_reload_flag = 0;
+    //フェードインの設定（TOPコメント：メイン用）
+    $('.fadeInMain').css('opacity', 0);
+    $('.fadeInMain').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView) {
+            $(this).stop().animate({opacity:1}, 3000);
+ 
+            //初回読み込み＆画面位置がTOPの時のみスクロール禁止
+            if(first_reload_flag == 0 && $(window).scrollTop()==0){
+                scroll_disabled();
+                first_reload_flag++;
+            }
+        }
+        else {
+            //$(this).stop().animate({opacity: 0}, 3000);
+        }
+    });
+
+
+    //フェードインの設定（TOPコメント：サブ用）
+    $('.fadeInSub').css('opacity', 0);
+    $('.fadeInSub').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView) {
+            $(this).stop().animate({opacity:1}, 3000);
+        }
+        else {
+            //何もしない
+        }
+    });
+    //フェードインの設定（TOPコメント：画像用）
+    $('.fadeInImg').css('opacity', 0);
+    setTimeout(function(){
+        $('.fadeInImg').stop().animate({opacity:1}, 2000);
+
+    },3000);
+
     //パララックスの設定
     $('#main_image').localScroll();
     $('#news').localScroll();
@@ -542,7 +632,7 @@ $(function(){
 </head>
 <body> 
     <div class="cover">
-        <div class="navbar mainMenu wideMenu">
+        <div class="navbar mainMenu wideMenu hide">
             <div class="navbar-header">
                 <img id="top_logo" src="img/LE_logo2.png" width="50px;" height="50px" style="margin-left:40px;">
             </div>
@@ -593,20 +683,38 @@ $(function(){
                 </div>
             </div>
         </div>
-        <div class="cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image : url('img/mainpic1.jpg');color:white;"></div>
+        <!--/ TOPスクロールバーなし_0222-->
+        <!--TOP画像なし_0222-->
+        <div class="fadeInImg cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image: url('img/berndies-cinemagraph-144202951948nkg.gif');color:white;"></div>
+        
         <div class="container">
             <div class="row" style="margin:25%;">
                 <div class="col-md-12 text-center" id="change_text">
-                    <p class="fadeIn text-center text-inverse main_text">
+                    <p class="fadeInMain text-center text-inverse main_text">
                         LIVE EST ,INC.
                     </p>
                     <br>
-                    <p class="fadeIn text-center text-inverse sub_text">
-                        - Always From Here-
+                    <p class="fadeInSub text-center text-inverse sub_text">
+                        Always From Here
+                    </p>
+                    <p class="fadeInDetail text-center" style="margin-top:50px;font-size:8pt;color:#FFF;letter-spacing:3px;">
+                        <a href="#news" id="topScroll" class="text-center" style="font-size:20pt;"><img width="50" height="50" src="img/btn_HEADLINE.png"></a><br>CLICK HERE
                     </p>
                 </div>
             </div>
+        <!--
+        <ul id="scene" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15">
+            <li class="layer" data-depth="0.00"><div class="background"></div></li>
+            <li class="layer" data-depth="0.90"><div class="moon"><img src="img/keyboard-417090_1280.png"></div></li>
+        </ul>
+         
+        <script src="parallax.min.js"></script>
+        <script>
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+        </script>-->
         </div>
+        <!--/ TOP画像なし_0222-->
     </div>
 
     <div class="container-fluid">
@@ -723,7 +831,7 @@ $(function(){
                 <div class="col-md-12">
                     <p class="fadeIn section_title">About Us</p>
                     <br>
-                    <table class="fadeIn table table-bordered">
+                    <table class="fadeIn table">
                         <tbody>
                             <tr>
                                 <td>社名</td>
@@ -776,9 +884,7 @@ $(function(){
                     <div class="col-md-12">
                         <p class="section_title font_white">Top Message</p>
                     </div>
-                    <div class="col-md-2">
-                    </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                         <p class="top_message_eng_name">Ishikawa Hidekazu</p>
                         <p class="top_message_jap_name">石川 秀和<span class="top_message_subname">- CEO & FOUNDER -</span></p>
                         
@@ -801,7 +907,9 @@ $(function(){
                             今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
                         </p>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-6" style="background-color:transparent;">
+                            テスト
+                        </div>
                     </div>
                 </div>
             </div>
@@ -973,6 +1081,9 @@ $(function(){
                     東京都豊島区池袋2−68−9　池袋MIBビル5F<br>
                     TEL / FAX　03-6907-1122 / 03-6907-1123
                     </p>
+                    <a class="pp_link" data-featherlight="#modal10">PRIVACY POLICY</a>
+                    　｜　
+                    <a class="sp_link" data-featherlight="#modal11">SECURITY POLICY</a>
                 </div>
                 <div class="col-sm-6">
                     <p class="text-right">
@@ -1117,12 +1228,141 @@ $(function(){
             TEL：03-6907-1122 
         </p>
     </div>
+    <div class="lightbox_pp" id="modal10">
+        <h2>プライバシーポリシー（個人情報保護方針）</h2>
+        <p style="line-height:25px;">
+        <br>
+        株式会社ライブエスト（以下「当社」）は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、<br>
+        全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。<br>
+        <br>
+        <strong>・個人情報の管理</strong><br>
+        当社は、お客様の個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、<br>
+        セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。<br>
+        <br>
+        <strong>・個人情報の利用目的</strong><br>
+        お客様からお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用致します。<br>
+        <br>
+        <strong>・個人情報の第三者への開示・提供の禁止</strong><br>
+        当社は、お客様よりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示致しません。<br>
+        A　お客様の同意がある場合<br>
+        B　お客様が希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合<br>
+        C　法令に基づき開示することが必要である場合<br>
+        <br>
+        <strong>・個人情報の安全対策</strong><br>
+        当社は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。<br>
+        <br>
+        <strong>・ご本人の照会</strong><br>
+        お客様がご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させて頂きます。<br>
+        <br>
+        <strong>・法令、規範の遵守と見直し</strong><br>
+        当社は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、<br>
+        本ポリシーの内容を適宜見直し、その改善に努めます。<br>
+        <br>
+        <strong>・お問い合せ</strong><br>
+        当社の個人情報の取扱に関するお問い合せは下記までご連絡下さい。<br>
+        <br>
+        株式会社ライブエスト<br>
+        〒171-0014 　東京都豊島区池袋2-68-9池袋MIBビル5階<br>
+        TEL:03-6907-1122 　FAX:03-6907-1123<br>
+        Mail　：<a href="mailto:info@live-est.com">info@live-est.com</a><br>
+        担当   ：高橋/石川
+        </p>
+    </div>
+    <div class="lightbox_ssp" id="modal11">
+        <h2>情報セキュリティ基本方針</h2>
+        <p style="line-height:25px;">
+        <br>
+        2017年1月1日<br>
+        株式会社ライブエスト<br>
+        代表取締役　石川秀和<br>
+        <br>
+        株式会社ライブエスト(以下、当社)は、情報システムの構築やコンサルテーションを通じて、<br>
+        様々なお客様の企業情報や個人情報を取得・管理しております。<br>
+        <br>
+        これらの事業活動を行ううえで、当社とお客様との信頼関係が重要であることを認識しております。<br>
+        今後も当社がお客様との信頼関係を保持し、より良いサービスを提供するために、<br>
+        当社が取扱う情報資産に適切な安全対策を実施しなければなりません。<br>
+        <br>
+        そのためには、物理的・技術的なセキュリティの具体的対策と、経営者・社員がセキュリティに対して高い意識を持ち、<br>
+        セキュリティを尊重して行動を取ることが求められます。<br>
+        <br>
+        情報セキュリティを確保することは重要な経営課題のひとつと考え、以下のとおり情報セキュリティ基本方針を定め、<br>
+        推進していきます。<br>
+        <br>
+        <strong>セキュリティ目的</strong><br>
+        <br>
+        当社におけるすべての情報資産に対する機密性、完全性、可用性を確保するための適切な情報セキュリティ管理を実施することで、<br>
+        当社の情報資産に対する侵害を阻止するとともに、当社の行うサービスの安全性と信頼性を高めることを目的としています。<br>
+        <br>
+        <strong>1.1.法令遵守</strong><br>
+        当社は、情報セキュリティに関する法令、国や監督省庁が定める指針、その他、社会的規範を遵守します。<br>
+        <br>
+        <strong>2.2.社内規程を整備</strong><br>
+        当社は、情報セキュリティ対策を講じるにあたり、遵守すべき行為および判断などの基準を統一的に定めるため、<br>
+        必要となる基本的な要件を明記した情報セキュリティ規程を制定します。<br>
+        <br>
+        <strong>3.3.教育・訓練</strong><br>
+        当社は、役員および全従業者に対して情報セキュリティの重要性を認識させ、情報資産が適正に利用されるよう、教育・訓練を実施します。<br>
+        <br>
+        <strong>4.4.推進・管理体制、監視体制を強化</strong><br>
+        当社は、適切な人的・組織的・技術的施策を講じ、情報資産に対する不正な侵入、漏えい、改ざん、紛失・盗難、破壊、利用妨害などが発生しないよう努めます。<br>
+        <br>
+        　　<strong>1.4―1 物理セキュリティ対策</strong><br>
+        　　当社は、情報資産に対する不正アクセス、漏洩、改ざん、紛失、不正使用、不正開示等が発生しないよう、<br>
+        　　入退室及び装置・機器等の管理を徹底してまいります。<br>
+            <br>
+        　　<strong>2.4―2 技術的セキュリティ対策</strong><br>
+        　　当社は、情報資産を参照、利用するための権限を定め、業務上正当な権限を有する者のみがアクセスできるよう制御すると共に、<br>
+        　　情報資産を不正なアクセス等から、適切に保護できるようアクセス制限、データの暗号化、不正アクセス検知等を実施してまいります<br>。
+            <br>
+        　　<strong>3.4―3 インシデント対応策</strong><br>
+        　　当社は、セキュリティ事故の発生予防に努めるとともに、万一事故が発生しても、物理的、技術的セキュリティ対策を駆使して、<br>
+        　　その被害を最小限に止めるとともに、再発防止に努めます。<br>
+            <br>
+        　　<strong>4.4―4 監査の実施</strong><br>
+        　　役員、従業員には、情報セキュリティ規程、セキュリティの重要性を認識させていきます。<br>
+        　　また、内部監査や第三者機関の監査などにより順守状況を把握します。改善が必要な個所に対しては是正処置の完遂に努めます。<br>
+        <br>
+        <strong>5.5.継続的な改善</strong><br>
+        当社は、以上の活動を継続的に見直し、改善に努めます。<br>
+        </p>
+    </div>
     <script type="text/javascript">
       $(function(){
+       // #topScrollをクリックした場合に処理
+        $('a#topScroll').click(function() {
+          // スクロールの速度
+          var speed = 1000; // ミリ秒
+          // アンカーの値取得
+          var href= $(this).attr("href");
+          // 移動先を取得
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          // 移動先を数値で取得
+          var position = target.offset().top -60;
+          // スムーススクロール
+          $('body,html').animate({scrollTop:position}, speed, 'swing',
+              function(){
+                //$('li#firstMenu').animate({
+                //  top:'-41px'
+                //},
+                //100,
+                //'linear'
+                //);
+                $('li#secondMenu').animate({
+                  top:'-500px'
+                },
+                100,
+                'linear'
+                );
+              }
+            );
+          return false;
+        });
+
        // #scrollをクリックした場合に処理
         $('a#scroll').click(function() {
           // スクロールの速度
-          var speed = 400; // ミリ秒
+          var speed = 800; // ミリ秒
           // アンカーの値取得
           var href= $(this).attr("href");
           // 移動先を取得
