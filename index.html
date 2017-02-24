@@ -186,11 +186,12 @@
     }
     .sub_section{
         padding-top:100px;
-        padding-bottom:50px;
+        padding-bottom:100px;
         color:#01044E;/*#3CA89F;*/
         background-color:#fff;
     }
     .top_message_section{
+        height:100%;
         padding-top:100px;
         padding-bottom:100px;
         background-color:#01044E;/*#0E7AC4;*/
@@ -282,14 +283,18 @@
         font-size:0.8em;
         letter-spacing: 0.1em;
         color:#fff;
-        margin:50px 10% 0;
+        margin:50px 0 0;
+        padding:;
     }
     .top_message_jap_name{
-        margin:50px 10% 0;
+        margin:0px 0px 0px;
+        padding-left:0;
+        padding-bottom:15px;
         text-align:left;
         letter-spacing:4px;
         font-size:20pt;
         color:#fff;
+        border-bottom:1px solid #FFF;
     }
     .top_message_subname{
         text-align:left;
@@ -297,13 +302,15 @@
         font-size:0.5em;
         letter-spacing: 0.1em;
         color:#5bc0de;
-        margin:50px 10% 0;
+        margin:50px 5% 0;
     }
 
     .top_message_content{
-        margin:30px 10% 0;
+        margin:70px 10px 70px 0;
+        line-height:30px;
         text-align:left;
         color:#fff;
+        font-size:0.95em;
     }
     .visionsection_content{
         margin-bottom:40px;
@@ -879,40 +886,59 @@ $(function(){
         <!--About Us end-->
         <!--Top Message start-->
         <div class="top_message_section" id="company">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-12">
-                        <p class="section_title font_white">Top Message</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="top_message_eng_name">Ishikawa Hidekazu</p>
-                        <p class="top_message_jap_name">石川 秀和<span class="top_message_subname">- CEO & FOUNDER -</span></p>
-                        
-                        <p class="top_message_content">
-                            まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
-                             <br>
-                            【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
-                            <br>
-                            なぜ動詞の「LIVE/リブ」ではなく「LIVE/ライブ」なのかといいますと、音楽で使われるような「LIVE/ライブ」にすることにより、一層生き生きとした表現になり【今】や【一瞬】を大事にする弊社にとって最高に適した言葉だと思ったからです。<br>
-                            ※詳細は是非とも経営理念をご覧下さい<br>
-                            <br>
-                            【仕事】は、人生の中で多くの時間を費やす場です。<br>
-                            だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br>
-                            どんな仕事でも、その時間は一度しかない人生の貴重な時間です。<br>
-                            <br>
-                            そんな人生の貴重な時間を仕事に費やすからこそ、人生をより素晴らしいものにしたいからこそ、私達は本気で、何事にも全力で取り組みます。<br>
-                            これからも今を楽しみ、人生をより素晴らしいものにする為に、また皆様にとって<価値>のある会社にする為に、
-                            絶えずチャレンジを続け日々努力をしていく所存です。<br>
-                             <br>
-                            今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
-                        </p>
-                    </div>
-                    <div class="col-md-6" style="background-color:transparent;">
-                            テスト
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="fadeIn section_title font_white">Top Message</p>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="fadeIn top_message_eng_name">Ishikawa Hidekazu</p>
+                <p class="fadeIn top_message_jap_name">石川 秀和<span class="top_message_subname">- CEO & FOUNDER -</span></p>
+            </div>
+        </div>
+        <div class="row" style="border-bottom:1px dotted #FFF;">
+            <div class="col-md-8">
+                <p class="fadeIn top_message_content">
+                    まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
+                     <br>
+                    【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
+                    <br>
+                    なぜ動詞の「LIVE/リブ」ではなく「LIVE/ライブ」なのかといいますと、音楽で使われるような「LIVE/ライブ」にすることで、一層生き生きとした表現になり【今】や【一瞬】を大事にする弊社にとって最高に適した言葉だと思ったからです。<br>
+                    ※詳細は是非とも経営理念をご覧下さい
+                </p>
+            </div>
+            <div class="col-md-4">
+                <img class="fadeIn img-circle" src="img/travel-cinemagraphs-1444385986k48ng.gif" width="100%" style="margin:30px 0;height:60vh;box-shadow: 5px 5px 10px black;">
+            </div>
+        </div>
+        <div class="row" style="border-bottom:1px dotted #FFF;">
+            <div class="col-md-4">
+                <img class="fadeIn img-circle" src="img/keyboard-417090_1280.jpg" width="100%" style="margin:20px 0;height:60vh;box-shadow: 5px 5px 10px black;">
+            </div>
+            <div class="col-md-8">
+                <p class="fadeIn top_message_content" style="margin-left:30px;">
+                    【仕事】は、人生の中で多くの時間を費やす場です。<br>
+                    だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br>
+                    どんな仕事でも、その時間は一度しかない人生の貴重な時間です。<br>
+                    <br>
+                    そんな人生の貴重な時間を仕事に費やすからこそ、人生をより素晴らしいものにしたいからこそ、私達は本気で、何事にも全力で取り組みます。<br>
+                    今を楽しみ、人生をより素晴らしいものにする為に、また皆様にとって<価値>のある会社にする為に、
+                    絶えずチャレンジを続け日々努力をしていく所存です。<br>
+                     <br>
+                    今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <p class="fadeIn top_message_content">
+                </p>
+            </div>
+            <div class="col-md-4">
+                    テスト
+            </div>
+        </div>
         </div>
         <!--Top Message end-->
         <!--Vision start-->
