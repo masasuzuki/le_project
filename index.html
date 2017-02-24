@@ -173,6 +173,11 @@
         letter-spacing:2px;
         display:inline-block;
     }
+
+    .nav{
+        letter-spacing:2px;
+    }
+
     /*ここから各sectionのCSS*/
     .section{
         padding-top:100px;
@@ -646,30 +651,12 @@ $(function(){
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active">
-                            <a href="#news" id="scroll">News</a>
-                        </li>
-                        <li class="active">
-                            <a href="#service" id="scroll">Service</a>
-                        </li>
-                        <li class="active">
-                            <a href="#about_us" id="scroll">Company</a>
-                        </li>
-                        <li class="active">
-                            <a href="#company" id="scroll">Top Message</a>
-                        </li>
-                       <li class="active">
-                            <a href="#vision" id="scroll">Policy</a>
-                        </li>
-                        <li class="active">
-                            <a href="#recruit" id="scroll">Recruit</a>
-                        </li>
-                         <li class="active">
-                            <a href="#partner" id="scroll">Partner</a>
-                        </li>
-                       <li class="active">
-                            <a href="#contact" id="scroll">Contact</a>
-                        </li>
+                        <li class="active"><a href="#news" id="scroll">News</a></li>
+                        <li class="active"><a href="#about_us" id="scroll">Company</a></li>
+                        <li class="active"><a href="#vision" id="scroll">Philosophy</a></li>
+                        <li class="active"><a href="#recruit" id="scroll">Recruit</a></li>
+                        <li class="active"><a href="#partner" id="scroll">Partner</a></li>
+                        <li class="active"><a href="#contact" id="scroll">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -679,10 +666,8 @@ $(function(){
                 <div class="collapse navbar-collapse" id="navbar-ex-collapse">
                     <ul id="menu" class="clearfix">
                         <li><a href="#news" id="scroll">News</a></li>
-                        <li><a href="#service" id="scroll">Service</a></li>
-                        <li><a href="#about_us" id="scroll">Company</a> </li>
-                        <li><a href="#company" id="scroll">Top Message</a> </li>
-                        <li><a href="#vision" id="scroll">Policy</a></li>
+                        <li><a href="#about_us" id="scroll">Company</a></li>
+                        <li><a href="#vision" id="scroll">Philosophy</a></li>
                         <li><a href="#recruit" id="scroll">Recruit</a></li>
                         <li><a href="#partner" id="scroll">Partner</a></li>
                         <li><a href="#contact" id="scroll">Contact</a></li>
@@ -886,70 +871,75 @@ $(function(){
         <!--About Us end-->
         <!--Top Message start-->
         <div class="top_message_section" id="company">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="fadeIn section_title font_white">Top Message</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="fadeIn section_title font_white">Top Message</p>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="fadeIn top_message_eng_name">Ishikawa Hidekazu</p>
-                <p class="fadeIn top_message_jap_name">石川 秀和<span class="top_message_subname">- CEO & FOUNDER -</span></p>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="fadeIn top_message_eng_name">Ishikawa Hidekazu</p>
+                    <p class="fadeIn top_message_jap_name">石川 秀和<span class="top_message_subname">- CEO & FOUNDER -</span></p>
+                </div>
             </div>
-        </div>
-        <div class="row" style="border-bottom:1px dotted #FFF;">
-            <div class="col-md-8">
-                <p class="fadeIn top_message_content">
-                    まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
-                     <br>
-                    【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
-                    <br>
-                    なぜ動詞の「LIVE/リブ」ではなく「LIVE/ライブ」なのかといいますと、音楽で使われるような「LIVE/ライブ」にすることで、一層生き生きとした表現になり【今】や【一瞬】を大事にする弊社にとって最高に適した言葉だと思ったからです。<br>
-                    ※詳細は是非とも経営理念をご覧下さい
-                </p>
+            <div class="row" style="border-bottom:1px dotted #FFF;">
+                <div class="col-md-8">
+                    <p class="fadeIn top_message_content">
+                        まず初めに、弊社のコーポレートサイトをご覧頂き、有難う御座います。<br>
+                         <br>
+                        【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
+                        <br>
+                        なぜ動詞の「LIVE/リブ」ではなく「LIVE/ライブ」なのかといいますと、音楽で使われるような「LIVE/ライブ」にすることで、一層生き生きとした表現になり【今】や【一瞬】を大事にする弊社にとって最高に適した言葉だと思ったからです。<br>
+                        ※詳細は是非とも経営理念をご覧下さい
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img class="fadeIn img-circle" src="img/travel-cinemagraphs-1444385986k48ng.gif" width="100%" style="margin:30px 0;height:60vh;box-shadow: 5px 5px 10px black;">
+                </div>
             </div>
-            <div class="col-md-4">
-                <img class="fadeIn img-circle" src="img/travel-cinemagraphs-1444385986k48ng.gif" width="100%" style="margin:30px 0;height:60vh;box-shadow: 5px 5px 10px black;">
+            <div class="row" style="border-bottom:1px dotted #FFF;">
+                <div class="col-md-4">
+                    <img class="fadeIn img-circle" src="img/keyboard-417090_1280.jpg" width="100%" style="margin:20px 0;height:60vh;box-shadow: 5px 5px 10px black;">
+                </div>
+                <div class="col-md-8">
+                    <p class="fadeIn top_message_content" style="margin-left:30px;">
+                        【仕事】は、人生の中で多くの時間を費やす場です。<br>
+                        だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br>
+                        どんな仕事でも、その時間は一度しかない人生の貴重な時間です。<br>
+                        <br>
+                        そんな人生の貴重な時間を仕事に費やすからこそ、人生をより素晴らしいものにしたいからこそ、私達は本気で、何事にも全力で取り組みます。<br>
+                        今を楽しみ、人生をより素晴らしいものにする為に、また皆様にとって<価値>のある会社にする為に、
+                        絶えずチャレンジを続け日々努力をしていく所存です。<br>
+                         <br>
+                        今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="row" style="border-bottom:1px dotted #FFF;">
-            <div class="col-md-4">
-                <img class="fadeIn img-circle" src="img/keyboard-417090_1280.jpg" width="100%" style="margin:20px 0;height:60vh;box-shadow: 5px 5px 10px black;">
-            </div>
-            <div class="col-md-8">
-                <p class="fadeIn top_message_content" style="margin-left:30px;">
-                    【仕事】は、人生の中で多くの時間を費やす場です。<br>
-                    だからこそ、＜仕事の充実なくして人生の充実なし＞と私達は考えています。<br>
-                    どんな仕事でも、その時間は一度しかない人生の貴重な時間です。<br>
-                    <br>
-                    そんな人生の貴重な時間を仕事に費やすからこそ、人生をより素晴らしいものにしたいからこそ、私達は本気で、何事にも全力で取り組みます。<br>
-                    今を楽しみ、人生をより素晴らしいものにする為に、また皆様にとって<価値>のある会社にする為に、
-                    絶えずチャレンジを続け日々努力をしていく所存です。<br>
-                     <br>
-                    今後とも、皆様方のご支援、ご鞭撻を宜しくお願い致します。
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <p class="fadeIn top_message_content">
-                </p>
-            </div>
-            <div class="col-md-4">
-                    テスト
-            </div>
-        </div>
         </div>
         <!--Top Message end-->
         <!--Vision start-->
-        <div class="vision_section" id="vision">
+        <div class="vision_section" id="vision" style="padding-top:100px;padding-bottom:100px;background-color:#ECEEF1;">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="fadeIn section_title">Philosophy</p>
+                    <br>
+                    <!--<h1 class="visionsection_title">LIVE EST × VISION</h1>-->
+                    <p class="fadeIn section_content">
+                        当社の大切にしている想い・考えをまとめたもの。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="vision_section" style="color:#01044E;padding-top:100px;padding-bottom:100px;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <h1 class="visionsection_title">LIVE EST × VISION</h1>
-                        <p class="visionsection_content">
+                        <p class="fadeIn section_title" style="color:black;">LIVE EST × VISION</p>
+                        <br>
+                        <!--<h1 class="visionsection_title">LIVE EST × VISION</h1>-->
+                        <p class="fadeIn visionsection_content">
                             <span>「今」</span>を楽しみ、<span>「人生」</span>をより素晴らしく。
                         </p>
                     </div>
@@ -960,7 +950,7 @@ $(function(){
         </div>
         <!--Vision end-->
         <!--STYLE５ start-->
-        <div class="style5_section" id="company">
+        <div class="style5_section" id="company" style="padding-top:100px;padding-bottom:100px;background-color:#01044E;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="col-md-1">
