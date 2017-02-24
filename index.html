@@ -44,7 +44,7 @@
       /*↑0221 変更*/
       font-family:"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
       letter-spacing: 0.4em;
-      font-size: 11pt;
+      font-size: 12pt;
       line-height:35px;
       color: #000000;
       background-color: #ffffff;
@@ -207,8 +207,8 @@
         background-color:#fff;
     }
     .style5_section{
-        padding-top:100px;
-        padding-bottom:100px;
+        padding-top:150px;
+        padding-bottom:150px;
         background-color:#08233E;
     }
     .recruit_section{
@@ -231,7 +231,8 @@
     .footer_section{
         padding-top:100px;
         padding-bottom:100px;
-        background-color:#2C5379;
+        background-color:#01044E;
+        letter-spacing:3px;
     }
 
     .section_title{
@@ -315,10 +316,11 @@
         line-height:30px;
         text-align:left;
         color:#fff;
-        font-size:0.95em;
+        font-size:0.9em;
     }
     .visionsection_content{
-        margin-bottom:40px;
+        margin-top:70px;
+        margin-bottom:70px;
         text-align:center;
         font-size:25pt;
         font-weight:bold;
@@ -327,28 +329,19 @@
         font-size:30pt;
         color:#EB2142;
     }
+
     .style5_content{
         text-align:center;
-        font-size:13pt;
-        color:#FFFFFF;
+        line-height:60px;
+        color:#FFF;
+        padding-top:50px;
+        padding-bottom:50px;
     }
-    .style5_content h5{
-        margin-top:5px;
-        margin-bottom:30px;
-        font-size:25pt;
-    }
-    .style5_content h5 span{
-        color:#02AEDC;
-        font-weight:bold;
-    }
-    .style5_content p{
-        margin-bottom:50px;
-        line-height:35px;
-    }
+
     .recruit_content{
-        margin-bottom:50px;
+        margin-top:50px;
+        margin-bottom:100px;
         text-align:center;
-        font-size:13pt;
     }
     .partnership_content{
         padding-top:10px;
@@ -369,8 +362,54 @@
         /*font-size:13pt;*/
     }
     /*ここまで各sectionのCSS*/
-    
-    /*Contactアイコンここから*/
+
+/*CharaContents サブ標題背景*/
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+
+/* The following is all you really need for the effect to work */
+.backbox {
+  font-family: "Josefin Slab";
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: white;
+  width: 75%;
+  position: relative;
+  left: 12.5%;
+  top: 3rem;
+  text-align: center;
+  padding: 0.0625rem;
+  position: relative;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjMiLz48c3RvcCBvZmZzZXQ9IjYwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjMiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+}
+.backbox:before {
+  width: 100%;
+  height: 0.125rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.8)), color-stop(60%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0));
+}
+.backbox:after {
+  width: 100%;
+  height: 0.125rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0.8)), color-stop(60%, rgba(255, 255, 255, 0.8)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.8) 60%, rgba(255, 255, 255, 0));
+}
+/*ここまで*/
+/*Contactアイコンここから*/
     .icon_block{
         margin:auto;
         margin-top:30px;
@@ -917,76 +956,77 @@ $(function(){
             </div>
         </div>
         <!--Top Message end-->
-        <!--Vision start-->
+        <!-- Philosophy
         <div class="vision_section" id="vision" style="padding-top:100px;padding-bottom:100px;background-color:#ECEEF1;">
             <div class="row">
                 <div class="col-md-12">
                     <p class="fadeIn section_title">Philosophy</p>
                     <br>
-                    <!--<h1 class="visionsection_title">LIVE EST × VISION</h1>-->
                     <p class="fadeIn section_content">
                         当社の大切にしている想い・考えをまとめたもの。
                     </p>
                 </div>
             </div>
         </div>
-        <div class="vision_section" style="color:#01044E;padding-top:100px;padding-bottom:100px;">
+        -->
+        <!--MIND start-->
+        <div class="vision_section" id="vision" style="color:#01044E;padding-top:100px;padding-bottom:100px;">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-10">
-                        <p class="fadeIn section_title" style="color:black;">LIVE EST × VISION</p>
-                        <br>
-                        <!--<h1 class="visionsection_title">LIVE EST × VISION</h1>-->
-                        <p class="fadeIn visionsection_content">
-                            <span>「今」</span>を楽しみ、<span>「人生」</span>をより素晴らしく。
-                        </p>
-                    </div>
-                    <div class="col-md-1">
-                    </div>
+                    <p class="fadeIn section_title" style="color:black;">LIVE EST × MIND</p>
+                    <br>
+                    <!--<h1 class="visionsection_title">LIVE EST × VISION</h1>-->
+                    <p class="fadeIn visionsection_content">
+                        <span>「今」</span>を楽しみ、<span>「人生」</span>をより素晴らしく。
+                    </p>
                 </div>
             </div>
         </div>
         <!--Vision end-->
         <!--STYLE５ start-->
-        <div class="style5_section" id="company" style="padding-top:100px;padding-bottom:100px;background-color:#01044E;">
+        <div class="style5_section" id="company" style="background-color:#01044E;">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="col-md-1">
-                    </div>
-                    <div class="col-md-10">
-                        <p class="style5_title">LIVE EST × STYLE５</p>
-                        <div class="style5_content">
-                            <h5>１、感動的 <span>「VALUE」</span> 提供</h5>
-                            <p>
-                                「○」=「✕」、「◎」=「○」<br/>
-                                【納得】・【満足】して頂ける内容は✕であり、<br/>
-                                【感動】・【驚嘆】して頂ける内容が○である。
-                            </p>
-                            <h5>２、熱狂的 <span>「WITH」</span> 思考</h5>
-                            <p>
-                                共に喜び共に悲しみ、共に笑い共に泣き、共に仕事し共に遊ぶ、<br/>
-                                常に<本気>で<素直>で<心を分かち合える>集団であり続ける。
-                            </p>
-                            <h5>３、圧倒的 <span>「SPEED」</span> 全開</h5>
-                            <p>
-                                慎重に・正確に事を為すのは当たり前。一番大切な事は「SPEED」の意識。<br/>
-                                意思決定、行動、言動、市場の変化に対する対応、全てにおいてスピーディーに。
-                            </p>
-                            <h5>４、積極的 <span>「３C」</span> 貫徹</h5>
-                            <p>
-                                CHANCE（好機）を掴める者=CHANGE（変革）出来る者+CHALLENGE（挑戦）し続ける者<br/>
-                                意識を変え、挑戦し続けた者に、好機がくる。常に積極的に変革し、挑戦し続る者を応援・推進する。
-                            </p>
-                            <h5>５、絶対的 <span>「MEMBER」</span> 主義</h5>
-                            <p>
-                                会社はメンバーのものであり、メンバーの＜幸せ＞、<想い>があってこそ、<br/>
-                                モチベーションの向上により大切なお客様へより良い提供・提案が出来る人財になれる。
-                            </p>
+                        <p class="fadeIn section_title" style="color:#FFF;">LIVE EST × <span style="color:#00CCFF;">STYLE５</span></p>
+                </div>
+                <div class="col-md-12">
+                    <div class="style5_content">
+                        <div class="fadeIn backbox">
+                            １、感動的 「<span style="color:#00CCFF;">VALUE</span>」 提供
                         </div>
-                    </div>
-                    <div class="col-md-1">
+                        <p class="fadeIn" style="text-align:center;margin-top:100px;margin-bottom:80px;line-height:40px;">
+                            「○」=「✕」、「◎」=「○」<br/>
+                            【納得】・【満足】して頂ける内容は✕であり、<br/>
+                            【感動】・【驚嘆】して頂ける内容が○である。
+                        </p>
+                        <div class="fadeIn backbox">
+                            ２、熱狂的 「<span style="color:#00CCFF;">WITH</span>」 思考
+                        </div>
+                        <p class="fadeIn" style="text-align:center;margin-top:100px;margin-bottom:80px;line-height:40px;">
+                            共に喜び共に悲しみ、共に笑い共に泣き、共に仕事し共に遊ぶ、<br/>
+                            常に<本気>で<素直>で<心を分かち合える>集団であり続ける。
+                        </p>
+                         <div class="fadeIn backbox">
+                            ３、圧倒的 「<span style="color:#00CCFF;">SPEED</span>」 全開
+                        </div>
+                        <p class="fadeIn" style="text-align:center;margin-top:100px;margin-bottom:80px;line-height:40px;">
+                            慎重に・正確に事を為すのは当たり前。一番大切な事は「SPEED」の意識。<br/>
+                            意思決定、行動、言動、市場の変化に対する対応、全てにおいてスピーディーに。
+                        </p>
+                        <div class="fadeIn backbox">
+                            ４、積極的 「<span style="color:#00CCFF;">３C</span>」 貫徹
+                        </div>
+                        <p class="fadeIn" style="text-align:center;margin-top:100px;margin-bottom:80px;line-height:40px;">
+                            CHANCE（好機）を掴める者=CHANGE（変革）出来る者+CHALLENGE（挑戦）し続ける者<br/>
+                            意識を変え、挑戦し続けた者に、好機がくる。常に積極的に変革し、挑戦し続ける。
+                        </p>
+                        <div class="fadeIn backbox">
+                            ５、絶対的 「<span style="color:#00CCFF;">MEMBER</span>」 主義
+                        </div>
+                        <p class="fadeIn" style="text-align:center;margin-top:100px;margin-bottom:80px;line-height:40px;">
+                            会社はメンバーのものであり、メンバーの＜幸せ＞、<想い>があってこそ、<br/>
+                            モチベーションの向上により大切なお客様へより良い提供・提案が出来る。
+                        </p>
                     </div>
                 </div>
             </div>
@@ -995,25 +1035,25 @@ $(function(){
     </div><!--container-fluidここまで-->
     <!--Recruit start-->
     <section class="full-height" id="recruit">
-        <div class="col-md-6 recruit_section">
-            <p class="section_title">Recruit</p>
-            <p class="recruit_content">
+        <div class="col-md-8 recruit_section">
+            <p class="fadeIn section_title">Recruit</p>
+            <p class="fadeIn recruit_content">
                 正社員／フリーランス募集中<br>
                 皆様からのご応募お待ちしております
             </p>
-            <div class="button1 text-center">
+            <div class="text-center">
                 <div class="row">
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-4" style="height:50px;">
-                        <div class="button2 text-center">
+                        <div class="fadeIn button2 text-center">
                             <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                         </div>
                     </div>
                     <div class="col-md-2">
                     </div>
                     <div class="col-md-4" style="height:50px;">
-                        <div class="button2 text-center">
+                        <div class="fadeIn button2 text-center">
                             <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
                         </div>
                     </div>
@@ -1022,25 +1062,22 @@ $(function(){
                 </div>    
             </div>
         </div>
-        <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/art.jpg" width="100%" style="background-image : url('img/art.jpg')">
+        <div class="col-md-4 bg-img full-height visible-lg visible-md" src="img/art.jpg" width="100%" style="background-image : url('img/art.jpg')">
         </div>
     </section>
     <!--Recruit end-->
 
     <!--Partnership start-->
     <section class="full-height" id="partner">
-        <div class="col-md-6 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
-        <div class="col-md-6 partnership_section">
-            <p class="partnership_title">Partnership</p>
-            <p class="partnership_content">
+        <div class="col-md-4 bg-img full-height visible-lg visible-md" src="img/partnership.jpg" width="100%" style="background-image : url('img/partnership.jpg')"></div>
+        <div class="col-md-8 partnership_section">
+            <p class="fadeIn section_title" style="padding-top:50px;padding-bottom:50px;">Partnership</p>
+            <p class="fadeIn" style="padding-left:50px;padding-right:50px;text-align:center;">
                 当社では、協業頂けるビジネスパートナー様を募集しております。<br>
-                共にビジネスチャンスの獲得や事業強化を目的とした<br>
-                パートナーシップを結び、お互いのスキル・技術力・ノウハウを共有し、<br>
-                相互のビジネスチャンスを広め、共に成長できればと思います。<br>
-                ビジネスパートナーとしてご協力頂ける方、<br>
-                もしくは、弊社についてお話を聞きたいと思って頂いた方、<br>
-                是非一度ご連絡下さい。
                 <br>
+                共にビジネスチャンスの獲得や事業強化を目的としたパートナーシップを結び、お互いのスキル・技術力・ノウハウを共有し、相互のビジネスチャンスを広め、共に成長できればと思います。<br>
+                <br>
+                ビジネスパートナーとしてご協力頂ける方、もしくは、弊社についてお話を聞きたいと思って頂いた方、是非一度ご連絡下さい。
             </p>
         </div>
     </section>
@@ -1050,13 +1087,13 @@ $(function(){
         <div class="contact_section" id="contact">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="section_title">Contact</p>
+                    <p class="fadeIn section_title">Contact</p>
                     <br>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <p id="partnerBlock" class="icon_block">
+                    <p id="partnerBlock" class="fadeIn icon_block">
                         <a class="partner" href="mailto:partner@live-est.com"><span class="glyphicon glyphicon-user"></span></a>
                     </p>
                     <p id="partnerComent" class="icon_comment">
@@ -1066,7 +1103,7 @@ $(function(){
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <p id="mailBlock" class="icon_block">
+                    <p id="mailBlock" class="fadeIn icon_block">
                         <a class="mail" href="mailto:info@live-est.com"><span class="glyphicon glyphicon-envelope"></span></a>
                     </p>
                     <p id="mailComent" class="icon_comment">
@@ -1075,7 +1112,7 @@ $(function(){
                     </p>
                 </div>
                 <div class="col-md-4">
-                    <p id="telBlock" class="icon_block">
+                    <p id="telBlock" class="fadeIn icon_block">
                         <span class="glyphicon glyphicon-phone-alt"></span>
                     </p>
                     <p id="telComent" class="icon_comment">
