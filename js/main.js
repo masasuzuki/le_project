@@ -138,16 +138,16 @@ $(function(){
 	$(".partner span")
 		.on('mouseover', function(){
 			$('#partnerBlock').stop().animate({
-				opacity:'1.0'
+				opacity:'0.7'
 			},500
 			);
 			$('#partnerComent').stop().animate({
-				opacity:'1.0'
+				opacity:'0.7'
 			},500
 			);
 		}).on('mouseout', function(){
 			$('#partnerBlock').stop().animate({
-				opacity:'0.8'
+				opacity:'1.0'
 			},500
 			);
 			$('#partnerComent').stop().animate({
@@ -160,16 +160,16 @@ $(function(){
 	$(".mail span")
 		.on('mouseover', function(){
 			$('#mailBlock').stop().animate({
-				opacity:'1.0'
+				opacity:'0.7'
 			},500
 			);
 			$('#mailComent').stop().animate({
-				opacity:'1.0'
+				opacity:'0.7'
 			},500
 			);
 		}).on('mouseout', function(){
 			$('#mailBlock').stop().animate({
-				opacity:'0.8'
+				opacity:'1.0'
 			},500
 			);
 			$('#mailComent').stop().animate({
@@ -182,16 +182,16 @@ $(function(){
 	$("#telBlock")
 		.on('mouseover', function(){
 			$('#telBlock').stop().animate({
-				opacity:'1.0'
+				opacity:'0.7'
 			},500
 			);
 			$('#telComent').stop().animate({
-				opacity:'1.0'
+				opacity:'0.7'
 			},500
 			);
 		}).on('mouseout', function(){
 			$('#telBlock').animate({
-				opacity:'0.8'
+				opacity:'1.0'
 			},500
 			);
 			$('#telComent').stop().animate({
