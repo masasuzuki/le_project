@@ -2,10 +2,10 @@ $(function(){
     var x = $(window).width();
     //windowの分岐幅をyに代入
     var y = 770;
-    if (x <= y) {	//一時不要_0222
-       // $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
+    if (x <= y) {
+       $('#change_text').html('<p class="fadeInMain text-center text-inverse main_text">LIVE EST ,INC.</p>');
     } else {
-       // $('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
+       //$('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
     }
 
 	//windowのサイズによりテキストを入れ替える
@@ -16,16 +16,16 @@ $(function(){
 	    //windowの分岐幅をyに代入
 	    var y = 770;
 	    if (x <= y) {	//一時不要
-	       // $('#change_text').html('<p class="text-center text-inverse" style="font-size:35px; letter-spacing:3px; display:inline-block; white-space:nowrap;">LIVE EST ,INC.</p>');
+	    	//$('#change_text').html('<p class="fadeInMain text-center text-inverse main_text">LIVE EST ,INC.</p>');
 	    } else {
-	        //$('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
+	    	//$('#change_text').html('<p class="text-center text-inverse" style="font-size:80px; letter-spacing:4px; display:inline-block;">LIVE EST ,INC.<br></p><br><p class="text-center text-inverse" style="font-size:30px; letter-spacing:2px; display:inline-block;">- Always From Here-</p>');
 	    }
 	});
 
 	//button1の制御//0221変更：'#3CA89F'
 	$('.button1 a').on('mouseover',function(){
 		$(this).stop().animate({
-			backgroundColor:'#00CCFF',
+			backgroundColor:'#01044E',
 			borderColor:'white',
 			color:'white'
 		},500
@@ -38,11 +38,11 @@ $(function(){
 		},500
 		);
 	});
-	//button2の制御
+	//button2の制御 0310色変更：'#00CCFF'
 	$('.button2 a').on('mouseover',function(){
 		$(this).stop().animate({
-			backgroundColor:'#00CCFF',
-			borderColor:'#00CCFF',
+			backgroundColor:'#01044E',
+			borderColor:'#01044E',
 			color:'white'
 		},500
 		);

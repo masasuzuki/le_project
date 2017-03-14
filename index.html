@@ -25,7 +25,6 @@
     <link href="http://fonts.googleapis.com/css?family=Anton" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <link href="css/main_770.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/slicknav.css" />
     <title>株式会社ライブエスト</title>
     <style type="text/css">
@@ -338,6 +337,13 @@
         padding-bottom:50px;
     }
 
+    .style5_content p{
+        text-align:center;
+        margin-top:50px;
+        margin-bottom:30px;
+        line-height:40px;
+    }
+
     .recruit_content{
         margin-top:50px;
         margin-bottom:100px;
@@ -448,7 +454,8 @@
     .button2 a{
         cursor:pointer;
         text-decoration:none;
-        font-size:15pt;
+        font-size:1.2em;
+        letter-spacing:0.1em;
         color:white;
         border:2px solid white;
         padding:10px 20px;
@@ -459,7 +466,8 @@
     .button3 a{
         cursor:pointer;
         text-decoration:none;
-        font-size:15pt;
+        font-size:1.2em;
+        letter-spacing:0.1em;
         color:black;
         border:1px solid black;
         padding:10px 20px;
@@ -506,17 +514,13 @@
     .lightbox_its2 {
         display: none;
         padding: 10px;
+
     }
-    /*
-    .lightbox_its2 div{
-        width:40%;
-    }
-    */
     .lightbox_its2 p{
-      text-align: center;
-      float:right;
-      width:60%;
-      line-height:30px;
+        float:right;
+        text-align: left;
+        line-height:30px;
+        letter-spacing:0.1em;
     }
     .lightbox_reg {
         display: none;
@@ -573,9 +577,9 @@
         height: 100%;
     }
 </style>
+<link href="css/main_770.css" rel="stylesheet" type="text/css">
 <script>
 $(function(){
-
     //scroll禁止関数
     function scroll_disabled(){
             //スクロール禁止
@@ -631,7 +635,6 @@ $(function(){
     $('.fadeInMain').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
         if (isInView) {
             $(this).stop().animate({opacity:1}, 3000);
- 
             //初回読み込み＆画面位置がTOPの時のみスクロール禁止
             if(first_reload_flag == 0 && $(window).scrollTop()==0){
                 scroll_disabled();
@@ -703,7 +706,7 @@ $(function(){
         </div>
         <!--/ TOPスクロールバーなし_0222-->
         <!--TOP画像なし_0222-->
-        <div class="fadeInImg cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image: url('img/berndies-cinemagraph-144202951948nkg.gif');color:white;"></div>
+        <div class="fadeInImg cover-image" id="main_image" src="img/mainpic1.jpg" style="background-image: url('img/amazing-new-cinemagraph-photography-1421678281gn8k4.gif');color:white;"></div>
         
         <div class="container">
             <div class="row" style="margin:25%;">
@@ -916,7 +919,7 @@ $(function(){
                         【ライブエスト（LIVE EST）】という社名は、「LIVE（生きている）」と「EST（最上級表現の-est）」を組み合わせ、【最高に生きている＝最高に人生を楽しんでいる】という意味を込めています。<br>
                         <br>
                         なぜ動詞の「LIVE/リブ」ではなく「LIVE/ライブ」なのかといいますと、音楽で使われるような「LIVE/ライブ」にすることで、一層生き生きとした表現になり【今】や【一瞬】を大事にする弊社にとって最高に適した言葉だと思ったからです。<br>
-                        ※詳細は是非とも経営理念をご覧下さい
+                        ※詳細は是非とも【Philosophy】をご覧下さい
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -997,7 +1000,7 @@ $(function(){
                         <div class="fadeIn backbox">
                             １、感動的 「<span style="color:#00CCFF;">VALUE</span>」 提供
                         </div>
-                        <p class="fadeIn" style="text-align:center;margin-top:50px;margin-bottom:30px;line-height:40px;">
+                        <p class="fadeIn">
                             「○」=「✕」、「◎」=「○」<br/>
                             【納得】・【満足】して頂ける内容は✕であり、<br/>
                             【感動】・【驚嘆】して頂ける内容が○である。
@@ -1005,28 +1008,28 @@ $(function(){
                         <div class="fadeIn backbox">
                             ２、熱狂的 「<span style="color:#00CCFF;">WITH</span>」 思考
                         </div>
-                        <p class="fadeIn" style="text-align:center;margin-top:50px;margin-bottom:30px;line-height:40px;">
+                        <p class="fadeIn">
                             共に喜び共に悲しみ、共に笑い共に泣き、共に仕事し共に遊ぶ、<br/>
                             常に<本気>で<素直>で<心を分かち合える>集団であり続ける。
                         </p>
                          <div class="fadeIn backbox">
                             ３、圧倒的 「<span style="color:#00CCFF;">SPEED</span>」 全開
                         </div>
-                        <p class="fadeIn" style="text-align:center;margin-top:50px;margin-bottom:30px;line-height:40px;">
+                        <p class="fadeIn">
                             慎重に・正確に事を為すのは当たり前。一番大切な事は「SPEED」の意識。<br/>
                             意思決定、行動、言動、市場の変化に対する対応、全てにおいてスピーディーに。
                         </p>
                         <div class="fadeIn backbox">
                             ４、積極的 「<span style="color:#00CCFF;">３C</span>」 貫徹
                         </div>
-                        <p class="fadeIn" style="text-align:center;margin-top:50px;margin-bottom:30px;line-height:40px;">
+                        <p class="fadeIn">
                             CHANCE（好機）を掴める者=CHANGE（変革）出来る者+CHALLENGE（挑戦）し続ける者<br/>
                             意識を変え、挑戦し続けた者に、好機がくる。常に積極的に変革し、挑戦し続ける。
                         </p>
                         <div class="fadeIn backbox">
                             ５、絶対的 「<span style="color:#00CCFF;">MEMBER</span>」 主義
                         </div>
-                        <p class="fadeIn" style="text-align:center;margin-top:50px;margin-bottom:30px;line-height:40px;">
+                        <p class="fadeIn">
                             会社はメンバーのものであり、メンバーの＜幸せ＞、<想い>があってこそ、<br/>
                             モチベーションの向上により大切なお客様へより良い提供・提案が出来る。
                         </p>
@@ -1046,14 +1049,14 @@ $(function(){
                 <div class="row">
                     <div class="col-md-1">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="height:50px;">
                         <div class="fadeIn button2 text-center">
                             <a href="#" data-featherlight="#modal5" style="white-space:nowrap">　正社員募集　</a>
                         </div>
                     </div>
                     <div class="col-md-2">
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="height:50px;">
                         <div class="fadeIn button2 text-center">
                             <a href="#" data-featherlight="#modal6" style="white-space:nowrap">フリーランス募集</a>
                         </div>
@@ -1063,7 +1066,7 @@ $(function(){
                 </div>    
             </div>
         </div>
-        <div class="col-md-12 partnership_section">
+        <div class="col-md-12 partnership_section" id="partner">
             <p class="fadeIn section_title" style="padding-top:50px;padding-bottom:50px;">Partnership</p>
             <p class="fadeIn section_content">
                 当社では、協業頂けるビジネスパートナー様を募集しております。<br>
@@ -1185,41 +1188,22 @@ $(function(){
         </p>
     </div>
     <div class="lightbox_its2" id="modal4">
-        <div style="width:100%;height:100%;">
-            <canvas id="myChart1"></canvas>
-        </div>
-        <script>
-        var ctx = document.getElementById("myChart1").getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["業務系", "WEB・ソーシャルゲーム系"],
-                datasets: [{
-                    backgroundColor: [
-                        "#FF6384",
-                        "#36A2EB",
-                    ],
-                    data: [55, 45]
-                }]
-            }
-        });
-        </script>
-        <!--
-        <div>
+            <img src="img/pie-chart.jpg">
             <p>
-                【業務系開発案件】<br/>
-                Java／C++／VB.NET／C#.NET／COBOL<br/>
-                【Webシステム開発】<br/>
-                PHP／Rails／JavaScript／HTML5<br/>
-                【サーバ】<br/>
-                サーバ設計／構築／運用・保守<br/>
-                （Windows／Linux／Solaris）<br/>
-                【ネットワーク】<br/>
-                NW構築／設計（L2,L3)／Ciscoスイッチ設定／<br/>
-                障害対応／運用・保守 <br/>
+                <strong>【業務系開発案件】</strong><br>
+                Java／C++／VB.NET／C#.NET／COBOL<br>
+                <br>
+                <strong>【Webシステム開発】</strong><br>
+                PHP／Rails／JavaScript／HTML5<br>
+                <br>
+                <strong>【サーバ】</strong><br>
+                サーバ設計／構築／運用・保守<br>
+                （Windows／Linux／Solaris）<br>
+                <br>
+                <strong>【ネットワーク】</strong><br>
+                NW構築／設計（L2,L3)／Ciscoスイッチ設定／<br>
+                障害対応／運用・保守 <br>
             </p>
-        </div>
-        -->
     </div>
     <div class="lightbox_reg" id="modal5">
         <h2>正社員募集</h2>
