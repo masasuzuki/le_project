@@ -8,6 +8,16 @@
         line-height:30px;
         font-size: 8pt;
     }
+    .main_text{
+        margin-top:40%;
+        font-size:2.8em !important;
+        letter-spacing:4px;
+    }
+    .sub_text{
+        font-size:1.2em !important;
+        letter-spacing:2px;
+    }
+
     .table > tbody > tr > td{
         line-height: 2.5;
     }
@@ -72,6 +82,7 @@
         color: #01044E;
         padding-top: 50px;
         padding-bottom: 50px;
+        line-height:20px;
     }
     .contact_section{
         padding-top: 50px;
@@ -86,7 +97,7 @@
     }
     .lightbox_ts h2 {
         letter-spacing: 0.01em;
-        font-size:15pt;
+        font-size:13pt;
     }
     .lightbox_ts p {
         margin-top:20px;
@@ -100,6 +111,13 @@
     .lightbox_its1 p {
         margin-top:20px;
         letter-spacing: 0.01em;
+        line-height:20px;
+    }
+    .lightbox_its2 img{
+        width:100%;
+        height:50%;
+    }
+    .lightbox_its2 p{
         line-height:20px;
     }
     .lightbox_reg h2{
@@ -119,6 +137,12 @@
     }
     .lightbox_own p {
         line-height:20px;
+    }
+    .lightbox_pp h2{
+        font-size:13pt;
+    }
+    .lightbox_ssp h2{
+        font-size:13pt;
     }
 
 }/*@media screen(max-width:770px)*/

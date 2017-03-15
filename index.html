@@ -580,6 +580,7 @@
 <link href="css/main_770.css" rel="stylesheet" type="text/css">
 <script>
 $(function(){
+    var x = $(window).width();
     //scroll禁止関数
     function scroll_disabled(){
             //スクロール禁止
@@ -587,7 +588,7 @@ $(function(){
             var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
             $(document).on(scroll_event,function(e){e.preventDefault();});
             //SP用
-            $(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
+            //$(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
     }
 
     //topScrollクリック時スクロール可
@@ -596,7 +597,7 @@ $(function(){
         var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
         $(document).off(scroll_event);
         //SP用
-        $(document).off('.noScroll');
+        //$(document).off('.noScroll');
 
     });
 
