@@ -102,7 +102,7 @@ $(function(){
             var scroll_event = 'onwheel' in document ? 'wheel' : 'onmousewheel' in document ? 'mousewheel' : 'DOMMouseScroll';
             $(document).on(scroll_event,function(e){e.preventDefault();});
             //SP用
-            $(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
+            //$(document).on('touchmove.noScroll', function(e) {e.preventDefault();});
 
             //メニューバーを隠す
             $('.navbar').addClass('hide');

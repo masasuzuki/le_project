@@ -8,8 +8,29 @@
         line-height:30px;
         font-size: 8pt;
     }
+    .cover-image{
+        max-height:800px;
+    }
+    #news{
+        background-image:none;
+        background-color: #FFF;
+        color:#01044E;
+    }
+
+    #about_us{
+        background-image:none;
+        background-color: #FFF;
+        color:#01044E;
+    }
+
+    #recruit{
+        background-image:none;
+        background-color:#01044E;
+        color:#FFF;
+    }
+
     .main_text{
-        margin-top:40%;
+        margin-top:25%;
         font-size:2.8em !important;
         letter-spacing:4px;
     }
