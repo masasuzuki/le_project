@@ -95,6 +95,23 @@
     .style5_content p{
         line-height:20px;
     }
+    .system_section{
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+    .system_content .backbox{
+        padding-bottom:50px;
+    }
+    .system_content{
+        padding-top:0px;
+        padding-bottom:0px;
+        line-height:30px;
+    }
+    .system_content p{
+        margin-top:0px;
+        margin-bottom:0px;
+        line-height:30px;
+    }
     .recruit_section {
         padding-top: 100px;
         padding-bottom: 100px;
