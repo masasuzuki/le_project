@@ -5547,6 +5547,16 @@ section.full-height {
     background-color: rgba(240,240,240,0.75);
 }
 
-
-
+.banner-space{
+  text-align:right;
+  padding:10px;  
+}
+.rec-banner img{
+  width:150px;
+  height:100px;
+}
+.fl-banner img{
+  width:150px;
+  height:100px;
+}
 
