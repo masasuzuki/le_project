@@ -82,7 +82,7 @@ $(function(){
 	 			backgroundColor:'white'
 	 		},500,
 	 		function(){
-		 		$('#top_logo').attr('src', 'img/LE_logo.png');
+		 		$('#top_logo').attr('src', 'img/le_logo_01.png');
 		 		$('.mainMenu').switchClass('mainMenu', 'mainMenuScroll', 10);
 	 		}
 	 		);
@@ -90,7 +90,7 @@ $(function(){
 	 			color:'#003366'
 	 		},500,
 	 		function(){
-		 		//if($('#top_logo').attr("src") === "img/LE_logo2.png" ){
+		 		//if($('#top_logo').attr("src") === "img/le_logo_02.png" ){
 		 		//}
 	 		}
 	 		);
@@ -111,7 +111,7 @@ $(function(){
 	 			backgroundColor:'transparent'
 	 		},500,
 	 		function(){
-			 	$('#top_logo').attr('src', 'img/LE_logo2.png');
+			 	$('#top_logo').attr('src', 'img/le_logo_02.png');
 		 		$('.mainMenuScroll').switchClass('mainMenuScroll', 'mainMenu', 10);
 	 		}
 	 		);
@@ -119,7 +119,7 @@ $(function(){
 	 			color:'white'
 	 		},500,
 	 		function(){
-		 		//if($('#top_logo').attr("src") === "img/LE_logo.png" ){
+		 		//if($('#top_logo').attr("src") === "img/le_logo_01.png" ){
 				//}
 	 		}
  			);
