@@ -455,3 +455,764 @@ section.full-height {
 
 
 
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+
+  #logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav {
+    width:100%;
+    text-align:center;
+    margin:10px 0;
+  }
+
+  .navigation{
+    width: 100%;
+    float: center;
+    list-style: none;
+    margin: 0;
+    padding:0;
+  }
+
+  .navigation li{
+    float: left;
+    width:25%;
+    padding:0;
+  }
+
+
+  #decorative {
+    display:none;
+  }
+
+  #content {
+    text-align:center;
+    width:100%;
+  }
+
+
+  }
+
+
+
+
+  /* Mobile */
+  @media screen and (max-width: 480px) {
+
+  #logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  #nav {
+    width:100%;
+    margin:5px 0;
+  }
+
+  .navigation{
+    width: 100%;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding:0;
+  }
+
+  .navigation li{
+    float: left;
+    width:25%;
+  }
+
+  .slide{
+    background-attachment: fixed;
+    width:100%;
+    position: relative;
+    padding:150px 0;
+  }
+
+
+}
+    @font-face {
+      font-family: "Yu Gothic";
+      src: local("Yu Gothic Medium");
+      font-weight: 100;
+    }
+    @font-face {
+      font-family: "Yu Gothic";
+      src: local("Yu Gothic Medium");
+      font-weight: 200;
+    }
+    @font-face {
+      font-family: "Yu Gothic";
+      src: local("Yu Gothic Medium");
+      font-weight: 300;
+    }
+    @font-face {
+      font-family: "Yu Gothic";
+      src: local("Yu Gothic Medium");
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: "Yu Gothic";
+      src: local("Yu Gothic Bold");
+      font-weight: bold;
+    }
+    html {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @supports (-ms-accelerator:true){
+      body{
+        font-family :"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+      }
+    }
+    body {
+      
+      /*font-family: Lato;*/
+      /*↑0221 変更*/
+      font-family:"游ゴシック体", "游ゴシック", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", "YuGothic", "Meiryo", verdana, "Osaka", "MS PGothic", Sans-Serif;
+      letter-spacing: 0.4em;
+      font-size: 12pt;
+      line-height:35px;
+      color: #000000;
+      background-color: #ffffff;
+
+    }
+    i.fsDefault{
+        font-size:32pt !important;
+    }
+    #navi {
+      position: relative;
+      margin: 1em 0;
+      height: 20px;
+    }
+    #menu {
+      display: block;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+    #menu li {
+      float: left;
+      width: 20%;
+      text-align: center;
+      position: relative;  /*z-indexの指定や子要素の基準とするために指定*/
+      z-index: 1;  /*ドロップダウンしたメニューが隠れないように*/
+    }
+    #menu li a {
+      padding: 0 20px 10px;
+      border-top: none;
+      border-right: none;
+      background: none;
+      color: #555555;
+      display: inline-block;
+      margin: auto;
+      text-shadow: -1px 1px rgba(255, 255, 255, 0.8);
+    }
+    #menu li a:hover {
+      background: none;
+      color: #97C1F3;
+    }
+    #menu li a:active {
+      color: #5687F8;
+    }
+    #menu li ul.sub-menu {
+      display: none;  /*サブメニューは最初は非表示にしておく*/
+      position: absolute;  /*絶対配置にしておかないとうまくいかない*/
+      top: 2em;
+      left: 30%;
+    }
+    #menu li:hover ul.sub-menu {
+      display: block;    /*マウスオーバー時にサブメニューを表示する*/
+    }
+    #menu li ul.sub-menu li {
+      float: none;  /*サブメニューはフロートさせないので解除*/
+    }
+     
+    /*背景色などのカスタマイズ*/
+    .slicknav_nav li {
+      border-top: 1px solid #3362B3;
+    }
+    .slicknav_menu {
+        text-align:right;
+        background-color: #01044E !important;
+        border-bottom:1px solid #FFF;
+    }
+    .slicknav_menu .slicknav_icon-bar {
+      background-color: #97C1F3 !important;
+    }
+    .slicknav_menu a:hover {
+      color: #85A8FB !important;
+    }
+    .slicknav_btn {
+      background-color: #01044E !important;
+    }
+    .slicknav_nav .slicknav_row:hover {
+      background: #01044E !important;
+    }
+    .slicknav_nav a:hover {
+      background: #01044E !important;
+    }
+    i.fa {
+      font-size: 18px;
+    }
+    i.fa.fa-caret-right {
+      display: none;
+    }
+    #menu {
+      display: none;
+    }
+    .shortMenu {
+        display: none;
+    }
+
+    @media screen and (max-width : 770px) {
+      #content {
+        margin: 0;
+      }
+      .shortMenu {
+        display: block;
+        background-color:transparent !important;
+      }
+      .slicknav_menu {
+        display: block;
+      }
+      .wideMenu{
+        display: none;
+      }
+      i.fa.fa-caret-right {
+        font-size: 14px;
+        display: inline-block;
+      }
+    }
+
+    .font_white{
+        color:#fff;
+    }
+    .slide{
+        background-attachment: fixed;
+        width:100%;
+        position: relative;
+        padding:150px 0;
+    }
+
+    #news{
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-image:url(../img/sec_news_bg.jpg);
+        color:white;
+        background-size: cover;
+        background-position: center;
+        min-height: 100%;
+    }
+
+    #about_us{
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-image:url(../img/sec_aboutus_bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        color:white;
+        min-height: 100%;
+    }
+
+    #recruit{
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-image:url(../img/sec_recruit_bg.jpg);
+        background-repeat:  no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100%;
+    }
+    .main_text{
+        color:#01044E;
+        font-size:4.0em !important;
+        letter-spacing:4px;
+        display:inline-block;
+    }
+    .sub_text{
+        color:#01044E;
+        font-size:1.5em !important;
+        font-size:30px;
+        letter-spacing:2px;
+        display:inline-block;
+    }
+
+    .nav{
+        letter-spacing:2px;
+    }
+
+
+    /*ここから各sectionのCSS*/
+    .newsSec{
+        background-attachment: fixed;
+        padding-top:100px;
+        padding-bottom:100px;
+        color:#01044E;
+    }
+    .serviceMainSec{
+        padding-top:100px;
+        padding-bottom:100px;
+        color:white;
+        background-color:#01044E;/*#3CA89F;*/
+    }
+    .serviceSubSec{
+        padding-top:100px;
+        padding-bottom:100px;
+        color:#01044E;/*#3CA89F;*/
+        background-color:#fff;
+    }
+    .aboutUsSec{
+        background-attachment: fixed;
+        padding-top:100px;
+        padding-bottom:100px;
+        color:#01044E;
+    }
+    .topMessageSec{
+        height:100%;
+        padding-top:100px;
+        padding-bottom:100px;
+        background-color:#01044E;/*#0E7AC4;*/
+    }
+    .visionSec{
+        padding-top:100px;
+        padding-bottom:100px;
+        background-color:#fff;
+    }
+    .style5Sec{
+        padding-top:150px;
+        padding-bottom:150px;
+        color:#01044E;
+        background-color:#01044E;
+    }
+    .system_section{
+        color:#01044E;
+        padding-top:150px;
+        padding-bottom:150px;
+        background-color:#fff;
+    }
+    .recruitSec{
+        background-attachment: fixed;
+        padding-top:150px;
+        padding-bottom:150px;
+        color:#FFF;
+    }
+    .partnerSec{
+        color:#01044E;
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+    .contactSec{
+        background-color:#ECEEF1;
+        padding-top:100px;
+        padding-bottom:100px;
+        color:#01044E;
+    }
+    .footerSec{
+        padding-top:100px;
+        background-color:#01044E;
+        letter-spacing:3px;
+    }
+
+    .section_title{
+        letter-spacing:0.1em;
+        font-family:'Lato';
+        text-align:center;
+        font-size:2.2em;
+    }
+
+    .subsection_title{
+        margin:30px 0 0;
+        text-align:center;
+        font-size:1.6em;
+        letter-spacing:0.1em;
+        font-family:'Lato';
+    }
+    .subsection_subtitle{
+        text-align:center;
+        font-size:0.8em;
+        letter-spacing:0.1em;
+    }
+
+    .visionsection_title{
+        margin-bottom:45px;
+        text-align:center;
+        color:#08233E;
+        font-family:'Lato';
+        font-size:1.3em;
+        font-weight:bold;
+    }
+    .style5_title{
+        margin-bottom:55px;
+        text-align:center;
+        font-size:40pt;
+        font-weight:bold;
+        color:#fff;
+    }
+    .partnership_title{
+        text-align:center;
+        font-size:35pt;
+    }
+
+    .section_content{
+        text-align:center;
+        /*font-size:15pt;*/
+    }
+    .subsection_content{
+        margin-top:40px;
+        text-align:center;
+        font-size:11pt;
+    }
+    .top_message_eng_name{
+        text-align:left;
+        font-size:0.8em;
+        letter-spacing: 0.1em;
+        color:#fff;
+        margin:50px 0 0;
+        padding:;
+    }
+    .top_message_jap_name{
+        margin:0px 0px 0px;
+        padding-left:0;
+        padding-bottom:15px;
+        text-align:left;
+        letter-spacing:4px;
+        font-size:20pt;
+        color:#fff;
+        border-bottom:1px solid #FFF;
+    }
+    .top_message_subname{
+        text-align:left;
+        font-weight:bold;
+        font-size:0.5em;
+        letter-spacing: 0.1em;
+        color:#5bc0de;
+        margin:50px 5% 0;
+    }
+
+    .top_message_content{
+        margin:3.0em 10px 70px 0;
+        line-height:30px;
+        text-align:left;
+        color:#fff;
+        font-size:0.9em;
+    }
+    .visionsection_content{
+        margin-top:70px;
+        margin-bottom:70px;
+        text-align:center;
+        font-size:25pt;
+        font-weight:bold;
+    }
+    .visionsection_content span{
+        font-size:30pt;
+        color:#EB2142;
+    }
+
+    .style5_content{
+        text-align:center;
+        line-height:60px;
+        color:#FFF;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .style5_content p{
+        text-align:center;
+        margin-top:50px;
+        margin-bottom:30px;
+        line-height:40px;
+    }
+    .system_content{
+        text-align:center;
+        line-height:60px;
+        padding-top:50px;
+        padding-bottom:50px;
+    }
+
+    .system_content p{
+        text-align:center;
+        margin-top:50px;
+        margin-bottom:30px;
+        line-height:40px;
+    }
+
+    .recruit_content{
+        margin-top:50px;
+        margin-bottom:100px;
+        text-align:center;
+    }
+    .partnership_content{
+        padding-top:10px;
+        text-align:center;
+    }
+    .footer_comname{
+
+    }
+    .footer_comaddress{
+
+    }
+    .footer_copyright{
+        text-align:right;
+    }
+    .table{
+        /*font-size:13pt;*/
+    }
+    .table_link{
+      color: #fff;
+      text-decoration: underline;
+    }
+    .table_link:hover{
+      color: #01044E;
+      text-decoration: none;
+    }
+
+    /*ここまで各sectionのCSS*/
+
+/*CharaContents サブ標題背景*/
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+
+/* The following is all you really need for the effect to work */
+.backbox {
+  font-family: "Josefin Slab";
+  text-transform: uppercase;
+  font-size: 2.0em;
+  color: white;
+  width: 75%;
+  position: relative;
+  left: 12.5%;
+  top: 3rem;
+  text-align: center;
+  padding: 0.0625rem;
+  position: relative;
+}
+/*ここまで*/
+/*Contactアイコンここから*/
+    .icon_block{
+        margin:auto;
+        margin-top:30px;
+        width:200px;
+        height:200px;
+        opacity:1;
+        border-radius:100px;
+        text-align:center;
+        background-color:#01044E;
+    }
+    .icon_block a{
+        width:200px;
+        height:200px;
+    }
+    .icon_block a span{
+        margin:22px;
+        width:160px;
+        height:160px;
+        font-size:113pt;
+        color:white;
+    }
+    .icon_block span{
+        margin:22px;
+        width:160px;
+        height:160px;
+        font-size:113pt;
+        color:white;
+    }
+    .icon_comment{
+        margin-top:30px;
+        text-align:center;
+        opacity:0;
+        font-family:'Helvetica';
+        font-size:10pt;
+        font-weight:bold;
+    }
+    /*Contactアイコンここまで*/
+    /*ここから_各ボタンのレイアウト*/
+    .button1 a:hover{
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+    .button2 a:hover{
+        cursor:pointer;
+        text-decoration:none;
+    }
+
+    .button3 a:hover{
+        cursor:pointer;
+        text-decoration:none;
+    }
+    /*service_subsection*/
+    .button1 a{
+        cursor:pointer;
+        text-decoration:none;
+        font-size:1.2em;
+        letter-spacing:0.1em;
+        color:#08233E;/*#3CA89F;*/
+        border:2px solid #08233E;/*#3CA89F;*/
+        padding:10px 20px;
+        width:150px;
+        height:50px;
+        text-align:center;
+    }
+    .button2 a{
+        cursor:pointer;
+        text-decoration:none;
+        font-size:1.2em;
+        letter-spacing:0.1em;
+        color:white;
+        border:2px solid white;
+        padding:10px 20px;
+        width:150px;
+        height:50px;
+        text-align:center;
+    }
+    .button3 a{
+        cursor:pointer;
+        text-decoration:none;
+        font-size:1.2em;
+        letter-spacing:0.1em;
+        color:black;
+        border:1px solid black;
+        padding:10px 20px;
+        width:150px;
+        height:50px;
+        text-align:center;
+    }
+    /*ここまで_各ボタンのレイアウト*/
+    /*ここから_modalウィンドウのレイアウト*/
+    .lightbox_map {
+        display: none;
+        padding: 10px;
+        width:100%;
+        height:100%;
+    }
+    .lightbox_ts {
+        display: none;
+        text-align:center;
+        margin: 30px;
+    }
+    .lightbox_ts h2{
+        letter-spacing:0.01em;
+    }
+    .lightbox_ts p{
+        text-align:center;
+        margin-top:50px;
+        line-height: 40px;
+    }
+
+    .lightbox_its1 {
+        display: none;
+        margin: 30px;
+    }
+
+    .lightbox_its1 h2 {
+        text-align: left;
+        letter-spacing:0.01em;
+    }
+
+    .lightbox_its1 p {
+        text-align: left;
+        line-height: 40px;
+    }
+    .lightbox_its2 {
+        display: none;
+        padding: 10px;
+
+    }
+    .lightbox_its2 p{
+        float:right;
+        text-align: left;
+        line-height:30px;
+        letter-spacing:0.1em;
+    }
+    .lightbox_reg {
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_reg p {
+        letter-spacing:0.1em;
+        margin-top:20px;
+      }
+    .lightbox_own {
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_own p {
+        letter-spacing:0.1em;
+        line-height:30px;
+        margin-top:20px;
+    }
+    .lightbox_pp {
+        letter-spacing:0.1em;
+        display: none;
+        padding: 10px;
+    }
+    .lightbox_ssp {
+        letter-spacing:0.1em;
+        display: none;
+        padding: 10px;
+    }
+    /*ここまで_modalウィンドウのレイアウト*/
+
+
+    dl.taigu dt{
+        float:left;
+
+    }
+    a.pp_link{
+      cursor: pointer;
+    }
+    a.pp_link:hover, focus{
+        color:#FFF;
+    }
+
+    a.sp_link{
+      cursor: pointer;
+    }
+    a.sp_link:hover{
+        color:#FFF;
+    }
+    a.sns_link{
+      color: #fff;
+    }
+    a.sns_link{
+      color: #fff;
+    }
+    a.sns_link:hover{
+      color: #337ab7;
+    }
+#scene {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+    #scene > li {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner-space a:hover{
+        display: inline-block;
+        animation: hurueru .3s  infinite;
+    }
+
+    @keyframes hurueru {
+        0% {transform: translate(0px, 0px) rotateZ(0deg)}
+        25% {transform: translate(2px, 2px) rotateZ(1deg)}
+        50% {transform: translate(0px, 2px) rotateZ(0deg)}
+        75% {transform: translate(2px, 0px) rotateZ(-1deg)}
+        100% {transform: translate(0px, 0px) rotateZ(0deg)}
+    }
