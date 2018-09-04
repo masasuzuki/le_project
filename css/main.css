@@ -1061,11 +1061,12 @@ section.full-height {
         width:150px;
         height:50px;
         text-align:center;
+        white-space:nowrap;
     }
     .button2 a{
         cursor:pointer;
         text-decoration:none;
-        font-size:1.2em;
+        font-size:1.1em;
         letter-spacing:0.1em;
         color:white;
         border:2px solid white;
@@ -1073,11 +1074,12 @@ section.full-height {
         width:150px;
         height:50px;
         text-align:center;
+        white-space:nowrap;
     }
     .button3 a{
         cursor:pointer;
         text-decoration:none;
-        font-size:1.2em;
+        font-size:1.1em;
         letter-spacing:0.1em;
         color:black;
         border:1px solid black;
@@ -1085,6 +1087,7 @@ section.full-height {
         width:150px;
         height:50px;
         text-align:center;
+        white-space:nowrap;
     }
     /*ここまで_各ボタンのレイアウト*/
     /*ここから_modalウィンドウのレイアウト*/
