@@ -51,6 +51,8 @@
         padding-bottom: 50px;
     }
     .subsection_content{
+        margin-top: 10px;
+        margin-bottom: 0px;
         font-size:8pt;
     }
     .backbox {
@@ -181,6 +183,9 @@
     }
     .lightbox_ssp h2{
         font-size:13pt;
+    }
+    .table_link{
+        color: #337ab7;
     }
 
 }/*@media screen(max-width:770px)*/
