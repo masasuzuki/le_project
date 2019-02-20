@@ -94,6 +94,9 @@
         padding-top: 50px;
         padding-bottom: 50px;
     }
+    .button1 a{
+        font-size:1.2em;
+    }
     .style5_content p{
         line-height:20px;
     }
